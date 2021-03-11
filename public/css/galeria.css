@@ -1,0 +1,163 @@
+@charset "UTF-8";
+
+.galeria_container{
+   position: relative;
+   min-height: calc(100vh - 44px);
+   padding: 0 26px;
+   display: grid;
+   grid-template-rows: 118px 1fr;
+}
+
+.galeria_header{
+   position: relative;
+   width: 100%;
+}
+.galeria_header > p{
+   color: var(--FontDark);
+  font-family: 'Brygada 1918', serif; 
+  font-size: 20.5px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.27;
+  letter-spacing: 4.1px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.galeria_header > h1{
+   color: var(--FontDark);
+   font-family: 'Brygada 1918', serif; 
+     font-size: 28.5px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 0.91;
+  letter-spacing: 5.7px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.acento{
+   display: block;
+   width: 52px;
+   height: 6px;
+   background-color: var(--Secondary);
+   margin: 0 auto;
+}
+
+.galeria_body{
+   position: relative;
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   grid-auto-rows: 128px 53px 102px 157px;
+   width: 100%;
+   padding-bottom: 38px;
+}
+.gallery-img{
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+
+._uno, ._tres{
+    grid-row: span 2;
+}
+._cinco {
+    grid-column: span 2;
+}
+
+.galeria_footer{
+   height: 38px;
+   position: fixed;
+   width: 100%;
+   display: grid;
+   grid-template-rows: 17px 21px;
+   bottom: 0;
+   justify-items:center;
+   background-color: #fff;
+}
+.galeria_footer > .acento{
+   align-self: end;
+}
+.la-estacion-logo{
+   height: 35px;
+   align-self: flex-end;
+   background-color: var(--Primary);
+   padding: 2px;
+}
+
+/***************POPUP Galeria*******************/
+.blackBox{
+   display: grid;
+   justify-items: center;
+   align-items: center;
+   width: 100%;
+   height: 100%;
+   position: fixed;
+   background-color: rgba(0, 0, 0, .6);
+   top: 0;
+   left: 0;
+   grid-template-columns: 26px 1fr 26px;
+   grid-template-rows: 1fr 30px;
+}
+.blackbox_img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    z-index: 10;
+}
+.chevron_left{
+   z-index: 10;
+   padding: 30px 0;
+}
+.chevron_right{
+   transform: rotate(180deg);
+   z-index: 10;
+   padding: 30px 0;
+}
+.gallery_close{
+   grid-column: span 3;
+   width: 25px;
+   height: 25px;
+}
+
+/* On screens that are 600px or more*/
+@media screen and (min-width: 600px) {
+   .galeria_container {
+    max-width: 992px;
+    margin: 0 auto;
+   }
+
+   .galeria_body {
+    grid-auto-rows: 228px 153px 202px 257px;
+   }
+
+   .gallery-img {
+      transition: .3s;
+   }
+
+   .gallery-img:hover {
+    transform: scale(1.2, 1.2);
+   }
+
+   .galeria_body {
+    padding-bottom: 138px;
+   }
+
+   .blackBox {
+    grid-template-columns: 150px 1fr 150px;
+    grid-template-rows: 1fr 143px;
+    z-index: 21;
+    padding-top: 43px;
+   }
+
+   .chevron_left, .chevron_right{
+      padding: 50px;
+   }
+
+   .gallery_close{
+      width: 50px;
+      height: 50px;
+   }
+
+} /**/
