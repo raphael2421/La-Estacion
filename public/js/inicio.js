@@ -6,104 +6,108 @@ const chevron_right = document.querySelector('.chevron_right');
 const slide_header = document.querySelector('.slide_header');
 const slide_img = document.querySelector('.slide_img');
 const slide = document.querySelector('.slide');
+const slides_container = document.querySelector('.slides_container');
 
 
 const slidesContent = [
    {
       title: 'proyecto',
-      img: 'slide0.jpg'
+      small: 'slide0.jpg',
+      large: 'slide0-XL.jpg'
    },
    {
       title: 'alberca',
-      img: 'slide1.jpg'
+      small: 'slide1.jpg',
+      large: 'slide1-XL.jpg'
    },
    {
       title: 'salón de juegos',
-      img: 'slide2.jpg'
+      small: 'slide2.jpg',
+      large: 'slide2-XL.jpg'
    },
    {
       title: 'experiencias',
-      img: 'slide3.jpg'
+      small: 'slide3.jpg',
+      large: 'slide3-XL.jpg'
    },
    {
       title: 'rooftop',
-      img: 'slide4.jpg'
+      small: 'slide4.jpg',
+      large: 'slide4-XL.jpg'
    }
 ]
-let slideN = 0;
 
-window.addEventListener('load', ()=>{
-   slide_header.innerHTML = `<p>${slidesContent[slideN].title}</p>`;
-   slide_img.setAttribute('src', `../media/${slidesContent[slideN].img}`);
+// IDEA:
+// multiplicar el ancho por el index del array para recorrer el slider
+let slideN = 0;
+slides_container.setAttribute('style', `grid-template-columns: repeat(${slidesContent.length}, 100%);`);
+slidesContent.forEach((i, ï, ä)=>{
+   slides_container.innerHTML += `
+      <div class="slide">
+         <div class="slide_header">
+            <p class="slide_header_txt"> ${i.title} </p>
+         </div>
+         <img class="slide_img" src="../media/${i.small}" alt="${i.title}">
+      </div>
+   `;
 });
 
+
+// go left
 chevron_left.addEventListener('click', go_left);
 function go_left() {
    slideN--
    if (slideN < 0) {
       slideN = slidesContent.length - 1;
    }
-   
-   slide.classList.remove('slide_fadein_left');
-   slide.classList.add('slide_fadeout_left');
-   chevron_left.removeEventListener('click', go_left);
-
-   setTimeout(()=>{
-      slide.classList.add('slide_fadein_left');
-      slide.classList.remove('slide_fadeout_left');
-      slide_img.setAttribute('src', `../media/${slidesContent[slideN].img}`);
-      slide_header.innerHTML = `<p>${slidesContent[slideN].title}</p>`;
-      chevron_left.addEventListener('click', go_left);
-   },300);
-
+   if (window.innerWidth > 1370) {
+      let width = window.innerWidth - 17;      
+      slides_container.style.transform = `translate(-${width * slideN}px)`;
+   } else{
+      slides_container.style.transform = `translate(-${window.innerWidth * slideN}px)`;
+   }
    
 } // go_left
 
+
+// go right
 chevron_right.addEventListener('click', go_right);
 function go_right() {
    slideN++
    if (slideN > slidesContent.length - 1) {
       slideN = 0;
    }
-
-   slide.classList.toggle('slide_fadein');
-   slide.classList.toggle('slide_fadeout');
-   chevron_right.removeEventListener('click', go_right);
-
-   setTimeout(() => {
-      slide.classList.toggle('slide_fadeout');
-      slide.classList.toggle('slide_fadein');
-      slide_img.setAttribute('src', `../media/${slidesContent[slideN].img}`);
-      slide_header.innerHTML = `<p>${slidesContent[slideN].title}</p>`;
-      chevron_right.addEventListener('click', go_right);
-   }, 390);
+   if (window.innerWidth > 1370) {
+      let width = window.innerWidth - 17;
+      slides_container.style.transform = `translate(-${width * slideN}px)`;
+   } else{
+      slides_container.style.transform = `translate(-${window.innerWidth * slideN}px)`;
+   }
 }
 
+/********************** Touch Move ***************************/
 /// IDEA
 // let initialCoords let finalCoords
 // on touch start get and set initialCoords
 // on touch move  update finalCoords
 // on touch end compare initial and final coords
 // decide where to go
-
-
-/********************** Touch Move ***************************/
 let initialCoords = 0;
 let finalCoords = 0;
 
-slide.addEventListener('touchstart', function (e) {
+slides_container.addEventListener('touchstart', function (e) {
    initialCoords = e.touches[0].clientX;
    // console.log(initialCoords);
 });
 
-slide.addEventListener('touchmove', function (e) {
+slides_container.addEventListener('touchmove', function (e) {
    finalCoords = e.touches[0].clientX;
    // console.log(finalCoords);
 });
 
-slide.addEventListener('touchend', function (e) {
+slides_container.addEventListener('touchend', function (e) {
    if (finalCoords < initialCoords -50) {
-      go_right();      
+      go_right();
    }
    else if (finalCoords > initialCoords +50) {
       go_left();
@@ -112,3 +116,4 @@ slide.addEventListener('touchend', function (e) {
       e.preventDefault();
    }
 });
+

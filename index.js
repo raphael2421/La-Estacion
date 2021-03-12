@@ -39,8 +39,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 // app.use('/*', require('./routes/wrongUrls'));
 
 // server start
-app.listen(process.env.PORT || 5000, () => {
-   console.log('node start', process.env.PORT || 5000);
+app.listen(process.env.PORT || 3000, () => {
+   console.log('node start', process.env.PORT || 3000);
 });
 
 ////////////////

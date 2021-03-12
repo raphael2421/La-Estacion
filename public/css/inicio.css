@@ -48,57 +48,11 @@
    z-index: 10;
    cursor: pointer;
 }
-
-.slide_fadein_left > * {
-   animation: slideFadeInLeft 300ms;
-}
-@keyframes slideFadeInLeft{
-   0%{
-      opacity: 0;
-      transform: translateX(100%);
+/*******************************************************/
+.slides_container {
+    display: grid;
+    transition: 0.3s;
    }
-   100%{
-      opacity: 1;
-      transform: translateX(0)
-   }
-}
-/* @keyframes slideFadeIn{
-   0%{
-      opacity: 0;
-      transform: scale(1.1, 1.1);
-   }
-   100%{
-      opacity: 1;
-      transform: scale(1, 1);
-   }
-} */
-
-.slide_fadeout_left > *{
- animation: slideFadeOutLeft 300ms forwards;
-}
-@keyframes slideFadeOutLeft{
-   0%{
-      opacity: 1;
-      transform: translateX(0);
-   }
-   100%{
-      opacity: 0;
-      transform: translateX(-100%);
-   }
-   
-}
-/* @keyframes slideFadeOut{
-   0%{
-      opacity: 1;
-      transform: scale(1, 1);
-   }
-   100%{
-      opacity: 0;
-      transform: scale(1.1, 1.1);
-   }
-   
-} */
-
 /*******************************************************/
 .contacto_container{
    height: calc(100vh - 44px);
