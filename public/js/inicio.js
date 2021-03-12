@@ -47,7 +47,7 @@ slidesContent.forEach((i, ï, ä)=>{
          <div class="slide_header">
             <p class="slide_header_txt"> ${i.title} </p>
          </div>
-         <img class="slide_img" src="../media/${i.small}" alt="${i.title}">
+         <img class="slide_img" src="../media/${window.innerWidth >= 600 ? i.large : i.small}" alt="${i.title}">
       </div>
    `;
 });
