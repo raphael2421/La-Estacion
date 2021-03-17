@@ -1,0 +1,151 @@
+@charset "UTF-8";
+
+.proyecto_head{
+   background-color: var(--Primary);
+   padding: 85px 38px;
+   text-align: center;
+   font-family: 'Brygada 1918', serif;
+   font-size: xx-large;
+   color: #ffffff;
+}
+.text-accent{
+   color: var(--Secondary);
+}
+
+.proyecto_middle{
+   background-image: url('../media/slider-proyecto/la-estacion-proyecto.jpg');
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   height: 547px;
+   padding-top: 78px;
+}
+
+.proyecto_middle > p {
+   text-align: center;
+   font-family: 'Encode Sans', sans-serif;
+   font-size: 16px;
+   font-weight: 300;
+   font-stretch: normal;
+   font-style: normal;
+   line-height: 1.88;
+   letter-spacing: normal;
+   color: #ffffff;
+}
+
+
+.proyecto_banner{
+   height: 107px;
+   display: grid;
+   justify-content: center;
+   align-content: center;
+   grid-gap: 8px;
+}
+.proyecto_banner >h1, .proyecto_banner > h3{
+   margin: 0;
+   padding: 0;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Brygada 1918', serif; 
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.11;
+  letter-spacing: 5.4px;
+  color: var(--FontDark);
+}
+
+/***************************/
+.chevron_left{
+   position: absolute;
+   height: 60px;
+   width: 18px;
+   top: calc(50% - 80px);
+   left: 6px;
+   z-index: 10;
+   transform: rotate(180deg);
+   cursor: pointer;
+   margin: 10px;
+   padding: 10px;
+}
+.chevron_right{
+   position: absolute;
+   height: 60px;
+   width: 18px;
+   top: calc(50% - 80px);
+   right: 6px;
+   z-index: 10;
+   cursor: pointer;
+   margin: 10px;
+   padding: 10px;
+}
+/***************************/
+.proyecto_modelos{
+   position: relative;
+}
+.modelos_img{
+   height: 100%;
+   width: 100%;
+   object-fit: cover;
+   text-align: center;
+}
+.slides_container{
+   display: grid;
+   transition: 0.3s;
+}
+.slide{
+   position: relative;
+   height: calc(100vh - 44px);
+   display: grid;
+   grid-template-rows: 1fr 93px;
+}
+/***************************/
+.modelos_title {
+   position: absolute;
+   top: calc(100% - 214px);
+   color: #fff;
+   font-family: 'Brygada1918';
+   text-transform: uppercase;
+   text-align: center;
+   margin: 0 auto;
+   width: 289px;
+   left: calc(50% - 145px);
+   border-top: 2px solid #fff;
+   border-bottom: 2px solid #fff;
+   font-size: 31px;
+   padding: 15px 0;
+   line-height: 0.97;
+   letter-spacing: 6.2px;
+}
+/***************************/
+.modelos_tipo{
+  display: grid;
+  grid-template-rows: 20px 37px;  
+  grid-gap: 10px;
+  gap: 10px;
+  justify-items: center;
+  align-items: center;
+  align-content: center;
+}
+.modelos_tipo >p{
+  font-family: 'Encode Sans', sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 4px;
+  text-align: center;
+  color: var(--FontDark);
+}
+.modelos_tipo > .m2{
+   font-size: 25px !important;
+   border: 1px solid var(--FontDark);
+   width: 88px;
+   height: 19px;
+   padding: 9px 12px;
+   line-height: 0.9;
+}
+
+/***************************/

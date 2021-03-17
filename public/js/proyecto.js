@@ -1,58 +1,48 @@
-// esversion 2018
+// esversion: 2018
 
-// slider
+const slidesContent = [
+   {
+      title: 'allende',
+      type: 'Tipo A',
+      mts: '100',
+      small: 'la-estacion-allende.jpg',
+      large: 'la-estacion-allende-XL.jpg'
+   },
+   {
+      title: 'morelos',
+      type: 'Tipo B',
+      mts: '65',
+      small: 'la-estacion-morelos.jpg',
+      large: 'la-estacion-morelos-XL.jpg'
+   },   
+]
+
 const chevron_left = document.querySelector('.chevron_left');
 const chevron_right = document.querySelector('.chevron_right');
 const slides_container = document.querySelector('.slides_container');
 const slide = document.querySelector('.slide');
-const slide_header = document.querySelector('.slide_header');
-const slide_img = document.querySelector('.slide_img');
-
-
-const slidesContent = [
-   {
-      title: 'proyecto',
-      small: 'slide0.jpg',
-      large: 'slide0-XL.jpg'
-   },
-   {
-      title: 'alberca',
-      small: 'slide1.jpg',
-      large: 'slide1-XL.jpg'
-   },
-   {
-      title: 'salón de juegos',
-      small: 'slide2.jpg',
-      large: 'slide2-XL.jpg'
-   },
-   {
-      title: 'experiencias',
-      small: 'slide3.jpg',
-      large: 'slide3-XL.jpg'
-   },
-   {
-      title: 'rooftop',
-      small: 'slide4.jpg',
-      large: 'slide4-XL.jpg'
-   }
-]
+// const slide = document.querySelector('.slide');
 
 // IDEA:
 // multiplicar el ancho por el index del array para recorrer el slider
 let slideN = 0;
 slides_container.setAttribute('style', `grid-template-columns: repeat(${slidesContent.length}, 100%);`);
-slidesContent.forEach((i, ï, ä)=>{
+slidesContent.forEach((i, ï, ä) => {
    slides_container.innerHTML += `
       <div class="slide">
-         <div class="slide_header">
-            <p class="slide_header_txt"> ${i.title} </p>
+         <img src="../media/slider-proyecto/${window.innerWidth >= 600 ? i.large : i.small}" alt="" class="modelos_img">
+          <div class="modelos_title">
+                  ${i.title}
+            </div>
+         <div class="modelos_tipo">
+            <p>Residencia <strong>${i.type}</strong></p>
+            <p class="m2">${i.mts}m<sup>2</sup></p>
          </div>
-         <img class="slide_img" src="../media/${window.innerWidth >= 600 ? i.large : i.small}" alt="${i.title}">
       </div>
    `;
 });
 
-
+/***********************************************/
 // go left
 chevron_left.addEventListener('click', go_left);
 function go_left() {
@@ -61,14 +51,13 @@ function go_left() {
       slideN = slidesContent.length - 1;
    }
    if (window.innerWidth > 1370) {
-      let width = window.innerWidth - 17;      
+      let width = window.innerWidth - 17;
       slides_container.style.transform = `translate(-${width * slideN}px)`;
-   } else{
+   } else {
       slides_container.style.transform = `translate(-${window.innerWidth * slideN}px)`;
    }
-   
-} // go_left
 
+} // go_left
 
 // go right
 chevron_right.addEventListener('click', go_right);
@@ -80,18 +69,12 @@ function go_right() {
    if (window.innerWidth > 1370) {
       let width = window.innerWidth - 17;
       slides_container.style.transform = `translate(-${width * slideN}px)`;
-   } else{
+   } else {
       slides_container.style.transform = `translate(-${window.innerWidth * slideN}px)`;
    }
 }
 
-/********************** Touch Move ***************************/
-/// IDEA
-// let initialCoords let finalCoords
-// on touch start get and set initialCoords
-// on touch move  update finalCoords
-// on touch end compare initial and final coords
-// decide where to go
+/********************************************/
 let initialCoords = 0;
 let finalCoords = 0;
 
@@ -106,14 +89,13 @@ slides_container.addEventListener('touchmove', function (e) {
 });
 
 slides_container.addEventListener('touchend', function (e) {
-   if (finalCoords < initialCoords -50) {
+   if (finalCoords < initialCoords - 50) {
       go_right();
    }
-   else if (finalCoords > initialCoords +50) {
+   else if (finalCoords > initialCoords + 50) {
       go_left();
    }
-   else{
+   else {
       e.preventDefault();
    }
 });
-

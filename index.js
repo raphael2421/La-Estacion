@@ -30,6 +30,8 @@ app.use(limit);
 // routes
 app.use('/', require('./routes/inicio'));
 app.use('/vive-la-estacion', require('./routes/galeria'));
+app.use('/quienes-somos', require('./routes/qSomos'));
+app.use('/proyecto', require('./routes/proyecto'));
 // app.use('/404', require('./routes/404'));
 
 
