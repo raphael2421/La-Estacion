@@ -1,0 +1,86 @@
+@charset "UTF-8";
+
+
+.beneficios_head {
+   margin-top: 44px;
+   margin-bottom: 50px;
+}
+.beneficios_head > p{
+   font-family: 'Brygada 1918', serif;
+   color: var(--FontDark);
+   line-height: 1.88;
+  letter-spacing: 3.2px;
+  text-align: center;
+  max-width: 274px;
+  margin: 0 auto;
+  letter-spacing: -0.83px;  
+}
+
+/*******************************/
+.blog_post{
+   position: relative;
+}
+.blog_head{
+   position: relative;
+}
+.blog_title_left{
+   position: absolute;
+   top: 25px;
+   left: 25px;
+     object-fit: contain;
+  font-family: 'Brygada 1918', serif; 
+  font-size: 27.5px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.09;
+  letter-spacing: -0.83px;
+  text-align: left;
+  color: #ffffff;
+}
+.blog_title_right{
+   position: absolute;
+   top: 25px;
+   right: 25px;
+     object-fit: contain;
+  font-family: 'Brygada 1918', serif; 
+  font-size: 27.5px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.09;
+  letter-spacing: -0.83px;
+  text-align: left;
+  color: #ffffff;
+}
+.blog_img_left{
+   width: 100%;
+   height: 100vw;
+   object-fit: cover;
+   object-position: 50% 50%; /* even if we dont declare this the image will still be centered */
+}
+.blog_img_right{
+   width: 100%;
+   height: calc(100vh - 44px);
+   object-fit: cover;
+   text-align: center;
+}
+.blog_text{
+   margin: 50px 26px;
+   border: 1px solid var(--FontDark);
+   padding: 23px;
+}
+.blog_text > p{
+     object-fit: contain;
+  font-family: 'Encode Sans', sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.65;
+  letter-spacing: normal;
+  text-align: center;
+}
+.blog_content{
+
+}
