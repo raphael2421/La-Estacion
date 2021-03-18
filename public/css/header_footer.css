@@ -60,6 +60,34 @@ header{
 footer{  
   position: relative;
 }
+
+footer{
+   height: 38px;
+   position: fixed;
+   width: 100%;
+   display: grid;
+   grid-template-rows: 17px 21px;
+   bottom: 0;
+   justify-items:center;
+   background-color: #fff;
+}
+footer > .acento{
+   align-self: end;
+}
+.acento{
+   display: block;
+   width: 52px;
+   height: 6px;
+   background-color: var(--Secondary);
+   margin: 0 auto;
+}
+.la-estacion-logo{
+   height: 35px;
+   align-self: flex-end;
+   background-color: var(--Primary);
+   padding: 2px;
+}
+
 /****************************************************************/
 .whats_icon, .tel_icon, .menu_icon, .close_menu_icon{
   cursor: pointer;

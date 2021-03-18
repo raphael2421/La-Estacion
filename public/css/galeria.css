@@ -51,7 +51,7 @@
    grid-template-columns: 1fr 1fr;
    grid-auto-rows: 128px 53px 102px 157px;
    width: 100%;
-   padding-bottom: 38px;
+   /* padding-bottom: 38px; */
 }
 .gallery-img{
    width: 100%;
@@ -64,26 +64,6 @@
 }
 ._cinco {
     grid-column: span 2;
-}
-
-.galeria_footer{
-   height: 38px;
-   position: fixed;
-   width: 100%;
-   display: grid;
-   grid-template-rows: 17px 21px;
-   bottom: 0;
-   justify-items:center;
-   background-color: #fff;
-}
-.galeria_footer > .acento{
-   align-self: end;
-}
-.la-estacion-logo{
-   height: 35px;
-   align-self: flex-end;
-   background-color: var(--Primary);
-   padding: 2px;
 }
 
 /***************POPUP Galeria*******************/
@@ -99,6 +79,7 @@
    left: 0;
    grid-template-columns: 26px 1fr 26px;
    grid-template-rows: 1fr 30px;
+   z-index: 21;
 }
 .blackbox_img {
     width: 100%;
@@ -120,6 +101,7 @@
    grid-column: span 3;
    width: 25px;
    height: 25px;
+   z-index: 22;
 }
 .blackbox_img_frame {
     width: 100%;
