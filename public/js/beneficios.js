@@ -41,6 +41,18 @@ Viajes y Turismo (WTTC)</b>`,
       content: ''
    },
    {
+      title: ``,
+      img: 'jesus-rocha-2-w-9-ez-azv-m-8-m-unsplash.png',
+      imgxl: '',
+      text: `Gastronomía y hotelería,
+sin duda alguna
+San Miguel de Allende
+cuenta con la combinación
+perfecta entre
+contemporaneidad y tradición.`,
+      content: ''
+   },
+   {
       title: `Nombrada la mejor
 ciudad pequeña
 del mundo.`,
@@ -51,18 +63,6 @@ en todo su esplendor de
 la cultura mexicana,
 <b>nombrada por la UNESCO,
 Patrimonio de la Humanidad.</b>`,
-      content: ''
-   },
-   {
-      title: ``,
-      img: 'jesus-rocha-2-w-9-ez-azv-m-8-m-unsplash.png',
-      imgxl: '',
-      text: `Gastronomía y hotelería,
-sin duda alguna
-San Miguel de Allende
-cuenta con la combinación
-perfecta entre
-contemporaneidad y tradición.`,
       content: ''
    },
 ];

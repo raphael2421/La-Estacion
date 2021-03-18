@@ -1,1 +1,65 @@
 @charset "UTF-8";
+
+.qs_head_img > img{
+   object-fit: cover;
+object-position: 50% 50%;
+height: 270px;
+}
+
+.qs_title > h2{
+   margin: 0;
+   padding: 0;
+   font-family: 'Brygada 1918', serif; 
+   font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.88;
+  letter-spacing: 3.2px;
+  text-align: center;
+  color: var(--FontDark);
+}
+.qs_title > h3{
+   margin: 0;
+   padding: 0;
+   font-family: 'Brygada 1918', serif; 
+    font-size: 27px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.11;
+  letter-spacing: 5.4px;
+  text-align: center;
+  color: var(--FontDark);
+}
+
+.qs_slogan{
+   margin:26px;
+   border: 1px solid var(--FontLight); 
+}
+.qs_slogan > p{
+   font-family: 'Brygada 1918', serif; 
+   font-size: 22px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.52;
+  letter-spacing: -1.1px;
+  text-align: center;
+  color: var(--FontLight);
+}
+
+.qs_content{
+   margin: 26px;
+}
+.qs_content > p{
+    font-size: 16px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.88;
+  letter-spacing: normal;
+  text-align: justify;
+  font-family: 'Encode Sans', sans-serif;
+  color: var(--FontDark);
+}
