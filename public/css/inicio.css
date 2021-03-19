@@ -143,7 +143,7 @@
 .legales_container{
   font-family: 'Encode Sans', sans-serif;
   background-color: var(--FontDark);
-  height: 300px;
+  height: 320px;
   width: 100%;
 }
 .legales_content{
@@ -159,6 +159,8 @@
   width: auto;
   font-weight: 200;
   text-align: center;
+  max-width: 960px;
+  margin: 0 auto;
 }
 .legales_subcontent{
   background-color: var(--FontDark);
@@ -174,10 +176,15 @@
   width: auto;
   font-weight: 200;
   text-align: center;
+  max-width: 960px;
+  margin: 0 auto;
 }
-
-
-/* On screens that are 600px or more*/
+.legales_subcontent > a{
+   text-decoration: none;
+   color: var(--FontLight);
+   font-weight: bold;
+}
+/********* Media Query On screens that are 600px or more ************/
 @media screen and (min-width: 600px) {
    .slide_header{
       height: 200px;
@@ -191,4 +198,10 @@
   .chevron_right {
      right: 150px;
   }
+}
+/********* Media Query On screens that are 992px or more ************/
+@media screen and (min-width: 992px) {
+   .legales_container{
+      height: 200px;
+   }
 }

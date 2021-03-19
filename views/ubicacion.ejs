@@ -8,10 +8,9 @@
          <h2>PRIVILEGIADA</h2>
       </section>
       <section class="mapa_border">
-         <!-- enable javascript to view a demo -->
-         <div id="gesture-area">
-            <img src="../media/ubicacion/mapa.svg" alt="sample image" id="scale-element">
-         </div>
+         <article id="gesture-area">            
+               <img id="drag-1" class="draggable" src="../media/ubicacion/mapa.svg" />            
+         </article>
       </section>
    </main>
 
@@ -19,3 +18,12 @@
 
 <script src="../js/ubicacion.js"></script>
 <%- include('template-parts/scripts') %>
+
+
+<%##
+         <!-- enable javascript to view a demo -->
+         <div id="gesture-area">
+            <img src="../media/ubicacion/mapa.svg" alt="sample image" id="scale-element">
+         </div>
+
+         ##%>

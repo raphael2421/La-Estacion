@@ -1,0 +1,55 @@
+@charset "UTF-8";
+
+.ubicacion_head{
+   margin: 40px auto;
+   width: 100%;
+}
+.ubicacion_head > h3{
+   margin: 0;
+   padding: 0;
+    font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.88;
+  letter-spacing: 3.2px;
+  text-align: center;
+  color: var(--FontDark);
+  font-family: 'Brygada 1918', serif;
+  text-transform: uppercase;
+}
+.ubicacion_head > h2{
+   margin: 0;
+   padding: 0;
+     font-size: 27px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.11;
+  letter-spacing: 5.4px;
+  text-align: center;
+  color: var(--FontDark);
+  font-family: 'Brygada 1918', serif;
+  text-transform: uppercase;
+}
+
+
+.privacidad_text{
+   max-width: 960px;
+   margin: 0 auto;
+   padding: 0 26px;
+}
+.privacidad_text > p{
+   font-size: 16px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.25;
+  letter-spacing: normal;
+  text-align: justify;
+  font-family: 'Encode Sans', sans-serif;
+}
+
+.container{
+  padding-bottom: 50px;
+}

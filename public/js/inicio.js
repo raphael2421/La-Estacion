@@ -60,7 +60,7 @@ function go_left() {
    if (slideN < 0) {
       slideN = slidesContent.length - 1;
    }
-   if (window.innerWidth > 1370) {
+   if (window.innerWidth >= 1280) {
       let width = window.innerWidth - 17;      
       slides_container.style.transform = `translate(-${width * slideN}px)`;
    } else{
@@ -77,7 +77,7 @@ function go_right() {
    if (slideN > slidesContent.length - 1) {
       slideN = 0;
    }
-   if (window.innerWidth > 1370) {
+   if (window.innerWidth >= 1280) {
       let width = window.innerWidth - 17;
       slides_container.style.transform = `translate(-${width * slideN}px)`;
    } else{

@@ -1,4 +1,7 @@
 @charset "UTF-8";
+.container{
+  padding-bottom: 10px;
+}
 
 .ubicacion_head{
    margin: 40px auto;
@@ -36,16 +39,67 @@
 
 .mapa_border{
    border: 2px solid var(--FontDark);
+   margin: 30px;
+   max-height: calc(100vh - 88px);
+   overflow: hidden;
+}
+.mapa_border > article{
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
 }
 /********** pinch and zoom ***********/
 #scale-element {
   display: block;
   max-width: 100%;
-  margin: 1rem auto;
+  margin: 0 auto;
   touch-action: none;
 }
 
 #scale-element.reset {
   transition: -webkit-transform 0.3s ease-in-out;
   transition: transform 0.3s ease-in-out;
+}
+
+/************ Draggable *****************/
+#drag-1, #drag-2 {
+  width: 250%;
+  /* min-height: 6.5em; */
+  /* margin: 1rem 0 0 1rem; */
+  /* background-color: #29e; */
+  /* color: white; */
+  /* border-radius: 0.75em; */
+  /* padding: 4%; */
+  touch-action: none;
+  user-select: none;
+  -webkit-transform: translate(-50px, -130px);
+  transform: translate(-50px, -130px)
+}
+
+
+/********* Media Query On screens that are 600px or more ************/
+@media screen and (min-width: 600px) {
+  .mapa_border{
+    max-width: 600px;
+    max-height: 600px;
+    margin: 0 auto;
+  }
+  #drag-1, #drag-2 {
+    width: 200%;
+    /* min-height: 6.5em; */
+    /* margin: 1rem 0 0 1rem; */
+    /* background-color: #29e; */
+    /* color: white; */
+    /* border-radius: 0.75em; */
+    /* padding: 4%; */
+    touch-action: none;
+    user-select: none;
+    -webkit-transform: translate(-30px, -360px);
+    transform: translate(-30px, -360px);
+  }
+
+}
+/********* Media Query On screens that are 992px or more ************/
+@media screen and (min-width: 992px) {
+
 }
