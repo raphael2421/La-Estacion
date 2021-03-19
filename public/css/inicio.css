@@ -112,8 +112,8 @@
    height: 274px;
 }
 .contacto_bottom > img{
-   width: 64px;
-   height: 79px;
+   width: 54px;
+   height: 69px;
    margin: 0 auto;
 }
 .contacto_bottom > p {
@@ -128,7 +128,7 @@
 }
 .contacto_bottom > h1{
    font-family: 'Encode Sans', sans-serif;
-   font-size: 40px;
+   font-size: 25px;
   font-weight: 500;
   font-stretch: normal;
   font-style: normal;

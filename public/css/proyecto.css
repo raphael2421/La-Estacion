@@ -4,14 +4,24 @@ footer{
 }
 .proyecto_head{
    background-color: var(--Primary);
-   padding: 85px 38px;
-   text-align: center;
+   padding: 10px;
+}
+.proyecto_head > p{
    font-family: 'Brygada 1918', serif;
-   font-size: xx-large;
    color: #ffffff;
+   font-size: 63px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 61px;
+  letter-spacing: -3.78px;
+  text-align: center;
 }
 .text-accent{
    color: var(--Secondary);
+}
+.text-small{
+   font-size: 46px;
 }
 
 .proyecto_middle{
@@ -208,7 +218,10 @@ footer{
    letter-spacing: -1.1px;
    text-align: center;
    color: #c5bba9;
+   width: 320px;
+   margin: 0 auto;
 }
+/*media query 800px width*/
 .modelos_amenidades >ul{
    margin: 0;
    padding: 0;

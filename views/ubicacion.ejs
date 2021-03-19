@@ -1,0 +1,21 @@
+<%- include('template-parts/header') %>
+<script src="../js/interact.min.js"></script>
+   <link rel="stylesheet" href="../css/ubicacion.css">
+
+   <main class="container">
+      <section class="ubicacion_head">
+         <h3>UBICACIÓN</h3>
+         <h2>PRIVILEGIADA</h2>
+      </section>
+      <section class="mapa_border">
+         <!-- enable javascript to view a demo -->
+         <div id="gesture-area">
+            <img src="../media/ubicacion/mapa.svg" alt="sample image" id="scale-element">
+         </div>
+      </section>
+   </main>
+
+<%- include('template-parts/footer') %>
+
+<script src="../js/ubicacion.js"></script>
+<%- include('template-parts/scripts') %>
