@@ -35,13 +35,28 @@ links_menu.forEach((i, ï, ä)=>{
 });
 
 
-function fecha() {
-   utc = new Date();
-   toLocal = new Date(utc.setHours(utc.getHours() - 6));
-   return toLocal.toISOString().slice(0, 19);
-}
-console.log(fecha());
 
-if ('time') {
-   // tel_icon.classList.add('hidden');
+// console.log(Intl.DateTimeFormat().resolvedOptions().timeZone)
+
+/*
+const date = new Date();
+// const dtf = new Intl.DateTimeFormat('es-MX', { hour: 'numeric', minute: 'numeric', second: 'numeric', timeZone: 'America/Mexico_City' });
+const dtf = new Intl.DateTimeFormat('es-MX', { timeZone: 'America/Mexico_City' });
+// console.log(dtf.format(date));
+
+///////////////////////
+const horario_cerrado = document.getElementById('horario_cerrado');
+const horario_abierto = document.getElementById('horario_abierto');
+const closed = new Date(horario_cerrado.value);
+const open = new Date(horario_abierto.value);
+
+console.log(dtf.format(open));
+console.log(dtf.format(closed));
+console.log(dtf.format(date));
+
+if ((dtf.format(date) > dtf.format(open) && dtf.format(date) < dtf.format(closed))) {   
+   console.log('abierto');
+   tel_icon.classList.remove('hidden');
 }
+
+*/

@@ -43,8 +43,7 @@
    max-height: calc(100vh - 88px);
    overflow: hidden;
 }
-.mapa_border > article{
-  overflow: hidden;
+.mapa_border > article{  
   width: 100%;
   height: 100%;
 }

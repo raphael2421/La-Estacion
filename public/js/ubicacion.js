@@ -1,19 +1,36 @@
+// js esversion: 2018
 
-/*
+let drag1 = document.querySelector('#drag-1');
+const mapa_border = document.querySelector('.mapa_border');
+
 var angleScale = {
    angle: 0,
    scale: 1
 }
-var gestureArea = document.getElementById('gesture-area')
-var scaleElement = document.getElementById('scale-element')
+var gestureArea = document.querySelector('.gesture-area')
+var scaleElement = document.querySelector('.scale-element')
 var resetTimeout
 
 ////////////////////////////////////
 function dragMoveListener(event) {
-   var target = event.target,
-      // keep the dragged position in the data-x/data-y attributes
-      x = (parseFloat(target.getAttribute('data-x')) || 0) + event.dx,
-      y = (parseFloat(target.getAttribute('data-y')) || 0) + event.dy;
+   var target = event.target
+   // keep the dragged position in the data-x/data-y attributes
+   let x = (parseFloat(target.getAttribute('data-x')) || 0) + event.dx
+   if (x >= 0) {
+      x = 0
+   }
+   if (x <= -drag1.offsetWidth + mapa_border.offsetWidth) {
+      x = -drag1.offsetWidth + mapa_border.offsetWidth;
+   }
+
+   let y = (parseFloat(target.getAttribute('data-y')) || 0) + event.dy
+   if (y >= 0) {
+      y = 0
+   }
+   if (y <= -drag1.offsetHeight + mapa_border.offsetHeight) {
+      // console.log(-mapa_border.offsetHeight +22);
+      y = -drag1.offsetHeight + mapa_border.offsetHeight;
+   }
 
    // translate the element
    target.style.webkitTransform =
@@ -42,7 +59,7 @@ interact(gestureArea)
 
             scaleElement.style.webkitTransform =
                scaleElement.style.transform =
-               'rotate(' + currentAngle + 'deg)' + 'scale(' + currentScale + ')'
+               'scale(' + currentScale + ')'
 
             // uses the dragMoveListener from the draggable demo above
             dragMoveListener(event)
@@ -50,6 +67,7 @@ interact(gestureArea)
          end(event) {
             angleScale.angle = angleScale.angle + event.angle
             angleScale.scale = angleScale.scale * event.scale
+            drag1 = document.querySelector('#drag-1');
 
             // resetTimeout = setTimeout(reset, 1000)
             // scaleElement.classList.add('reset')
@@ -69,14 +87,13 @@ function reset() {
    angleScale.scale = 1
 }
 
-*/
+
 
 
 
 ///////////////////////////////////
 
-const drag1 = document.querySelector('.draggable');
-const mapa_border = document.querySelector('.mapa_border');
+/* 
 
 // target elements with the "draggable" class
 interact('.draggable')
@@ -115,20 +132,21 @@ function dragMoveListener(event) {
    // console.log(drag1.offsetWidth);
    var target = event.target
    // keep the dragged position in the data-x/data-y attributes
-   var x = (parseFloat(target.getAttribute('data-x')) || 0) + event.dx
+   let x = (parseFloat(target.getAttribute('data-x')) || 0) + event.dx
    if (x >= 0 ) {
       x = 0
    }
-   if (x <= -mapa_border.offsetWidth) {
-      x = -mapa_border.offsetWidth +8;
+   if (x <= -drag1.offsetWidth + mapa_border.offsetWidth) {
+      x = -drag1.offsetWidth + mapa_border.offsetWidth;
    }
-   var y = (parseFloat(target.getAttribute('data-y')) || 0) + event.dy
+
+   let y = (parseFloat(target.getAttribute('data-y')) || 0) + event.dy
    if (y >= 0) {
       y = 0
    }
-   if (y <= -mapa_border.offsetHeight) {
+   if (y <= -drag1.offsetHeight + mapa_border.offsetHeight) {
       // console.log(-mapa_border.offsetHeight +22);
-      y = -mapa_border.offsetHeight +22;
+      y = -drag1.offsetHeight + mapa_border.offsetHeight;
    }
 
    // translate the element
@@ -160,3 +178,5 @@ if (window.innerWidth >= 600) {
    drag1.setAttribute('data-x', -50)
    drag1.setAttribute('data-y', -130)
 }
+
+*/
