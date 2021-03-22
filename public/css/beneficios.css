@@ -1,24 +1,36 @@
 @charset "UTF-8";
 
 .container{
-   max-width: 1200px;
+   max-width: 1438px;
    margin: 0 auto;
 }
 .beneficios_head {
    margin-top: 44px;
-   margin-bottom: 50px;
+   margin-bottom: 50px;   
 }
 .beneficios_head > p{
    font-family: 'Brygada 1918', serif;
    color: var(--FontDark);
-   line-height: 1.88;
   letter-spacing: 3.2px;
-  text-align: center;
-  max-width: 274px;
+  text-align: center;  
   margin: 0 auto;
   letter-spacing: -0.83px;  
+  max-width: 274px;
 }
-
+.beneficios_title{
+   font-size: 16px !important; 
+   letter-spacing: 3.2px !important;
+}
+.beneficios_subtitle{
+   font-size: 27px !important; 
+   letter-spacing: 5.4px !important;
+}
+.beneficios_slogan{
+   font-size: 27px !important; 
+   font-weight: bold !important; 
+   line-height: 1.09 !important;
+   margin-top: 50px !important;
+}
 /*******************************/
 .blog_post{
    position: relative;
@@ -69,6 +81,7 @@
    height: calc(100vh - 44px);
    object-fit: cover;
    text-align: center;
+   object-position: 50% 50%; /* even if we dont declare this the image will still be centered */
 }
 .blog_text{
    margin: 50px 26px;
@@ -92,3 +105,58 @@
 
 /** Media query **/
 
+/********* Media Query On screens that are 600px or more ************/
+@media screen and (min-width: 600px) {
+   .beneficios_head {
+    margin-top: 205px;
+    margin-bottom: 130px;
+}
+   .beneficios_head > p{
+      max-width: 1438px ;
+   }
+   .beneficios_title{
+      font-size: 45px !important;
+      margin: 0;
+      padding: 0;
+      letter-spacing: 9.5px;
+      padding-bottom: 23px;
+   }
+   .beneficios_subtitle{
+      font-size: 72px !important;
+      margin: 0;
+      padding: 0;
+      padding-bottom: 102px;
+      letter-spacing: 16px;
+   }
+   .beneficios_slogan{
+      font-size: 72px !important;
+      margin: 0;
+      padding: 0;
+      letter-spacing: -2.4px;
+      text-align: left !important;
+   }
+
+   /******/
+   .blog_head{
+      display: grid;
+      justify-items: center;
+   }
+   .blog_img_left{
+      width: 100%;
+      max-width: 1024px;
+      height: 100vw;
+      max-height: 480px;
+      object-fit: cover;
+      object-position: 50% 50%; /* even if we dont declare this the image will still be centered */   
+   }
+   .blog_img_right{
+      width: 100%;
+      max-width: 1024px;
+      height: calc(100vh - 44px);
+      max-height: 480px;
+      object-fit: cover;
+      text-align: center;
+      object-position: 50% 50%; /* even if we dont declare this the image will still be centered */   
+   }
+
+} /*600px*/

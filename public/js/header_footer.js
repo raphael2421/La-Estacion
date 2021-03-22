@@ -38,10 +38,10 @@ links_menu.forEach((i, ï, ä)=>{
 
 // console.log(Intl.DateTimeFormat().resolvedOptions().timeZone)
 
-/*
+
 const date = new Date();
-// const dtf = new Intl.DateTimeFormat('es-MX', { hour: 'numeric', minute: 'numeric', second: 'numeric', timeZone: 'America/Mexico_City' });
-const dtf = new Intl.DateTimeFormat('es-MX', { timeZone: 'America/Mexico_City' });
+const dtf = new Intl.DateTimeFormat('es-MX', { hour: 'numeric', minute: 'numeric', second: 'numeric', timeZone: 'America/Mexico_City' });
+// const dtf = new Intl.DateTimeFormat('es-MX', { timeZone: 'America/Mexico_City' });
 // console.log(dtf.format(date));
 
 ///////////////////////
@@ -58,5 +58,3 @@ if ((dtf.format(date) > dtf.format(open) && dtf.format(date) < dtf.format(closed
    console.log('abierto');
    tel_icon.classList.remove('hidden');
 }
-
-*/
