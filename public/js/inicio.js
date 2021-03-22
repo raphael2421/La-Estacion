@@ -111,7 +111,7 @@ let finalCoordsY = 0;
 document.addEventListener('touchstart', function (e) {
    e.preventDefault();
    document.querySelectorAll('.slide_header_txt').forEach((i, ï, ä) => {
-      i.innerText = e.touches[0].clientY;
+      i.innerText = 'Y:' + Math.floor(e.touches[0].clientY) + ' X:' + Math.floor(e.touches[0].clientX);
    });
    if (e.target.classList.contains('swipe')) {
       e.preventDefault();
@@ -125,7 +125,7 @@ document.addEventListener('touchstart', function (e) {
 
 document.addEventListener('touchmove', function (e) {
    document.querySelectorAll('.slide_header_txt').forEach((i, ï, ä)=>{
-      i.innerText = e.touches[0].clientY;
+      i.innerText = 'Y:' + Math.floor(e.touches[0].clientY) + ' X:' + Math.floor(e.touches[0].clientX);
    });
    if (e.target.classList.contains('swipe')) {
       e.preventDefault();
