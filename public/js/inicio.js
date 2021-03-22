@@ -11,30 +11,40 @@ const slide_img = document.querySelector('.slide_img');
 
 const slidesContent = [
    {
-      title: 'proyecto',
-      small: 'slide0.jpg',
-      large: 'slide0-XL.jpg'
+      title: '',
+      small: 'proyecto.jpg',
+      large: 'proyecto-XL.jpg'
    },
    {
-      title: 'alberca',
-      small: 'slide1.jpg',
-      large: 'slide1-XL.jpg'
+      title: '',
+      small: 'departamento.jpg',
+      large: 'departamento-XL.jpg'
    },
    {
-      title: 'salón de juegos',
-      small: 'slide2.jpg',
-      large: 'slide2-XL.jpg'
+      title: '',
+      small: 'experiencias.jpg',
+      large: 'experiencias-XL.jpg'
    },
    {
-      title: 'experiencias',
-      small: 'slide3.jpg',
-      large: 'slide3-XL.jpg'
+      title: '',
+      small: 'rooftop.jpg',
+      large: 'rooftop-XL.jpg'
    },
    {
-      title: 'rooftop',
-      small: 'slide4.jpg',
-      large: 'slide4-XL.jpg'
-   }
+      title: '',
+      small: 'alberca.jpg',
+      large: 'alberca-XL.jpg'
+   },
+   {
+      title: '',
+      small: 'bar.jpg',
+      large: 'bar-XL.jpg'
+   },
+   {
+      title: '',
+      small: 'salon-de-juegos.jpg',
+      large: 'salon-de-juegos-XL.jpg'
+   },
 ]
 
 // IDEA:
@@ -47,7 +57,7 @@ slidesContent.forEach((i, ï, ä)=>{
          <div class="slide_header">
             <p class="slide_header_txt"> ${i.title} </p>
          </div>
-         <img class="slide_img" src="../media/${window.innerWidth >= 600 ? i.large : i.small}" alt="${i.title}">
+         <img class="slide_img swipe" src="../media/slider-inicio/${window.innerWidth >= 600 ? i.large : i.small}" alt="${i.title}">
       </div>
    `;
 });
@@ -87,33 +97,57 @@ function go_right() {
 
 /********************** Touch Move ***************************/
 /// IDEA
-// let initialCoords let finalCoords
-// on touch start get and set initialCoords
-// on touch move  update finalCoords
+// let initialCoordsX let finalCoordsX
+// on touch start get and set initialCoordsX
+// on touch move  update finalCoordsX
 // on touch end compare initial and final coords
 // decide where to go
-let initialCoords = 0;
-let finalCoords = 0;
+let initialCoordsX = 0;
+let finalCoordsX = 0;
 
-slides_container.addEventListener('touchstart', function (e) {
-   initialCoords = e.touches[0].clientX;
-   // console.log(initialCoords);
+let initialCoordsY = 0;
+let finalCoordsY = 0;
+
+document.addEventListener('touchstart', function (e) {
+   e.preventDefault();
+   document.querySelectorAll('.slide_header_txt').forEach((i, ï, ä) => {
+      i.innerText = e.touches[0].clientY;
+   });
+   if (e.target.classList.contains('swipe')) {
+      e.preventDefault();
+      e.stopPropagation();
+      initialCoordsX = e.touches[0].clientX;
+      initialCoordsY = e.touches[0].clientY;  
+   }
+   
+   // console.log(initialCoordsX);
 });
 
-slides_container.addEventListener('touchmove', function (e) {
-   finalCoords = e.touches[0].clientX;
-   // console.log(finalCoords);
+document.addEventListener('touchmove', function (e) {
+   document.querySelectorAll('.slide_header_txt').forEach((i, ï, ä)=>{
+      i.innerText = e.touches[0].clientY;
+   });
+   if (e.target.classList.contains('swipe')) {
+      e.preventDefault();
+      e.stopPropagation();
+   finalCoordsX = e.touches[0].clientX;
+   finalCoordsY = e.touches[0].clientY;
+   // console.log(finalCoordsX);
+   }
 });
 
-slides_container.addEventListener('touchend', function (e) {
-   if (finalCoords < initialCoords -50) {
+document.addEventListener('touchend', function (e) {
+   if (finalCoordsY < initialCoordsY - 60) {
+      return true;
+   }
+   if (finalCoordsY > initialCoordsY + 60) {
+      return true;
+   }
+   if (finalCoordsX < initialCoordsX -30) {
       go_right();
    }
-   else if (finalCoords > initialCoords +50) {
+   if (finalCoordsX > initialCoordsX +30) {
       go_left();
-   }
-   else{
-      e.preventDefault();
    }
 });
 

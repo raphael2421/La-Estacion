@@ -1,4 +1,7 @@
 @charset "UTF-8";
+.container{
+   padding-bottom: 85px;
+}
 footer{
    visibility: hidden;
 }
@@ -133,7 +136,7 @@ footer{
 /***************************/
 .modelos_tipo{
   display: grid;
-  grid-template-rows: 20px 37px;  
+  grid-template-rows: 50px 37px;  
   grid-gap: 10px;
   gap: 10px;
   justify-items: center;
@@ -180,6 +183,7 @@ footer{
    grid-template-rows: 68px 55px 1fr 180px 1fr;
    grid-gap: 30px;
    gap: 30px;
+   padding-bottom: 80px;
 }
 .render_title{
    color: var(--Secondary);

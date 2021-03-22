@@ -31,13 +31,13 @@ slides_container.setAttribute('style', `grid-template-columns: repeat(${slidesCo
 slidesContent.forEach((i, ï, ä) => {
    slides_container.innerHTML += `
       <div class="slide">
-         <img src="../media/slider-proyecto/${window.innerWidth >= 600 ? i.large : i.small}" alt="" class="modelos_img ${i.title}">
+         <img src="../media/slider-proyecto/${window.innerWidth >= 600 ? i.large : i.small}" alt="" class="modelos_img">
           <div class="modelos_title ${i.title}">
                   ${i.title}
             </div>
          <div class="modelos_tipo">
-            <p>Residencia <strong>${i.type}</strong></p>
-            <p class="m2">${i.mts}m<sup>2</sup></p>
+            <p ><b class="${i.title}">Ver distribución</b></p>
+            <p class="m2 ${i.title}">${i.mts}m<sup>2</sup></p>
          </div>
       </div>
    `;

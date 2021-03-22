@@ -10,13 +10,13 @@ const blogContent = [
             ciudades más atractivas para
             invertir en bienes raíces ya
             que ha brindado mayor
-            plusvalía a través de los años.  <b>Hoy en día, el porcentaje
+            plusvalía a través de los años. <br> <b>Hoy en día, el porcentaje
             de plusvalía ronda
             en un 11% anual.</b>`,
       content: ''
    },
    {
-      title: `San Miguel
+      title: `San Miguel <br>
                de Allende`,
       img: 'landscapes-1426130.png',
       imgxl: '',
@@ -28,16 +28,14 @@ nacional y extranjera.`,
       content: ''
    },
    {
-      title: `Nombrada la mejor
-ciudad pequeña
-del mundo.`,
+      title: `Nombrada <b>la mejor <br>
+ciudad pequeña</b> <br>
+del mundo <br>
+para vivir.`,
       img: 'litsie-gonzalez-m-ei-f-cggi-7-e-unsplash.png',
       imgxl: '',
-      text: `San Miguel de Allende
-se convirtió en el primer lugar turístico sin playa de América Latina en recibir el <b>Sello de
-Viaje seguro (TSS) por parte
-del Consejo Mundial de
-Viajes y Turismo (WTTC)</b>`,
+      text: `San Miguel de Allende <br>
+se convirtió en <b>el primer lugar turístico sin playa</b> de América Latina en recibir el Sello de Viaje seguro (TSS) por parte del Consejo Mundial de Viajes y Turismo (WTTC)`,
       content: ''
    },
    {
@@ -53,16 +51,15 @@ contemporaneidad y tradición.`,
       content: ''
    },
    {
-      title: `Nombrada la mejor
-ciudad pequeña
-del mundo.`,
+      title: `San Miguel de Allende <br> Patrimonio de la
+humanidad.`,
       img: 'kazuend-2-kx-eb-8-g-5-vo-unsplash.png',
       imgxl: '',
       text: `Ciudad representativa
 en todo su esplendor de
 la cultura mexicana,
-<b>nombrada por la UNESCO,
-Patrimonio de la Humanidad.</b>`,
+nombrada por la <b>UNESCO,</b>
+Patrimonio de la Humanidad.`,
       content: ''
    },
 ];

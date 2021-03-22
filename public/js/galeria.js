@@ -120,10 +120,10 @@ blackBox.addEventListener('touchmove', function (e) {
 });
 
 blackBox.addEventListener('touchend', function (e) {
-   if (finalCoords < initialCoords - 50) {
+   if (finalCoords < initialCoords - 30) {
       go_right();
    }
-   else if (finalCoords > initialCoords + 50) {
+   else if (finalCoords > initialCoords + 30) {
       go_left();
    }
    else {

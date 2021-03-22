@@ -52,7 +52,7 @@
   letter-spacing: -0.83px;
   text-align: left;
   color: #ffffff;
-  max-width: 169px;
+  
 }
 .blog_title_right{
    position: absolute;
@@ -66,9 +66,9 @@
   font-style: normal;
   line-height: 1.09;
   letter-spacing: -0.83px;
-  text-align: left;
+  text-align: right;
   color: #ffffff;
-  max-width: 169px;
+  
 }
 .blog_img_left{
    width: 100%;

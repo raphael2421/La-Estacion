@@ -35,7 +35,7 @@
    width: 18px;
    top: calc(50% - 60px);
    left: 26px;
-   z-index: 10;
+   z-index: 100;
    transform: rotate(180deg);
    cursor: pointer;
 }
@@ -45,7 +45,7 @@
    width: 18px;
    top: calc(50% - 60px);
    right: 26px;
-   z-index: 10;
+   z-index: 100;
    cursor: pointer;
 }
 /*******************************************************/
@@ -162,6 +162,12 @@
   max-width: 960px;
   margin: 0 auto;
 }
+.legales_content > a{
+   text-decoration: none;
+   color: var(--FontLight);
+   font-weight: bold;
+}
+
 .legales_subcontent{
   background-color: var(--FontDark);
   width: 100%;
@@ -179,11 +185,7 @@
   max-width: 960px;
   margin: 0 auto;
 }
-.legales_subcontent > a{
-   text-decoration: none;
-   color: var(--FontLight);
-   font-weight: bold;
-}
+
 /********* Media Query On screens that are 600px or more ************/
 @media screen and (min-width: 600px) {
    .slide_header{
