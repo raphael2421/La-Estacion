@@ -70,7 +70,7 @@ function go_left() {
    if (slideN < 0) {
       slideN = slidesContent.length - 1;
    }
-   if (window.innerWidth >= 1280) {
+   if (window.innerWidth >= 1250) {
       let width = window.innerWidth - 17;      
       slides_container.style.transform = `translate(-${width * slideN}px)`;
    } else{
@@ -87,7 +87,7 @@ function go_right() {
    if (slideN > slidesContent.length - 1) {
       slideN = 0;
    }
-   if (window.innerWidth >= 1280) {
+   if (window.innerWidth >= 1250) {
       let width = window.innerWidth - 17;
       slides_container.style.transform = `translate(-${width * slideN}px)`;
    } else{
@@ -114,7 +114,6 @@ document.addEventListener('touchstart', function (e) {
       i.innerText = 'Y:' + Math.floor(e.touches[0].clientY) + ' X:' + Math.floor(e.touches[0].clientX);
    });
    if (e.target.classList.contains('swipe')) {
-      e.preventDefault();
       e.stopPropagation();
       initialCoordsX = e.touches[0].clientX;
       initialCoordsY = e.touches[0].clientY;  
@@ -127,8 +126,7 @@ document.addEventListener('touchmove', function (e) {
    document.querySelectorAll('.slide_header_txt').forEach((i, ï, ä)=>{
       i.innerText = 'Y:' + Math.floor(e.touches[0].clientY) + ' X:' + Math.floor(e.touches[0].clientX);
    });
-   if (e.target.classList.contains('swipe')) {
-      e.preventDefault();
+   if (e.target.classList.contains('swipe')) {      
       e.stopPropagation();
    finalCoordsX = e.touches[0].clientX;
    finalCoordsY = e.touches[0].clientY;
@@ -137,17 +135,14 @@ document.addEventListener('touchmove', function (e) {
 });
 
 document.addEventListener('touchend', function (e) {
-   if (finalCoordsY < initialCoordsY - 60) {
-      return true;
-   }
-   if (finalCoordsY > initialCoordsY + 60) {
-      return true;
-   }
-   if (finalCoordsX < initialCoordsX -30) {
+   if ((finalCoordsX < initialCoordsX - 30) && (finalCoordsY > initialCoordsY - 30)) {
       go_right();
    }
-   if (finalCoordsX > initialCoordsX +30) {
+   if ((finalCoordsX > initialCoordsX + 30) && (finalCoordsY < initialCoordsY + 30)) {
       go_left();
    }
 });
 
+document.body.addEventListener('touchmove', function (event) {
+   event.preventDefault();
+}, false);
