@@ -62,7 +62,7 @@
 
 /************ Draggable *****************/
 #drag-1, #drag-2 {
-  width: 250%;
+  /* width: 250%; */
   /* min-height: 6.5em; */
   /* margin: 1rem 0 0 1rem; */
   /* background-color: #29e; */
@@ -71,10 +71,12 @@
   /* padding: 4%; */
   touch-action: none;
   user-select: none;
-  -webkit-transform: translate(-50px, -130px);
-  transform: translate(-50px, -130px)
+  /* -webkit-transform: translate(-50px, -130px); */
+  /* transform: translate(-50px, -130px) */
 }
-
+.gesture-area{
+  box-sizing: border-box;
+}
 
 /********* Media Query On screens that are 600px or more ************/
 @media screen and (min-width: 600px) {
@@ -82,9 +84,10 @@
     max-width: 600px;
     max-height: 600px;
     margin: 0 auto;
+    box-sizing: border-box;
   }
   #drag-1, #drag-2 {
-    width: 200%;
+    width: 2000px;
     /* min-height: 6.5em; */
     /* margin: 1rem 0 0 1rem; */
     /* background-color: #29e; */
@@ -93,8 +96,8 @@
     /* padding: 4%; */
     touch-action: none;
     user-select: none;
-    -webkit-transform: translate(-30px, -360px);
-    transform: translate(-30px, -360px);
+    /* -webkit-transform: translate(-30px, -360px);
+    transform: translate(-30px, -360px); */
   }
 
 }

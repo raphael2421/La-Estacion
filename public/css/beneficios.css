@@ -160,3 +160,24 @@
    }
 
 } /*600px*/
+
+@media screen and (min-width: 992px) {
+   .blog_title_right{
+      right: 16%;
+      font-size: 50.5px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1;
+      letter-spacing: -1.52px;
+   }
+   .blog_title_left{
+      left: 16%;
+      font-size: 50.5px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1;
+      letter-spacing: -1.52px;
+   }
+} /**/

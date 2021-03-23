@@ -8,19 +8,10 @@ footer{
 .proyecto_head{
    background-color: var(--Primary);
    padding: 10px;
-}
-.proyecto_head > p{
    font-family: 'Brygada 1918', serif;
    color: #ffffff;
-   font-size: 63px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 61px;
-  letter-spacing: -3.78px;
-  text-align: center;
 }
-.text-accent{
+.sma_accent{
    color: var(--Secondary);
 }
 .text-small{
@@ -35,8 +26,9 @@ footer{
    height: 547px;
    padding-top: 78px;
 }
+.proyecto_head_desktop{display: none;}
 
-.proyecto_middle > p {
+.sma_subtext {
    text-align: center;
    font-family: 'Encode Sans', sans-serif;
    font-size: 16px;
@@ -69,6 +61,9 @@ footer{
   line-height: 1.11;
   letter-spacing: 5.4px;
   color: var(--FontDark);
+}
+.proyecto_banner > h1{
+   font-size: 27px;
 }
 
 /***************************/
@@ -257,3 +252,98 @@ footer{
    transform: translateY(-5px);
 }
 
+
+
+/********* Media Query On screens that are 992px or more ************/
+@media screen and (min-width: 992px) {
+   body{
+      background: var(--Primary);
+      background: linear-gradient(180deg, var(--Primary) 518px, rgba(255,255,255,1) 518px);
+   }
+
+   .proyecto_head{
+      display: none;
+   }
+   .proyecto_head_desktop{
+      display: inherit;
+      font-family: 'Brygada 1918', serif;
+      color: #ffffff;
+   }
+   .sma_top{
+      font-size: 90px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: -5.4px;
+      text-align: left;
+   }
+   .sma_middle{
+      font-size: 55.5px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: -3.33px;
+      text-align: left;
+   }
+   .sma_bottom{
+      font-size: 90px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: -5.4px;
+      text-align: left;
+   }
+   .sma_subtext{
+      font-size: 24px;
+      font-weight: 300;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.25;
+      letter-spacing: normal;
+      text-align: right;
+   }
+
+   .proyecto_middle{
+      height: 1167px;
+      padding: 75px 240px;
+      box-sizing: border-box;
+   }
+
+   .proyecto_banner{
+      grid-gap: 18px;
+      gap: 18px;
+      margin: 50px 0 100px 0;
+   }
+   .proyecto_banner > h3{
+      font-size: 20.5px;
+   }
+   .proyecto_banner > h1{
+      font-size: 44.5px;
+   }
+
+   /************/
+   .proyecto_modelos{
+      
+   }
+
+   /****************/
+   .container {
+    background-color: #fff;
+    width: auto;
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 100px;
+    margin: 0 240px;
+    box-sizing: content-box;
+   }
+   footer {
+    visibility: inherit;
+   }
+} /**/
+
+
+
+ 

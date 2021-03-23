@@ -126,7 +126,7 @@ document.addEventListener('touchmove', function (e) {
    document.querySelectorAll('.slide_header_txt').forEach((i, ï, ä)=>{
       i.innerText = 'Y:' + Math.floor(e.touches[0].clientY) + ' X:' + Math.floor(e.touches[0].clientX);
    });
-   if (e.target.classList.contains('swipe')) {      
+   if (e.target.classList.contains('swipe')) {
       e.stopPropagation();
    finalCoordsX = e.touches[0].clientX;
    finalCoordsY = e.touches[0].clientY;
