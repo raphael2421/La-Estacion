@@ -15,8 +15,8 @@
     <div class="contacto_top">
        <p>síguenos en</p>
        <div class="contacto_icons">
-         <img src="../media/instagram-icon.png" alt=""> 
-         <img src="../media/facebook-icon.png" alt="">
+        <a href="https://www.instagram.com/laestacionresidence"><img src="../media/instagram-icon.png" alt=""></a>
+        <a href="https://www.facebook.com/LaEstacionResidence"><img src="../media/facebook-icon.png" alt=""></a>
        </div>
     </div>
     <div class="contacto_banner">
@@ -32,6 +32,38 @@
        <h1>
          462 120 6579
        </h1>
+    </div>
+    <div class="forma_container">
+       <form id="contacto_forma" class="contacto_forma" action="/" method="post">
+         <input id="fc_nombre" type="text" name="fc_nombre" placeholder="Nombre" />
+         <input id="fc_telefono" type="text" name="fc_telefono" placeholder="Teléfono" />
+         <input id="fc_email" type="text" name="fc_email" placeholder="Email" />
+         <select name="fc_via_comunicacion" id="fc_via_comunicacion">
+            <option selected="selected" disabled>¿Como prefiere ser contactado?</option>
+            <option value="Llamada">Llamada</option>
+            <option value="Whatsapp">Whatsapp</option>
+            <option value="Telegram">Telegram</option>
+            <option value="Email">Email</option>
+         </select>
+         <select name="fc_horario" id="fc_horario">
+            <option selected="selected" disabled>Horaios de atención (México Centro)</option>
+            <option value="9am - 10am">9am - 10am</option>
+            <option value="10am - 11am">10am - 11am</option>
+            <option value="11am - 12pm">11am - 12pm</option>
+            <option value="12pm - 1pm">12pm - 1pm</option>
+            <option value="1pm - 2pm">1pm - 2pm</option>
+            <option value="2pm - 3pm">2pm - 3pm</option>
+            <option value="3pm - 4pm">3pm - 4pm</option>
+            <option value="4pm - 5pm">4pm - 5pm</option>
+            <option value="5pm - 6pm">5pm - 6pm</option>
+            <option value="6pm - 7pm">6pm - 7pm</option>
+            <option value="7pm - 8pm">7pm - 8pm</option>
+            <option value="8pm - 9pm">8pm - 9pm</option>
+         </select>
+         <div>
+            <input id="fc_btn_enviar" type="submit" value="enviar">
+         </div>
+       </form>
     </div>
  </div> <!--contacto_container-->
  <div class="legales_container">

@@ -40,7 +40,7 @@
 .mapa_border{
    border: 2px solid var(--FontDark);
    margin: 30px;
-   max-height: calc(100vh - 88px);
+   height: 400px;
    overflow: hidden;
 }
 .mapa_border > article{  
@@ -62,7 +62,7 @@
 
 /************ Draggable *****************/
 #drag-1, #drag-2 {
-  /* width: 250%; */
+  width: 1000px;
   /* min-height: 6.5em; */
   /* margin: 1rem 0 0 1rem; */
   /* background-color: #29e; */

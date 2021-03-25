@@ -7,6 +7,7 @@ exports.renderUbicacion = async (req, res, next) => {
 
    res.status(200).render('ubicacion', {
       path: 'ubicacion',
+      page: 'ubicación',
       fechaMX: await fechaMX(),
    });
    

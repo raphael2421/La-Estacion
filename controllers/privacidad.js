@@ -7,6 +7,7 @@ exports.renderPrivacidad = async (req, res, next) => {
    //comienza aquí
    res.status(200).render('privacidad', {
       path: 'aviso-de-privacidad',
+      page: 'aviso de privacidad',
       fechaMX: await fechaMX(),
    });
 } // renderPrivacidad end... 

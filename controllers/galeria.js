@@ -7,6 +7,7 @@ exports.renderGaleria = async (req, res, next) => {
    //comienza aquí
    res.status(200).render('galeria', {
       path: 'vive-la-estacion',
+      page: 'Galería',
       fechaMX: await fechaMX(),
    });
 } // renderGaleria end...

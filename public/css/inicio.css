@@ -19,6 +19,7 @@
    background: rgb(0,0,0), .3;
    background: linear-gradient(180deg, rgba(0,0,0,0.499019676229867) 60%, rgba(0,0,0,0) 100%);
    /* z-index: 5; */
+   visibility: hidden;
 }
 .slide_header > p{
    font-family: 'Brygada 1918', serif;
@@ -55,7 +56,7 @@
    }
 /*******************************************************/
 .contacto_container{
-   height: calc(100vh - 44px);
+   /* height: calc(100vh - 44px); */
    display: grid;
    grid-template-rows: 1fr 115px 1fr;
 }
@@ -82,7 +83,7 @@
    text-align: center;
    position: relative;
 }
-.contacto_icons > img{
+.contacto_icons > a >img{
    margin: 0 13px;
    height: 40px;
 }
@@ -136,7 +137,34 @@
   letter-spacing: 4.8px;
   text-align: center;
 }
-
+.forma_container{
+   margin: 0 auto;
+}
+.contacto_forma {
+    display: grid;
+    margin: 50px auto;
+    box-sizing: border-box;
+    padding: 40px 20px;
+    gap: 20px;
+    max-width: 360px;
+    border: 1px solid rgba(0,0,0, 0.2);
+    border-radius: 8px;
+}
+input, select {
+    font-family: 'Encode Sans', sans-serif;
+    font-size: small;
+    border: 1px solid rgba(0,0,0,.3);
+    border-radius: 5px;
+    padding: 5px;
+    color: var(--FontDark);
+}
+#fc_btn_enviar{
+   width: 100%;
+   background-color: var(--Secondary);
+   color: #fff;
+   text-transform: uppercase;
+   border: 1px solid var(--Secondary);
+}
 
 /*******************************************************************************/
 
@@ -188,6 +216,9 @@
 
 /********* Media Query On screens that are 600px or more ************/
 @media screen and (min-width: 600px) {
+   .forma_container{
+      margin: 0;
+   }
    .slide_header{
       height: 200px;
    }
