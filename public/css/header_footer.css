@@ -196,7 +196,8 @@ footer > .acento{
   }
   .header_menu > img {
     height: 26px;
-    width: 32px;    
+    width: 32px;
+    padding-bottom: 12px;
   }
   .tel_icon{
     display: none;

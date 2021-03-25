@@ -149,14 +149,32 @@ footer{
   text-align: center;
   color: var(--FontDark);
 }
-.modelos_tipo > .m2{
+.m2{
    font-size: 25px !important;
    border: 1px solid var(--FontDark);
    width: 88px;
    height: 19px;
    padding: 9px 12px;
    line-height: 0.9;
+   text-align: center;      
+   font-weight: lighter;
+   justify-self: center;
+   margin: 0;
 }
+   .precio {
+      width: 100%;      
+      object-fit: contain;
+      font-family: 'Brygada 1918', serif; 
+      font-size: 24px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 0.97;
+      letter-spacing: -2.2px;
+      text-align: left;
+      color: #de4b17;
+      margin-top: 0;
+   }
 
 /***************************/
 
@@ -168,18 +186,55 @@ footer{
    height: 100vh;
    background-color: #fff;
    transition: 0.3s;
-   z-index: 21;
-   overflow:scroll;
+   z-index: 100;
+   overflow-y: scroll;
+   overflow-x: hidden;
 }
 .modelos_popup_container{
    position: relative;
-   display: grid;
-   grid-template-columns: 100%;
-   grid-template-rows: 68px 55px 1fr 180px 1fr;
-   grid-gap: 30px;
-   gap: 30px;
-   padding-bottom: 80px;
+   display: block;
+   width: 100%;
+   margin: 0 auto;
+   margin-top: 100px;
+   grid-template-columns: 1fr;
+   grid-gap: 60px;
+   gap: 60px;
+   max-height: 100%;
+   box-sizing: border-box;
 }
+
+.popup_container_right, .popup_container_left{
+   justify-self: center;
+}
+.popup_container_left {
+   display: grid;
+   grid-gap: 50px;
+}
+.popup_container_right {
+   display: grid;
+   grid-gap: 50px;
+}
+.modelos_amenidades {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 27px;
+    gap: 27px;
+    margin: 26px;
+   margin-bottom: 80px;
+}
+   .amenidades_left, .amenidades_right{
+      display: grid;
+      grid-gap: 27px;
+      gap: 27px;
+   }
+   .amenidades_left>div, .amenidades_right>div{
+      display: grid;
+      grid-template-columns: 28px 1fr;
+      grid-gap: 30px;
+      gap: 30px;
+   }
+
+/******************/
 .render_title{
    color: var(--Secondary);
    font-family: 'Brygada 1918', serif;
@@ -193,14 +248,15 @@ footer{
    line-height: 1.6;
    letter-spacing: 6.2px;
    user-select: none;
+   max-height: 50px;
    
 }
 .close_popup{
-   align-self: flex-end;
-   justify-self: flex-end;
-   margin-right: 26px;
-   height: 44px;
-   width: 44px;
+   height: 24px;
+   width: 24px;
+   position: absolute;
+   right: 16px;
+   top: 16px;
 }
 .modelos_img_render {
    margin: 0 auto;
@@ -218,41 +274,11 @@ footer{
    text-align: center;
    color: #c5bba9;
    width: 320px;
-   margin: 0 auto;
+   margin: 50px auto 0 auto;
 }
-/*media query 800px width*/
-.modelos_amenidades >ul{
-   margin: 0;
-   padding: 0;
+.precio {
+    text-align: center;
 }
-.modelos_amenidades >ul > li{
-   list-style: none;
-   font-size: 16px;
-   font-weight: 400;
-   font-stretch: normal;
-   font-style: normal;
-   line-height: 1.13;
-   letter-spacing: normal;
-   text-align: left;
-   color: var(--FontDark);
-   font-family: 'Encode Sans', sans-serif;
-   display: grid;
-   grid-template-columns: 42px 1fr;
-   grid-gap: 25px;
-   gap: 25px;
-   margin-bottom: 34px;
-}
-.modelos_amenidades{
-   width: 247px;
-   justify-self: center;
-   align-self: center;   
-}
-.amenidades_icon {
-   display: inline-block;
-   transform: translateY(-5px);
-}
-
-
 
 /********* Media Query On screens that are 992px or more ************/
 @media screen and (min-width: 992px) {
@@ -328,6 +354,9 @@ footer{
    .proyecto_modelos{
       
    }
+   .modelos_title {    
+      top: 54px;
+   }
 
    /****************/
    .container {
@@ -342,8 +371,84 @@ footer{
    footer {
     visibility: inherit;
    }
+   /*********************/
+   .slide{
+      height: 573px;
+   }
+   .modelos_img{
+      height: 480px;
+   }
+   /*************************/
+   .modelos_popup_container{
+      display: grid;
+      width: 100%;
+      margin: 0 auto;
+      padding: 136px 240px;
+      grid-template-columns: 400px 609px;
+      grid-gap: 175px;
+      gap: 175px;
+      max-height: 100%;
+      box-sizing: border-box;
+   }
+   .close_popup{
+      height: 44px;
+      width: 44px;
+      position: absolute;
+      top: 49px;
+      right: 240px;
+      z-index: 100;
+   }
+   .render_desc{
+      width: 100%;
+      font-size: 30px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.33;
+      letter-spacing: -1.5px;
+      text-align: left;
+   }
+   .precio {
+      width: 100%;
+      height: 42px;      
+      object-fit: contain;
+      font-family: 'Brygada 1918', serif; 
+      font-size: 44px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 0.97;
+      letter-spacing: -2.2px;
+      text-align: left;
+      color: #de4b17;
+      margin-top: 62px;
+   }
+
+   .popup_container_left {
+      display: grid;
+      grid-gap: 60px;
+   }
+   
+   .modelos_amenidades{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 64px;
+      gap: 64px;
+      width: 100%;
+   }
+   .amenidades_left, .amenidades_right{
+      display: grid;
+      grid-gap: 27px;
+      gap: 27px;
+   }
+   .amenidades_left>div, .amenidades_right>div{
+      display: grid;
+      grid-template-columns: 42px 1fr;
+      grid-gap: 30px;
+      gap: 30px;
+   }
+   .m2{
+      justify-self: baseline;
+   }
 } /**/
 
-
-
- 

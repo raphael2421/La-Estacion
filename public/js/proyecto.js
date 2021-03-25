@@ -27,7 +27,7 @@ const close_popup = document.querySelectorAll('.close_popup');
 // IDEA:
 // multiplicar el ancho por el index del array para recorrer el slider
 let slideN = 0;
-slides_container.setAttribute('style', `grid-template-columns: repeat(${slidesContent.length}, 100%);`);
+// slides_container.setAttribute('style', `grid-template-columns: repeat(${slidesContent.length}, 100%);`);
 slidesContent.forEach((i, ï, ä) => {
    slides_container.innerHTML += `
       <div class="slide">
@@ -36,8 +36,7 @@ slidesContent.forEach((i, ï, ä) => {
                   ${i.title}
             </div>
          <div class="modelos_tipo">
-            <p ><b class="${i.title}">Ver distribución</b></p>
-            <p class="m2 ${i.title}">${i.mts}m<sup>2</sup></p>
+            <p ><b class="${i.title}">Ver distribución</b></p>            
          </div>
       </div>
    `;

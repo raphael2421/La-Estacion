@@ -87,7 +87,7 @@
     box-sizing: border-box;
   }
   #drag-1, #drag-2 {
-    width: 2000px;
+    width: 1300px;
     /* min-height: 6.5em; */
     /* margin: 1rem 0 0 1rem; */
     /* background-color: #29e; */
@@ -105,3 +105,8 @@
 @media screen and (min-width: 992px) {
 
 }
+
+
+/*
+-40px -400px
+*/
