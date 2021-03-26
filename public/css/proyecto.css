@@ -1,4 +1,8 @@
 @charset "UTF-8";
+.proyecto_icons {
+    width: 42px;
+    height: 33px;
+}
 .container{
    padding-bottom: 85px;
 }
