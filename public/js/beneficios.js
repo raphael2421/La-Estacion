@@ -16,8 +16,7 @@ const blogContent = [
       content: ''
    },
    {
-      title: `San Miguel <br>
-               de Allende`,
+      title: `Una inversión segura`,
       img: 'landscapes-1426130.png',
       imgxl: '',
       text: `Una de las mejores ciudades
@@ -39,15 +38,10 @@ se convirtió en <b>el primer lugar turístico sin playa</b> de América Latina 
       content: ''
    },
    {
-      title: ``,
-      img: 'jesus-rocha-2-w-9-ez-azv-m-8-m-unsplash.png',
+      title: `Gastronomía`,
+      img: 'capa-2.jpg',
       imgxl: '',
-      text: `Gastronomía y hotelería,
-sin duda alguna
-San Miguel de Allende
-cuenta con la combinación
-perfecta entre
-contemporaneidad y tradición.`,
+      text: `Sin duda alguna San Miguel de Allende cuenta con la combinación perfecta entre contemporaneidad y tradición.`,
       content: ''
    },
    {
