@@ -1,5 +1,6 @@
 <%- include('template-parts/header') %>
 <link rel="stylesheet" href="../css/proyecto.css">
+<link rel="stylesheet" href="../css/drift-basic.css">
 
 <main class="container">
    <section class="proyecto_head">      
@@ -24,11 +25,13 @@
       <h3>modelos</h3>
       <h1>la estación</h1>
    </section>
-   <section class="proyecto_modelos">
-      
+   <section class="proyecto_modelos">      
       <div class="slides_container">
       </div>
    </section>
+   <!--slider-->
+   
+   <!-- popups-->
    <div id="morelos" class="modelos_popup display_none">
       <img src="../media/slider-proyecto/close-popup.svg" alt="" class="close_popup">
       <div class="modelos_popup_container">
@@ -36,11 +39,11 @@
             <div class="render_title">
                morelos
             </div>
-            <img src="../media/slider-proyecto/morelos_img_render.jpg" alt="" class="modelos_img_render">
+            <img src="../media/slider-proyecto/morelos_img_render.jpg" alt="" class="modelos_img_render" data-zoom="../media/slider-proyecto/morelos_img_render.jpg?w=200&ch=DPR&dpr=2"/>
          </div>
          <div class="popup_container_right">
             <p class="render_desc">
-               El departamento que te permitirá descubrir tu lado más íntimo y entrelazar tus nuevas historias para vivir
+               El departamento que te permitirá descubrir tu lado más íntimo y entrelazar tus nuevas historias para vivir La Estación.
             </p>
             <div class="precio">
                Desde $2,737,800 MXN
@@ -71,11 +74,12 @@
             <div class="render_title">
                allende
             </div>
-            <img src="../media/slider-proyecto/allende_img_render.jpg" alt="" class="modelos_img_render">
+            <img src="../media/slider-proyecto/allende_img_render.jpg" alt="" class="modelos_img_render" data-zoom="../media/slider-proyecto/allende_img_render.jpg?w=200&ch=DPR&dpr=2"/>
          </div>
          <div class="popup_container_right">
             <p class="render_desc">
-               El departamento que te permitirá descubrir tu lado más íntimo y entrelazar tus nuevas historias para vivir
+               El espacio atemporal que aprovecha cada rincón y te hace sumergirte en las posibilidades infinitas de vivir San Miguel
+               de Allende.
             </p>
             <div class="precio">
                Desde $4,633,200 MXN
@@ -83,7 +87,7 @@
             <p class="m2 morelos">110m<sup>2</sup></p>
             <div class="modelos_amenidades">
                <div class="amenidades_left">
-                  <div><img class="proyecto_icons" src="../media/slider-proyecto/cama-icon.svg" alt="">2 recamaras</div>
+                  <div><img class="proyecto_icons" src="../media/slider-proyecto/cama-icon.svg" alt="">2 recámaras</div>
                   <div><img class="proyecto_icons" src="../media/slider-proyecto/tina-icon.svg" alt="">2 Baños</div>
                   <div><img class="proyecto_icons" src="../media/slider-proyecto/sillon-icon.svg" alt="">Sala</div>
                </div>
@@ -104,6 +108,6 @@
 
 <%- include('template-parts/footer') %>
 
-<script src="../js/proyecto.js"></script>
+<script type="module" src="../js/proyecto.js"></script>
 
 <%- include('template-parts/scripts') %>

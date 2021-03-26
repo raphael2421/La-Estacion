@@ -79,16 +79,17 @@ footer{
    height: 100%;
    width: 100%;
    object-fit: cover;
+   object-position: 50% 50%;
    text-align: center;
 }
 .slides_container{
-   display: grid;
+   display: block;
    transition: 0.3s;
 }
 .slide{
    position: relative;
-   height: calc(100vh - 44px);
-   display: grid;
+   height: 100%;
+   display: block;
    grid-template-rows: 1fr 93px;
 }
 /***************************/
@@ -111,7 +112,7 @@ footer{
 }
 /***************************/
 .modelos_tipo{
-  display: grid;
+  display: block;
   grid-template-rows: 50px 37px;  
   grid-gap: 10px;
   gap: 10px;
@@ -213,6 +214,8 @@ footer{
       grid-template-columns: 28px 1fr;
       grid-gap: 30px;
       gap: 30px;
+      margin: 0 auto;
+      width: 80%;
    }
 
 /******************/
@@ -240,9 +243,8 @@ footer{
    top: 16px;
 }
 .modelos_img_render {
-   margin: 0 auto;
-   max-height: 530px;
-   max-width: 300px;
+   margin: 0 auto;   
+   max-width: 90%;
 }
 .render_desc{
    font-family: 'Brygada 1918', serif;
@@ -392,12 +394,16 @@ footer{
       display: grid;
       width: 100%;
       margin: 0 auto;
-      padding: 10% 5%;
-      grid-template-columns: 400px 1fr;
+      padding: 8% 5%;
+      grid-template-columns: 1fr 1fr;
       grid-gap: 5%;
       gap: 5%;
       max-height: 100%;
       box-sizing: border-box;
+   }
+   .popup_container_right{
+      grid-gap: 0;
+      gap: 0;
    }
    .close_popup{
       height: 44px;
@@ -438,13 +444,14 @@ footer{
       grid-gap: 60px;
       gap: 60px;
    }
-   
+
    .modelos_amenidades{
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-gap: 64px;
       gap: 64px;
       width: 100%;
+      margin: 0;
    }
    .amenidades_left, .amenidades_right{
       display: grid;
@@ -456,7 +463,8 @@ footer{
       grid-template-columns: 42px 1fr;
       grid-gap: 30px;
       gap: 30px;
-   }
+      width: 100%;
+   }   
    .m2{
       justify-self: baseline;
    }

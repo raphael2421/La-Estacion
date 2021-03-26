@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 .container{
-   max-width: 1438px;
+   max-width: 1440px;
    margin: 0 auto;
 }
 .beneficios_head {
@@ -84,7 +84,7 @@
    object-position: 50% 50%; /* even if we dont declare this the image will still be centered */
 }
 .blog_text{
-   margin: 50px 26px;
+   margin: 50px 5%;
    border: 1px solid var(--FontDark);
    padding: 23px;
 }
@@ -100,7 +100,7 @@
   text-align: center;
 }
 .blog_content{
-
+   
 }
 
 /** Media query **/
@@ -108,11 +108,10 @@
 /********* Media Query On screens that are 600px or more ************/
 @media screen and (min-width: 600px) {
    .beneficios_head {
-    margin-top: 205px;
-    margin-bottom: 130px;
+    margin: 5% auto;
 }
    .beneficios_head > p{
-      max-width: 1438px ;
+      max-width: 1200px ;
    }
    .beneficios_title{
       font-size: 45px !important;
@@ -122,18 +121,18 @@
       padding-bottom: 23px;
    }
    .beneficios_subtitle{
-      font-size: 72px !important;
+      font-size: 62px !important;
       margin: 0;
       padding: 0;
-      padding-bottom: 102px;
+      padding-bottom: 50px;
       letter-spacing: 16px;
    }
    .beneficios_slogan{
-      font-size: 72px !important;
+      font-size: 62px !important;
       margin: 0;
       padding: 0;
       letter-spacing: -2.4px;
-      text-align: left !important;
+      
    }
 
    /******/
@@ -163,7 +162,7 @@
 
 @media screen and (min-width: 992px) {
    .blog_title_right{
-      right: 16%;
+      right: 18%;
       font-size: 50.5px;
       font-weight: normal;
       font-stretch: normal;
@@ -172,7 +171,7 @@
       letter-spacing: -1.52px;
    }
    .blog_title_left{
-      left: 16%;
+      left: 18%;
       font-size: 50.5px;
       font-weight: normal;
       font-stretch: normal;

@@ -8,13 +8,19 @@ const slide = document.querySelector('.slide');
 const slide_header = document.querySelector('.slide_header');
 const slide_img = document.querySelector('.slide_img');
 
-
+// {
+//    title: '',
+//       small: 'proyecto.jpg',
+//          large: 'proyecto-XL.jpg'
+// },
+// <img class="slide_img swipe" src="../media/galeria/photo4-XL.jpg" />
 const slidesContent = [
    {
       title: '',
-      small: 'proyecto.jpg',
-      large: 'proyecto-XL.jpg'
+      small: 'video.m4v',
+      large: 'video.m4v'
    },
+  
    {
       title: '',
       small: 'departamento.jpg',
@@ -47,8 +53,12 @@ const slidesContent = [
    },
 ]
 
+//
 // IDEA:
 // multiplicar el ancho por el index del array para recorrer el slider
+
+// slider video: ${window.innerWidth >= 600 ? `<video class="slide_img swipe" src="../media/slider-inicio/video.mp4" autoplay="true" muted="true" loop="true"></video>` : `<img class="slide_img swipe" src="../media/slider-inicio/${window.innerWidth >= 600 ? i.large : i.small}" alt="${i.title}">`}
+// sin video: <img class="slide_img swipe" src="../media/slider-inicio/${window.innerWidth >= 600 ? i.large : i.small}" alt="${i.title}">
 let slideN = 0;
 slides_container.setAttribute('style', `grid-template-columns: repeat(${slidesContent.length}, 100%);`);
 slidesContent.forEach((i, ï, ä)=>{
@@ -57,11 +67,10 @@ slidesContent.forEach((i, ï, ä)=>{
          <div class="slide_header">
             <p class="slide_header_txt"> ${i.title} </p>
          </div>
-         <img class="slide_img swipe" src="../media/slider-inicio/${window.innerWidth >= 600 ? i.large : i.small}" alt="${i.title}">
+         ${( ï == 0) ? `<video class="slide_img swipe" src="../media/slider-inicio/video.m4v" autoplay="true" muted="true" loop="true"></video>` : `<img class="slide_img swipe" src="../media/slider-inicio/${window.innerWidth >= 600 ? i.large : i.small}" alt="${i.title}">`}
       </div>
    `;
 });
-
 
 // go left
 chevron_left.addEventListener('click', go_left);
