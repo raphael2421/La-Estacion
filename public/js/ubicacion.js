@@ -19,17 +19,17 @@ function dragMoveListener(event) {
    if (x >= 0) {
       x = 0
    }
-   if (x <= -drag1.offsetWidth + mapa_border.offsetWidth) {
-      x = -drag1.offsetWidth + mapa_border.offsetWidth;
+   if (x <= -document.querySelector('#drag-1').offsetWidth + mapa_border.offsetWidth) {
+      x = -document.querySelector('#drag-1').offsetWidth + mapa_border.offsetWidth;
    }
 
    let y = (parseFloat(target.getAttribute('data-y')) || 0) + event.dy
    if (y >= 0) {
       y = 0
    }
-   if (y <= -drag1.offsetHeight + mapa_border.offsetHeight) {
+   if (y <= -document.querySelector('#drag-1').offsetHeight + mapa_border.offsetHeight) {
       // console.log(-mapa_border.offsetHeight +22);
-      y = -drag1.offsetHeight + mapa_border.offsetHeight;
+      y = -document.querySelector('#drag-1').offsetHeight + mapa_border.offsetHeight;
    }
 
    // translate the element
@@ -63,6 +63,7 @@ interact(gestureArea)
 
             // uses the dragMoveListener from the draggable demo above
             dragMoveListener(event)
+            drag1 = '';
          },
          end(event) {
             angleScale.angle = angleScale.angle + event.angle

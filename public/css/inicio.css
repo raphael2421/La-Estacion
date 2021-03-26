@@ -165,7 +165,11 @@ input, select {
    text-transform: uppercase;
    border: 1px solid var(--Secondary);
 }
-
+.forma_msj{
+   width: 100%;
+   text-align: center;
+   color: limegreen;
+}
 /*******************************************************************************/
 
 .legales_container{

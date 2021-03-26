@@ -2,13 +2,18 @@
 .container{
    margin: 0 auto;
 }
-
+.qs_head_img{
+   display: none;
+}
 .qs_head_img > img{
    object-fit: cover;
 object-position: 50% 50%;
 height: 270px;
 }
 
+.qs_title{
+   margin: 35px auto;
+}
 .qs_title > h2{
    margin: 0;
    padding: 0;
@@ -146,3 +151,9 @@ display: none;
       text-align: center;
    }
 } /**/
+
+/**/
+.galeria_container{
+   grid-template-rows: 1fr;
+   margin-top: 50px;
+}

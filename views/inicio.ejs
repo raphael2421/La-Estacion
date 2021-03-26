@@ -11,7 +11,7 @@
     <!---->
     
  </div> <!--slider_container-->
- <div id="contacto" class="contacto_container">
+ <div class="contacto_container">
     <div class="contacto_top">
        <p>síguenos en</p>
        <div class="contacto_icons">
@@ -22,7 +22,7 @@
     <div class="contacto_banner">
        <p>¡VIVE <br> LA ESTACIÓN!</p>
     </div>
-    <div class="contacto_bottom">
+    <div id="contacto" class="contacto_bottom">
        <img src="../media/ubicacion-icon.png" alt="">
        <p>
          Calzada de la Estación 90, <br>
@@ -35,9 +35,9 @@
     </div>
     <div class="forma_container">
        <form id="contacto_forma" class="contacto_forma" action="/" method="post">
-         <input id="fc_nombre" type="text" name="fc_nombre" placeholder="Nombre" />
+         <input id="fc_nombre" type="text" name="fc_nombre" placeholder="Nombre" required />
          <input id="fc_telefono" type="text" name="fc_telefono" placeholder="Teléfono" />
-         <input id="fc_email" type="text" name="fc_email" placeholder="Email" />
+         <input id="fc_email" type="text" name="fc_email" placeholder="Email" required />
          <select name="fc_via_comunicacion" id="fc_via_comunicacion">
             <option selected="selected" disabled>¿Como prefiere ser contactado?</option>
             <option value="Llamada">Llamada</option>
@@ -63,6 +63,16 @@
          <div>
             <input id="fc_btn_enviar" type="submit" value="enviar">
          </div>
+         <div class="forma_msj">
+            <%= locals.msjForma  ? `${msjForma}` : '' %>
+         </div>
+        
+            <%- locals.msjForma ? `            <script>
+            window.addEventListener('load', function(){
+               document.getElementById('contacto').scrollIntoView();
+            });               
+            </script>` : '' %>
+         
        </form>
     </div>
  </div> <!--contacto_container-->

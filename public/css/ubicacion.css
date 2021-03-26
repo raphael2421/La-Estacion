@@ -38,6 +38,7 @@
 
 
 .mapa_border{
+  display: none;
    border: 2px solid var(--FontDark);
    margin: 30px;
    height: 400px;
@@ -77,7 +78,11 @@
 .gesture-area{
   box-sizing: border-box;
 }
-
+.mapa_waze{
+  max-width: 320px;
+  margin: 50px auto;
+  margin-bottom: 80px;
+}
 /********* Media Query On screens that are 600px or more ************/
 @media screen and (min-width: 600px) {
   .mapa_border{
@@ -85,6 +90,9 @@
     max-height: 600px;
     margin: 0 auto;
     box-sizing: border-box;
+  }
+  .mapa_waze{
+    max-width: 600px;
   }
   #drag-1, #drag-2 {
     width: 1300px;

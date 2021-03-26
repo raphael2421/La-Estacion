@@ -7,9 +7,9 @@ footer{
 }
 .proyecto_head{
    background-color: var(--Primary);
-   padding: 10px;
+   padding: 80px 0;
    font-family: 'Brygada 1918', serif;
-   color: #ffffff;
+   color: #ffffff;   
 }
 .sma_accent{
    color: var(--Secondary);
@@ -279,7 +279,35 @@ footer{
 .precio {
     text-align: center;
 }
-
+/****/
+   .sma_top{
+      font-size: 63px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -3.78px;
+  text-align: center;
+   }
+   .sma_middle{
+      font-size: 46px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -2.76px;
+  text-align: center;
+   }
+   .sma_bottom{
+       font-size: 63px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -3.78px;
+  text-align: center;
+   }
+/****/
 /********* Media Query On screens that are 992px or more ************/
 @media screen and (min-width: 992px) {
    body{
@@ -352,9 +380,9 @@ footer{
 
    /************/
    .proyecto_modelos{
-      
+      /* display: inherit; */
    }
-   .modelos_title {    
+   .modelos_title {
       top: 54px;
    }
 

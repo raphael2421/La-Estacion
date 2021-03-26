@@ -23,6 +23,17 @@ exports.renderInicio = async (req, res, next) => {
 //@method:    POST
 //@access:    Public
 exports.formaDeContacto = async (req, res, next) => {
-   //comienza aquí
+   console.log(req.body);
+
+   const paramsObj = req.body;
+
+   enviarCorreo(paramsObj);
+   // render view
+   res.status(200).render('inicio', {
+      path: '/',
+      page: 'Inicio',
+      msjForma: 'Tu solicitud fue enviada',
+      fechaMX: await fechaMX()
+   });
    
 } // formaDeContacto end...
