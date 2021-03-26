@@ -42,42 +42,6 @@ slidesContent.forEach((i, ï, ä) => {
    `;
 });
 
-/***********************************************/
-// go left
-chevron_left.addEventListener('click', go_left);
-function go_left() {
-   slideN--
-   if (slideN < 0) {
-      slideN = slidesContent.length - 1;
-   }
-   if (window.innerWidth > 1370) {
-      let width = window.innerWidth - 17;
-      slides_container.style.transform = `translate(-${width * slideN}px)`;
-   } else {
-      slides_container.style.transform = `translate(-${window.innerWidth * slideN}px)`;
-   }
-   // chevron_left.classList.add('display_none');
-   // chevron_right.classList.remove('display_none');
-
-} // go_left
-
-// go right
-chevron_right.addEventListener('click', go_right);
-function go_right() {
-   slideN++
-   if (slideN > slidesContent.length - 1) {
-      slideN = 0;
-   }
-   if (window.innerWidth > 1370) {
-      let width = window.innerWidth - 17;
-      slides_container.style.transform = `translate(-${width * slideN}px)`;
-   } else {
-      slides_container.style.transform = `translate(-${window.innerWidth * slideN}px)`;
-   }
-   // chevron_right.classList.add('display_none');
-   // chevron_left.classList.remove('display_none');
-}
-
 /********************************************/
 // let initialCoords = 0;
 // let finalCoords = 0;

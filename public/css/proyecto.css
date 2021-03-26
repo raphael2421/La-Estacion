@@ -70,30 +70,7 @@ footer{
    font-size: 27px;
 }
 
-/***************************/
-.chevron_left{
-   position: absolute;
-   height: 60px;
-   width: 18px;
-   top: calc(50% - 80px);
-   left: 6px;
-   z-index: 10;
-   transform: rotate(180deg);
-   cursor: pointer;
-   margin: 10px;
-   padding: 10px;
-}
-.chevron_right{
-   position: absolute;
-   height: 60px;
-   width: 18px;
-   top: calc(50% - 80px);
-   right: 6px;
-   z-index: 10;
-   cursor: pointer;
-   margin: 10px;
-   padding: 10px;
-}
+
 /***************************/
 .proyecto_modelos{
    position: relative;
@@ -265,7 +242,7 @@ footer{
 .modelos_img_render {
    margin: 0 auto;
    max-height: 530px;
-   max-width: 299px;
+   max-width: 300px;
 }
 .render_desc{
    font-family: 'Brygada 1918', serif;
@@ -366,7 +343,7 @@ footer{
 
    .proyecto_middle{
       height: 1167px;
-      padding: 75px 240px;
+      padding: 75px 12%;
       box-sizing: border-box;
    }
 
@@ -397,7 +374,7 @@ footer{
     position: relative;
     overflow: hidden;
     padding-bottom: 100px;
-    margin: 0 240px;
+    margin: 0 10%;
     box-sizing: content-box;
    }
    footer {
@@ -415,10 +392,10 @@ footer{
       display: grid;
       width: 100%;
       margin: 0 auto;
-      padding: 136px 240px;
-      grid-template-columns: 400px 609px;
-      grid-gap: 175px;
-      gap: 175px;
+      padding: 10% 5%;
+      grid-template-columns: 400px 1fr;
+      grid-gap: 5%;
+      gap: 5%;
       max-height: 100%;
       box-sizing: border-box;
    }
@@ -426,8 +403,8 @@ footer{
       height: 44px;
       width: 44px;
       position: absolute;
-      top: 49px;
-      right: 240px;
+      top: 5%;
+      right: 5%;
       z-index: 100;
    }
    .render_desc{
@@ -459,6 +436,7 @@ footer{
    .popup_container_left {
       display: grid;
       grid-gap: 60px;
+      gap: 60px;
    }
    
    .modelos_amenidades{

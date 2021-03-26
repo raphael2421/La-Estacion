@@ -2,16 +2,21 @@
 
 // esversion 2018
 const galeriaIMGs = [
-   { thumb: "photo0.jpg", large: "photo0-XL.jpg", alt: "", style: "gallery-img _uno" },
-   { thumb: "photo1.jpg", large: "photo1-XL.jpg", alt: "", style: "gallery-img _dos" },
-   { thumb: "photo2.jpg", large: "photo2-XL.jpg", alt: "", style: "gallery-img _tres" },
-   { thumb: "photo3.jpg", large: "photo3-XL.jpg", alt: "", style: "gallery-img _cuatro" },
-   { thumb: "photo4.jpg", large: "photo4-XL.jpg", alt: "", style: "gallery-img _cinco" },
-   { thumb: "photo5.jpg", large: "photo5-XL.jpg", alt: "", style: "gallery-img _uno" },
-   { thumb: "photo6.jpg", large: "photo6-XL.jpg", alt: "", style: "gallery-img _dos" },
-   { thumb: "photo7.jpg", large: "photo7-XL.jpg", alt: "", style: "gallery-img _tres" },
-   { thumb: "photo8.jpg", large: "photo8-XL.jpg", alt: "", style: "gallery-img _cuatro" },
-   { thumb: "photo9.jpg", large: "photo9-XL.jpg", alt: "", style: "gallery-img _cinco" },
+   { thumb: "1.jpg", large: "1.jpg", alt: "", style: "gallery-img _uno" },
+   { thumb: "2.jpg", large: "2.jpg", alt: "", style: "gallery-img _dos" },
+   { thumb: "3.jpg", large: "3.jpg", alt: "", style: "gallery-img _tres" },
+   { thumb: "4.jpg", large: "4.jpg", alt: "", style: "gallery-img _cuatro" },
+   { thumb: "5.jpg", large: "5.jpg", alt: "", style: "gallery-img _cinco" },
+   { thumb: "6.jpg", large: "6.jpg", alt: "", style: "gallery-img _uno" },
+   { thumb: "7.jpg", large: "7.jpg", alt: "", style: "gallery-img _dos" },
+   { thumb: "8.jpg", large: "8.jpg", alt: "", style: "gallery-img _tres" },
+   { thumb: "9.jpg", large: "9.jpg", alt: "", style: "gallery-img _cuatro" },
+   { thumb: "10.jpg", large: "10.jpg", alt: "", style: "gallery-img _cinco" },
+   { thumb: "11.jpg", large: "11.jpg", alt: "", style: "gallery-img _uno" },
+   { thumb: "12.jpg", large: "12.jpg", alt: "", style: "gallery-img _dos" },
+   { thumb: "13.jpg", large: "13.jpg", alt: "", style: "gallery-img _tres" },
+   { thumb: "14.jpg", large: "14.jpg", alt: "", style: "gallery-img _cuatro" },
+   { thumb: "15.jpg", large: "15.jpg", alt: "", style: "gallery-img _cinco" },
 ];
 
 
@@ -19,7 +24,7 @@ const galeriaIMGs = [
 const galeria_body = document.querySelector('.galeria_body');
 
 galeriaIMGs.forEach((i, ï, ä) => {
-   galeria_body.innerHTML += `<img  class="${i.style}" src="../media/galeria/${i.thumb}" alt="${i.alt}" data-imgXL="${i.large}" data-idx="${ï}" />`;
+   galeria_body.innerHTML += `<img  class="${i.style}" src="../media/quienes-somos/${i.thumb}" alt="${i.alt}" data-imgXL="${i.large}" data-idx="${ï}" />`;
 });
 
 
@@ -97,7 +102,7 @@ window.addEventListener('load', () => {
 
    galeriaIMGs.forEach((i, ï, ä) => {
       blackbox_img_frame.innerHTML += `
-         <img class="blackbox_img" src="../media/galeria/${i.large}">
+         <img class="blackbox_img" src="../media/quienes-somos/${i.large}">
       `;
 
       if (ï == ä.length - 1) {

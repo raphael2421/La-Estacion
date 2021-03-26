@@ -33,20 +33,20 @@
 .chevron_left{
    position: absolute;
    height: 60px;
-   width: 18px;
+   width: 30px;
    top: calc(50% - 60px);
    left: 26px;
-   z-index: 50;
+   z-index: 30;
    transform: rotate(180deg);
    cursor: pointer;
 }
 .chevron_right{
    position: absolute;
    height: 60px;
-   width: 18px;
+   width: 30px;
    top: calc(50% - 60px);
    right: 26px;
-   z-index: 50;
+   z-index: 30;
    cursor: pointer;
 }
 /*******************************************************/
