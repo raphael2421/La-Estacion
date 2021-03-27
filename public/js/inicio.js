@@ -163,7 +163,11 @@ function autoSlide() {
    go_right();
 }
 
-let slideInterval = setInterval(autoSlide, 2800);
+let slideInterval;
+
+window.addEventListener('load', ()=>{
+   slideInterval = setInterval(autoSlide, 2800);
+});
 
 window.addEventListener('click', ()=>{
    clearInterval(slideInterval);

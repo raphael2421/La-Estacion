@@ -96,6 +96,7 @@
   font-size: 14px;
   margin: 0 auto;
   border-radius: 4px;
+  text-transform: uppercase;
 }
 /********* Media Query On screens that are 600px or more ************/
 @media screen and (min-width: 600px) {

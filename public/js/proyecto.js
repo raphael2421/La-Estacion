@@ -252,3 +252,20 @@ close_popup.forEach((i, ï, ä) => {
 // });
 
 // modelos_img_render
+
+
+
+////// auto slide
+function autoSlide() {
+   go_right();
+}
+
+let slideInterval;
+
+window.addEventListener('load', () => {
+   slideInterval = setInterval(autoSlide, 2800);
+});
+
+window.addEventListener('click', () => {
+   clearInterval(slideInterval);
+});
