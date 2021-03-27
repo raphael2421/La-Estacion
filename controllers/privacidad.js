@@ -6,8 +6,8 @@ const fechaMX = require('../utils/fechaMX');
 exports.renderPrivacidad = async (req, res, next) => {
    //comienza aquí
    res.status(200).render('privacidad', {
-      path: 'aviso-de-privacidad',
-      page: 'aviso de privacidad',
+      path: '/aviso-de-privacidad',
+      page: 'Aviso de Privacidad',
       fechaMX: await fechaMX(),
    });
 } // renderPrivacidad end... 

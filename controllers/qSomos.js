@@ -6,7 +6,7 @@ const fechaMX = require('../utils/fechaMX');
 exports.renderQsomos = async (req, res, next) => {
    //comienza aquí
    res.status(200).render('qSomos', {
-      path: 'quienes-somos',
+      path: '/quienes-somos',
       page: '¿Quienes somos?',
       fechaMX: await fechaMX(),
    });

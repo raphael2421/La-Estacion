@@ -6,8 +6,8 @@ const fechaMX = require('../utils/fechaMX');
 exports.renderUbicacion = async (req, res, next) => {
 
    res.status(200).render('ubicacion', {
-      path: 'ubicacion',
-      page: 'ubicación',
+      path: '/ubicacion',
+      page: 'Ubicación',
       fechaMX: await fechaMX(),
    });
    

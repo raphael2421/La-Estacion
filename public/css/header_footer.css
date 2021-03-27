@@ -164,7 +164,9 @@ footer > .acento{
 }
 
 
-
+  .menu_desk{
+    display: none;
+  }
 /********* Media Query On screens that are 992px or more ************/
 @media screen and (min-width: 992px) {
   .menu_top {
@@ -202,5 +204,29 @@ footer > .acento{
   .tel_icon{
     display: none;
   }
-} /**/
-
+  /****** menu ***/
+  .menu_desk{
+    display: block;
+  }
+  .menu_desk > ul > li{
+    font-family: 'Encode Sans', sans-serif;
+    object-fit: contain;
+    list-style: none;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: inherit;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 3.19;
+    text-align: center;
+    float: left;
+    margin-right: 10px ;
+  }
+  .header_menu{
+    display: none;
+  }
+  
+} /*END media query*/
+.link_active{
+  color: var(--Secondary);
+}

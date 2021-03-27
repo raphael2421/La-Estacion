@@ -6,7 +6,7 @@ const fechaMX = require('../utils/fechaMX');
 exports.renderProyecto = async (req, res, next) => {
    //comienza aquí
    res.status(200).render('proyecto', {
-      path: 'proyecto',
+      path: '/proyecto',
       page: 'Proyecto',
       fechaMX: await fechaMX(),
    });
