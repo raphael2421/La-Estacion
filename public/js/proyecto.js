@@ -1,70 +1,156 @@
 // esversion: 2018
+const close_popup = document.querySelectorAll('.close_popup');
 
 const slidesContent = [
    {
-      title: 'allende',
+      title: 'Calidad',
       type: 'Tipo A',
       mts: '100',
-      small: 'la-estacion-allende.jpg',
-      large: 'la-estacion-allende-XL.jpg'
+      small: 'calidad.jpg',
+      large: 'calidad-XL.jpg',
+      content: 'Exclusivos departamentos que te transportan a vivir San Miguel de Allende, equipados con la más alta gama de materiales de calidad para darte a ti, ese espacio único. '
    },
    {
-      title: 'morelos',
+      title: 'Acabados',
       type: 'Tipo B',
       mts: '65',
-      small: 'la-estacion-morelos.jpg',
-      large: 'la-estacion-morelos-XL.jpg'
-   },   
-]
+      small: 'acabados.jpg',
+      large: 'acabados-XL.jpg',
+      content: 'Espectaculares acabados en muros de tabique de barro aparente, aplanado, con detalles en pórfido sangre de pichón.'
+   },
+   {
+      title: 'color',
+      type: 'Tipo B',
+      mts: '65',
+      small: 'color.jpg',
+      large: 'color-XL.jpg',
+      content: 'Ambos modelos cuentan con acabados de estuco finamente trabajados, en una paleta de colores bombilla, pinole, infusión y camelado, que ofrece al tacto, la sensación de fina seda y frescura.'
+   },
+   {
+      title: 'sustentable',
+      type: 'Tipo B',
+      mts: '65',
+      small: 'sustentable.jpg',
+      large: 'sustentable-XL.jpg',
+      content: 'Los departamentos están equipados con cocinas integrales que cuentan con tecnología sustentable haciendo de tu espacio, un lugar seguro y eficiente.'
+   },
+   {
+      title: 'relajante',
+      type: 'Tipo B',
+      mts: '65',
+      small: 'relajante.jpg',
+      large: 'relajante-XL.jpg',
+      content: 'Los departamentos están equipados con cocinas integrales que cuentan con tecnología sustentable haciendo de tu espacio, un lugar seguro y eficiente.'
+   },
+];
 
 const chevron_left = document.querySelector('.chevron_left');
 const chevron_right = document.querySelector('.chevron_right');
+const slider_container = document.querySelector('.slider_container');
+
 const slides_container = document.querySelector('.slides_container');
 const slide = document.querySelector('.slide');
-const close_popup = document.querySelectorAll('.close_popup');
+
 // const slide = document.querySelector('.slide');
 
 // IDEA:
 // multiplicar el ancho por el index del array para recorrer el slider
 let slideN = 0;
-// slides_container.setAttribute('style', `grid-template-columns: repeat(${slidesContent.length}, 100%);`);
+slides_container.setAttribute('style', `grid-template-columns: repeat(${slidesContent.length}, 100%);`);
 slidesContent.forEach((i, ï, ä) => {
    slides_container.innerHTML += `
       <div class="slide">
-         <img src="../media/slider-proyecto/${window.innerWidth >= 600 ? i.large : i.small}" alt="" class="modelos_img">
-          <div class="modelos_title ${i.title}">
-                  ${i.title}
-            </div>
-         <div class="modelos_tipo">
-            <p ><b class="${i.title}">Ver distribución</b></p>            
-         </div>
+         <img class="slide_img swipe" src="../media/slider-proyecto/${window.innerWidth >= 600 ? i.large : i.small}" alt="${i.title}">
+         <article class="detalles_box">
+            <p class="detalles_title">${i.title}</p>
+            <p class="detalles_content">${i.content}</p>
+         </article>
       </div>
    `;
 });
 
+
+const detalles_box = document.querySelector('.detalles_box');
+if (window.innerWidth >= 1200) {
+   chevron_left.setAttribute('style', 'left: 25px; top:334px');
+   chevron_right.setAttribute('style', `right: ${(detalles_box.clientWidth + 25)}px; top:334px`);
+}
 /********************************************/
-// let initialCoords = 0;
-// let finalCoords = 0;
+// go left
+chevron_left.addEventListener('click', go_left);
+function go_left() {
+   slideN--
+   if (slideN < 0) {
+      slideN = slidesContent.length - 1;
+   }
+   if (window.innerWidth >= 1200) {
+      let width = document.querySelector('.slider_container').clientWidth;
+      slides_container.style.transform = `translate(-${width * slideN}px)`;
+   } else {
+      slides_container.style.transform = `translate(-${window.innerWidth * slideN}px)`;
+   }
 
-// slides_container.addEventListener('touchstart', function (e) {
-//    initialCoords = e.touches[0].clientX;
-//    // console.log(initialCoords);
-// });
+} // go_left
 
-// slides_container.addEventListener('touchmove', function (e) {
-//    finalCoords = e.touches[0].clientX;
-//    // console.log(finalCoords);
-// });
 
-// slides_container.addEventListener('touchend', function (e) {
-//    if (finalCoords < (initialCoords - 70) ) {
-//       go_right();
-//    }
-//    else if (finalCoords > (initialCoords + 70) ) {
-//       go_left();
-//    }
-// });
+// go right
+chevron_right.addEventListener('click', go_right);
+function go_right() {
+   slideN++
+   if (slideN > slidesContent.length - 1) {
+      slideN = 0;
+   }
+   if (window.innerWidth >= 1200) {
+      let width = document.querySelector('.slider_container').clientWidth;
+      slides_container.style.transform = `translate(-${width * slideN}px)`;
+   } else {
+      slides_container.style.transform = `translate(-${window.innerWidth * slideN}px)`;
+   }
+}
+let initialCoordsX = 0;
+let finalCoordsX = 0;
 
+let initialCoordsY = 0;
+let finalCoordsY = 0;
+
+document.addEventListener('touchstart', function (e) {
+   e.preventDefault();
+   document.querySelectorAll('.slide_header_txt').forEach((i, ï, ä) => {
+      i.innerText = 'Y:' + Math.floor(e.touches[0].clientY) + ' X:' + Math.floor(e.touches[0].clientX);
+   });
+   if (e.target.classList.contains('swipe')) {
+      e.stopPropagation();
+      initialCoordsX = e.touches[0].clientX;
+      initialCoordsY = e.touches[0].clientY;
+   }
+
+   // console.log(initialCoordsX);
+});
+
+document.addEventListener('touchmove', function (e) {
+   document.querySelectorAll('.slide_header_txt').forEach((i, ï, ä) => {
+      i.innerText = 'Y:' + Math.floor(e.touches[0].clientY) + ' X:' + Math.floor(e.touches[0].clientX);
+   });
+   if (e.target.classList.contains('swipe')) {
+      e.stopPropagation();
+      finalCoordsX = e.touches[0].clientX;
+      finalCoordsY = e.touches[0].clientY;
+      // console.log(finalCoordsX);
+   }
+});
+
+document.addEventListener('touchend', function (e) {
+   if ((finalCoordsX < initialCoordsX - 30) && (finalCoordsY > initialCoordsY - 30)) {
+      go_right();
+   }
+   if ((finalCoordsX > initialCoordsX + 30) && (finalCoordsY < initialCoordsY + 30)) {
+      go_left();
+   }
+});
+
+document.body.addEventListener('touchmove', function (event) {
+   event.preventDefault();
+}, false);
 
 
 /************ drift *********/

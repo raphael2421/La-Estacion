@@ -82,6 +82,20 @@
   max-width: 320px;
   margin: 50px auto;
   margin-bottom: 80px;
+  display: grid;
+  grid-gap: 20px;
+  gap: 20px;
+}
+.link_waze{
+  padding: 10px 20px;
+  background-color: var(--Secondary);
+  text-align: center;
+  color: #fff;
+  font-family: 'Encode Sans', sans-serif;
+  text-decoration: none;
+  font-size: 14px;
+  margin: 0 auto;
+  border-radius: 4px;
 }
 /********* Media Query On screens that are 600px or more ************/
 @media screen and (min-width: 600px) {

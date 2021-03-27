@@ -6,14 +6,12 @@
 .container{
    padding-bottom: 85px;
 }
-footer{
-   visibility: hidden;
-}
+
 .proyecto_head{
    background-color: var(--Primary);
    padding: 80px 0;
    font-family: 'Brygada 1918', serif;
-   color: #ffffff;   
+   color: #ffffff;
 }
 .sma_accent{
    color: var(--Secondary);
@@ -44,7 +42,6 @@ footer{
    color: #ffffff;
 }
 
-
 .proyecto_banner{
    height: 107px;
    display: grid;
@@ -70,7 +67,6 @@ footer{
    font-size: 27px;
 }
 
-
 /***************************/
 .proyecto_modelos{
    position: relative;
@@ -82,11 +78,11 @@ footer{
    object-position: 50% 50%;
    text-align: center;
 }
-.slides_container{
+.modelos_container{
    display: block;
    transition: 0.3s;
 }
-.slide{
+.slide_modelo{
    position: relative;
    height: 100%;
    display: block;
@@ -291,6 +287,31 @@ footer{
   text-align: center;
    }
 /****/
+/*************** Slider Detalles ***********************/
+.slide {
+    height: calc(100vh - 44px);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 385px 1fr;
+}
+.slide_img{
+   height: 385px;
+}
+.detalles_title{
+   display: none;
+}
+.detalles_content{
+   padding: 5%;
+   font-family: 'Encode Sans', sans-serif;
+   font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.71;
+  letter-spacing: normal;
+  text-align: center;
+  color: var(--FontDark);
+}
 /********* Media Query On screens that are 992px or more ************/
 @media screen and (min-width: 992px) {
    body{
@@ -362,9 +383,7 @@ footer{
    }
 
    /************/
-   .proyecto_modelos{
-      /* display: inherit; */
-   }
+ 
    .modelos_title {
       top: 54px;
    }
@@ -383,7 +402,7 @@ footer{
     visibility: inherit;
    }
    /*********************/
-   .slide{
+   .slide_modelo{
       height: 573px;
    }
    .modelos_img{
@@ -468,5 +487,39 @@ footer{
    .m2{
       justify-self: baseline;
    }
-} /**/
+
+   /*** slides detalles ***/
+   .slider_container, .slide, .slide_img {
+      height: 644px;
+      grid-template-columns: 2fr 1fr;
+      grid-template-rows: 1fr
+   }
+   .detalles_box{
+      display: grid;      
+      align-content: center;
+      align-items: center;
+      background-color: #ece9e5;
+   }
+   .detalles_title{
+      padding: 0 15%;
+      display: block;
+      font-family: 'Brygada 1918', serif; 
+       font-size: 35px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 0.87;
+      letter-spacing: -1.75px;
+      text-align: left;
+      color: #c5baa9;
+   }
+   .detalles_content{
+      text-align: left;
+      font-size: 18px;
+      padding:0 15%;
+   }
+
+} /* END query*/
+
+
 
