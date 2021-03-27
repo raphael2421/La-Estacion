@@ -78,7 +78,7 @@ if (window.innerWidth >= 1200) {
 /********************************************/
 // go left
 chevron_left.addEventListener('click', go_left);
-function go_left() {
+function go_left() {   
    slideN--
    if (slideN < 0) {
       slideN = slidesContent.length - 1;
@@ -114,6 +114,7 @@ let initialCoordsY = 0;
 let finalCoordsY = 0;
 
 document.addEventListener('touchstart', function (e) {
+   clearInterval(slideInterval);
    e.preventDefault();
    document.querySelectorAll('.slide_header_txt').forEach((i, ï, ä) => {
       i.innerText = 'Y:' + Math.floor(e.touches[0].clientY) + ' X:' + Math.floor(e.touches[0].clientX);
@@ -263,9 +264,11 @@ function autoSlide() {
 let slideInterval;
 
 window.addEventListener('load', () => {
-   slideInterval = setInterval(autoSlide, 2800);
+   slideInterval = setInterval(autoSlide, 3200);
 });
 
-window.addEventListener('click', () => {
-   clearInterval(slideInterval);
+window.addEventListener('click', function(e){
+   if ((e.target.classList.contains('slide_img') || e.target.classList.contains('detalles_box'))) {
+      clearInterval(slideInterval);
+   }
 });

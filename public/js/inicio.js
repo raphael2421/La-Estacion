@@ -67,7 +67,7 @@ slidesContent.forEach((i, ï, ä)=>{
          <div class="slide_header">
             <p class="slide_header_txt"> ${i.title} </p>
          </div>
-         ${( ï == 0) ? `<video class="slide_img swipe" src="../media/slider-inicio/video.m4v" autoplay="true" muted="true" loop="true"></video>` : `<img class="slide_img swipe" src="../media/slider-inicio/${window.innerWidth >= 600 ? i.large : i.small}" alt="${i.title}">`}
+         ${(ï == 0) ? `<video class="slide_img swipe" src="../media/slider-inicio/video.mp4" autoplay muted loop type="video/mp4" poster="../media/slider-inicio/video.jpg"></video>` : `<img class="slide_img swipe" src="../media/slider-inicio/${window.innerWidth >= 600 ? i.large : i.small}" alt="${i.title}">`}
       </div>
    `;
 });
@@ -166,7 +166,7 @@ function autoSlide() {
 let slideInterval;
 
 window.addEventListener('load', ()=>{
-   slideInterval = setInterval(autoSlide, 2800);
+   slideInterval = setInterval(autoSlide, 3200);
 });
 
 window.addEventListener('click', ()=>{

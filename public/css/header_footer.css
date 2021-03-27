@@ -183,6 +183,7 @@ footer > .acento{
     top: 0;
     z-index: 51;
     box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    position: sticky;
   }
   .header_logo > img {    
     height: 70px;
