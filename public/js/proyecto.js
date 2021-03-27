@@ -40,7 +40,7 @@ const slidesContent = [
       mts: '65',
       small: 'relajante.jpg',
       large: 'relajante-XL.jpg',
-      content: 'Los departamentos están equipados con cocinas integrales que cuentan con tecnología sustentable haciendo de tu espacio, un lugar seguro y eficiente.'
+      content: 'Baños que incitan a vivir una sensación relajante gracias a sus amplios espacios que cuentan con gabinetes de madera con cubiertas de mármol Santo Tomás, mezcladoras de lujo y piso porcelánico.'
    },
 ];
 

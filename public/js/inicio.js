@@ -118,6 +118,7 @@ let initialCoordsY = 0;
 let finalCoordsY = 0;
 
 document.addEventListener('touchstart', function (e) {
+   clearInterval(slideInterval);
    e.preventDefault();
    document.querySelectorAll('.slide_header_txt').forEach((i, ï, ä) => {
       i.innerText = 'Y:' + Math.floor(e.touches[0].clientY) + ' X:' + Math.floor(e.touches[0].clientX);
@@ -155,3 +156,15 @@ document.addEventListener('touchend', function (e) {
 document.body.addEventListener('touchmove', function (event) {
    event.preventDefault();
 }, false);
+
+
+////// auto slide
+function autoSlide() {
+   go_right();
+}
+
+let slideInterval = setInterval(autoSlide, 2800);
+
+slide_img.addEventListener('click', ()=>{
+   clearInterval(slideInterval);
+});

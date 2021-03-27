@@ -63,6 +63,7 @@ display: none;
   letter-spacing: -1.1px;
   text-align: center;
   color: var(--FontLight);
+  padding: 5px;
 }
 
 .qs_content{
