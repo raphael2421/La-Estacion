@@ -165,6 +165,6 @@ function autoSlide() {
 
 let slideInterval = setInterval(autoSlide, 2800);
 
-slide_img.addEventListener('click', ()=>{
+window.addEventListener('click', ()=>{
    clearInterval(slideInterval);
 });
