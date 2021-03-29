@@ -54,7 +54,7 @@
                <li><a class="menu_link <%= path == '/vive-la-estacion' ? 'link_active' : '' %>" href="/vive-la-estacion">vive la estación</a></li>
                <li><a class="menu_link <%= path == '/beneficios' ? 'link_active' : '' %>" href="/beneficios">beneficios</a></li>
                <li><a class="menu_link <%= path == '/ubicacion' ? 'link_active' : '' %>" href="/ubicacion">ubicación</a></li>
-               <li><a class="menu_link <%= path == '/#contacto' ? 'link_active' : '' %>" href="/#contacto">contacto</a></li>
+               <li><a class="menu_link link_contacto <%= path == '/#contacto' ? 'link_active' : '' %>" href="/#contacto">contacto</a></li>
                <li><a class="menu_link <%= path == '/quienes-somos' ? 'link_active' : '' %>" href="/quienes-somos">¿quiénes somos?</a></li>
             </ul>
          </nav>
@@ -65,13 +65,13 @@
    </header>
    <nav class="menu_top">
       <ul>
-         <li><a class="menu_link" href="/">inicio</a></li>
-         <li><a class="menu_link" href="/proyecto">proyecto</a></li>
-         <li><a class="menu_link" href="/vive-la-estacion">vive la estación</a></li>
-         <li><a class="menu_link" href="/beneficios">beneficios</a></li>
-         <li><a class="menu_link" href="/ubicacion">ubicación</a></li>
-         <li><a class="menu_link" href="/#contacto">contacto</a></li>
-         <li><a class="menu_link" href="/quienes-somos">¿quiénes somos?</a></li>
+         <li><a class="menu_link <%= path == '/' ? 'link_active' : '' %>" href="/">inicio</a></li>
+         <li><a class="menu_link <%= path == '/proyecto' ? 'link_active' : '' %>" href="/proyecto">proyecto</a></li>
+         <li><a class="menu_link <%= path == '/vive-la-estacion' ? 'link_active' : '' %>" href="/vive-la-estacion">vive la estación</a></li>
+         <li><a class="menu_link <%= path == '/beneficios' ? 'link_active' : '' %>" href="/beneficios">beneficios</a></li>
+         <li><a class="menu_link <%= path == '/ubicacion' ? 'link_active' : '' %>" href="/ubicacion">ubicación</a></li>
+         <li><a class="menu_link link_contacto <%= path == '/#contacto' ? 'link_active' : '' %>" href="/#contacto">contacto</a></li>
+         <li><a class="menu_link <%= path == '/quienes-somos' ? 'link_active' : '' %>" href="/quienes-somos">¿quiénes somos?</a></li>
       </ul>
       <div class="close_menu">
          <img class="close_menu_icon" src="../media/close-menu-la-estacion-plaza-mexico.png" alt="">

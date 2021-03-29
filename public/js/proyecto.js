@@ -267,8 +267,10 @@ window.addEventListener('load', () => {
    slideInterval = setInterval(autoSlide, 3200);
 });
 
-window.addEventListener('click', function(e){
-   if ((e.target.classList.contains('slide_img') || e.target.classList.contains('detalles_box'))) {
+const stopSlide = [chevron_left, chevron_right, document.querySelector('.slide_img'), document.querySelector('.detalles_box')];
+stopSlide.forEach((i, ï, ä)=>{
+   console.log(i);
+   i.addEventListener('click', ()=>{
       clearInterval(slideInterval);
-   }
+   });
 });

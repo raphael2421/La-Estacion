@@ -2,17 +2,10 @@
 const blog = document.querySelector('.blog');
 const blogContent = [
    {
-      title: '',
+      title: 'Plusvalía',
       img: 'mexico-5756222.png',
       imgxl: '',
-      text: `Por más de 7 años, se ha
-            mantenido como una de las
-            ciudades más atractivas para
-            invertir en bienes raíces ya
-            que ha brindado mayor
-            plusvalía a través de los años. <br> <b>Hoy en día, el porcentaje
-            de plusvalía ronda
-            en un 11% anual.</b>`,
+      text: `Por más de 7 años, San Miguel de Allende se mantiene como una de las ciudades más atractivas para invertir en bienes raíces, ya que ha brindado mayor plusvalía a tráves de los años.</b>`,
       content: ''
    },
    {
