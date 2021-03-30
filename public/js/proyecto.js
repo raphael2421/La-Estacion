@@ -296,12 +296,12 @@ let on_off = false;
 
 window.addEventListener('scroll', function (event) {
    if (isInViewport(findMe)) {
-      console.log('In viewport!');      
+      // console.log('In viewport!');
       if ((window.matchMedia("(pointer: coarse)").matches && on_off == false)) {
          slideInterval = setInterval(autoSlide, 3200);
          on_off = true;
          // touchscreen
-         console.log('touchscreen');
+         // console.log('touchscreen');
          // touchscreen
          let img = document.createElement('img');
          img.setAttribute('src', '../media/dedo.svg');
@@ -311,7 +311,8 @@ window.addEventListener('scroll', function (event) {
             img.classList.add('finger_fadeout');
          }, 3200);
       }
-   } else {
-      //console.log('Nope...');
+   } else if ((window.innerWidth >= 1200 && on_off == false)){
+      on_off = true;
+      slideInterval = setInterval(autoSlide, 3200);
    }
 }, false);

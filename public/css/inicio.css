@@ -244,9 +244,9 @@ input, select {
 
    .slider_container {
     position: relative;
-    height: calc(100vh - 80px);
+    height: calc(100vh - 60px);
    }
    .slide_img{
-      height: calc(100vh - 80px);
+      height: calc(100vh - 60px);
    }
 }
