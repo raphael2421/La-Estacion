@@ -141,6 +141,7 @@ document.addEventListener('touchmove', function (e) {
 });
 
 document.addEventListener('touchend', function (e) {
+   clearInterval(slideInterval);
    if ((finalCoordsX < initialCoordsX - 30) && (finalCoordsY > initialCoordsY - 30)) {
       go_right();
    }
@@ -264,7 +265,7 @@ function autoSlide() {
 let slideInterval;
 
 window.addEventListener('load', () => {
-   slideInterval = setInterval(autoSlide, 3200);
+   console.log('loaded');
 });
 
 const stopSlide = [chevron_left, chevron_right, document.querySelector('.slide_img'), document.querySelector('.detalles_box')];
@@ -274,3 +275,43 @@ stopSlide.forEach((i, ï, ä)=>{
       clearInterval(slideInterval);
    });
 });
+
+
+
+//// si esta visible 
+
+
+var isInViewport = function (elem) {
+   var distance = elem.getBoundingClientRect();
+   return (
+      distance.top >= 0 &&
+      distance.left >= 0 &&
+      distance.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+      distance.right <= (window.innerWidth || document.documentElement.clientWidth)
+   );
+};
+
+var findMe = document.querySelector('.slider_container');
+let on_off = false;
+
+window.addEventListener('scroll', function (event) {
+   if (isInViewport(findMe)) {
+      console.log('In viewport!');      
+      if ((window.matchMedia("(pointer: coarse)").matches && on_off == false)) {
+         slideInterval = setInterval(autoSlide, 3200);
+         on_off = true;
+         // touchscreen
+         console.log('touchscreen');
+         // touchscreen
+         let img = document.createElement('img');
+         img.setAttribute('src', '../media/dedo.svg');
+         slider_container.prepend(img);
+         img.classList.add('touch_anim');
+         setTimeout(() => {
+            img.classList.add('finger_fadeout');
+         }, 3200);
+      }
+   } else {
+      //console.log('Nope...');
+   }
+}, false);

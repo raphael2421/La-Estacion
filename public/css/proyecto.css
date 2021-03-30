@@ -532,5 +532,20 @@
 
 } /* END query*/
 
+.recorrido_virtual{         
+      display: block;
+      font-family: 'Brygada 1918', serif; 
+       font-size: 35px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 0.87;
+      letter-spacing: -1.75px;
+      text-align: left;
+      color: var(--Secondary);
+      text-transform: capitalize;
+}
 
-
+.touch_anim{
+   filter: invert(29%) sepia(56%) saturate(4223%) hue-rotate(355deg) brightness(86%) contrast(96%);
+}

@@ -243,16 +243,17 @@ footer > .acento{
   width: 70px;
   height: 70px;
   position: absolute;
-  bottom: 250px;
-  right: 80px;
+  bottom: 180px;
+  right: 40px;
   z-index: 100;
   transition: 0.5s;
   animation: finger_fadein 800ms forwards;
   animation-delay: 1.2s;
   opacity: 0;
+  z-index: 100;
 }
 .finger_fadeout{
-  animation: finger_fadeout 600ms forwards;
+  animation: finger_fadeout 500ms forwards;
 }
 @keyframes finger_fadein {
   0%{
@@ -262,19 +263,19 @@ footer > .acento{
   }
   100%{
     opacity: 1;
-    right: 80px;
-    bottom: 250px;
+    right: 40px;
+    bottom: 180px;
   }
 }
 @keyframes finger_fadeout {  
   0%{
     opacity: 1;
-    right: 80px;
-    bottom: 250px;
+    right: 40px;
+    bottom: 180px;
   }
   100%{
     opacity: 0;
     right: 280px;
-    bottom: 250px;
+    bottom: 180px;
   }
 }

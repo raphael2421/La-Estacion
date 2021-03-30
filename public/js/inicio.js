@@ -172,30 +172,23 @@ window.addEventListener('click', ()=>{
 
 
 ///////// si es touch show finger
-
-function is_touch_enabled() {
-   return ('ontouchstart' in window) ||
-      (navigator.maxTouchPoints > 0) ||
-      (navigator.msMaxTouchPoints > 0);
-}
-
-
 window.addEventListener('load', () => {
    slideInterval = setInterval(autoSlide, 3200);
+   if (window.matchMedia("(pointer: coarse)").matches) {
+      // touchscreen
+      console.log('touchscreen');
+      // touchscreen
+      let img = document.createElement('img');
+      img.setAttribute('src', '../media/dedo.svg');
+      document.body.appendChild(img);
+      img.classList.add('touch_anim');
+      setTimeout(() => {
+         img.classList.add('finger_fadeout');
+      }, 3200);
+   }
 
    //////////// muestra dedo
-   if (is_touch_enabled()) {
-      let home_firsttime = localStorage.getItem('home-firsttime');
-      if (Object.is(home_firsttime, null)) {
-         localStorage.setItem('home-firsttime', '');
-         let img = document.createElement('img');
-         img.setAttribute('src', '../media/dedo.svg');
-         document.body.appendChild(img);
-         img.classList.add('touch_anim');
-         setTimeout(() => {
-            img.classList.add('finger_fadeout');
-         }, 3200);
-      }
-   };
+   
+   
    /// anima dedo
 });
