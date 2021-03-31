@@ -77,9 +77,10 @@ if (window.innerWidth >= 1200) {
 }
 /********************************************/
 // go left
-chevron_left.addEventListener('click', go_left);
+chevron_left.addEventListener('mouseup', go_left);
 function go_left() {   
-   slideN--
+   slideN--;
+   console.log(slideN);
    if (slideN < 0) {
       slideN = slidesContent.length - 1;
    }
@@ -94,9 +95,10 @@ function go_left() {
 
 
 // go right
-chevron_right.addEventListener('click', go_right);
+chevron_right.addEventListener('mouseup', go_right);
 function go_right() {
-   slideN++
+   slideN++;
+   console.log(slideN);
    if (slideN > slidesContent.length - 1) {
       slideN = 0;
    }
@@ -114,11 +116,8 @@ let initialCoordsY = 0;
 let finalCoordsY = 0;
 
 document.addEventListener('touchstart', function (e) {
-   clearInterval(slideInterval);
    e.preventDefault();
-   document.querySelectorAll('.slide_header_txt').forEach((i, ï, ä) => {
-      i.innerText = 'Y:' + Math.floor(e.touches[0].clientY) + ' X:' + Math.floor(e.touches[0].clientX);
-   });
+   clearInterval(slideInterval);   
    if (e.target.classList.contains('swipe')) {
       e.stopPropagation();
       initialCoordsX = e.touches[0].clientX;
@@ -129,10 +128,8 @@ document.addEventListener('touchstart', function (e) {
 });
 
 document.addEventListener('touchmove', function (e) {
-   document.querySelectorAll('.slide_header_txt').forEach((i, ï, ä) => {
-      i.innerText = 'Y:' + Math.floor(e.touches[0].clientY) + ' X:' + Math.floor(e.touches[0].clientX);
-   });
    if (e.target.classList.contains('swipe')) {
+      console.log('swipe');
       e.stopPropagation();
       finalCoordsX = e.touches[0].clientX;
       finalCoordsY = e.touches[0].clientY;
@@ -294,25 +291,25 @@ var isInViewport = function (elem) {
 var findMe = document.querySelector('.slider_container');
 let on_off = false;
 
-window.addEventListener('scroll', function (event) {
-   if (isInViewport(findMe)) {
-      // console.log('In viewport!');
-      if ((window.matchMedia("(pointer: coarse)").matches && on_off == false)) {
-         slideInterval = setInterval(autoSlide, 3200);
-         on_off = true;
-         // touchscreen
-         // console.log('touchscreen');
-         // touchscreen
-         let img = document.createElement('img');
-         img.setAttribute('src', '../media/dedo.svg');
-         slider_container.prepend(img);
-         img.classList.add('touch_anim');
-         setTimeout(() => {
-            img.classList.add('finger_fadeout');
-         }, 3200);
-      }
-   } else if ((window.innerWidth >= 1200 && on_off == false)){
-      on_off = true;
-      slideInterval = setInterval(autoSlide, 3200);
-   }
-}, false);
+// window.addEventListener('scroll', function (event) {
+//    if (isInViewport(findMe)) {
+//       // console.log('In viewport!');
+//       if ((window.matchMedia("(pointer: coarse)").matches && on_off == false)) {
+//          slideInterval = setInterval(autoSlide, 3200);
+//          on_off = true;
+//          // touchscreen
+//          // console.log('touchscreen');
+//          // touchscreen
+//          let img = document.createElement('img');
+//          img.setAttribute('src', '../media/dedo.svg');
+//          slider_container.prepend(img);
+//          img.classList.add('touch_anim');
+//          setTimeout(() => {
+//             img.classList.add('finger_fadeout');
+//          }, 3200);
+//       }
+//    } else if ((window.innerWidth >= 1200 && on_off == false)){
+//       on_off = true;
+//       slideInterval = setInterval(autoSlide, 3200);
+//    }
+// }, false);

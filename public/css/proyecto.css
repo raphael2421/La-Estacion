@@ -127,6 +127,12 @@
   text-align: center;
   color: var(--FontDark);
 }
+.modelos_tipo >p>b{
+   border: 1px solid var(--Primary);
+   padding: 5px 10px;
+   border-radius: 7px;
+   cursor: pointer;
+}
 .m2{
    font-size: 25px !important;
    border: 1px solid var(--FontDark);
@@ -311,14 +317,18 @@
   letter-spacing: normal;
   text-align: center;
   color: var(--FontDark);
+  /* background-color: #ece9e5; */
 }
 .matterport{
-   margin: 100px auto 28px auto;
+   margin: -50px auto 28px auto;
    width: 90%;
    height: 360px;
 }
 /********* Media Query On screens that are 992px or more ************/
 @media screen and (min-width: 992px) {
+   .matterport{
+      margin: 100px auto 28px auto;
+   }
    body{
       background: var(--Primary);
       background: linear-gradient(180deg, var(--Primary) 518px, rgba(255,255,255,1) 518px);

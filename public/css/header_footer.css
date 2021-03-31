@@ -163,22 +163,13 @@ footer > .acento{
   }
 }
 
-
-  .menu_desk{
-    display: none;
-  }
-  .chevron_left, .chevron_right{
-    visibility: hidden;
-  }
+.menu_desk{
+  display: none;
+}
+  
 /********* Media Query On screens that are 992px or more ************/
 @media screen and (min-width: 992px) {
-  .chevron_left, .chevron_right{
-    visibility: inherit;
-  }
-  .menu_top {
-    top:80px;
-    padding-top: 50px;
-  }
+  .menu_top{display: none;}
   header {
     background-color: var(--Primary);
     width: auto;

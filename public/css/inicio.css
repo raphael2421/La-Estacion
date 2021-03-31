@@ -36,7 +36,7 @@
    width: 30px;
    top: calc(50% - 60px);
    left: 26px;
-   z-index: 30;
+   z-index: 100;
    transform: rotate(180deg);
    cursor: pointer;
 }
@@ -46,7 +46,7 @@
    width: 30px;
    top: calc(50% - 60px);
    right: 26px;
-   z-index: 30;
+   z-index: 100;
    cursor: pointer;
 }
 /*******************************************************/
