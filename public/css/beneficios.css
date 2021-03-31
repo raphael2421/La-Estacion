@@ -100,7 +100,6 @@
   text-align: center;
 }
 
-
 /** Media query **/
 
 /********* Media Query On screens that are 600px or more ************/
@@ -157,7 +156,12 @@
    }
 
 } /*600px*/
-
+.blog_title_right::after, blog_img_left::after{
+   content: "";
+   position: absolute;
+   display: block;
+   -
+}
 @media screen and (min-width: 992px) {
    .blog_title_right{
       right: 18%;
