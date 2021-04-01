@@ -186,10 +186,5 @@ window.addEventListener('load', () => {
    //       img.classList.add('finger_fadeout');
    //    }, 3200);
    // }
-
-   //////////// muestra dedo
-   
-   
-   /// anima dedo
 });
 slideInterval = setInterval(autoSlide, 3200);
