@@ -11,8 +11,19 @@ const cors = require('cors');
 const hpp = require('hpp');
 const rate_limit = require('express-rate-limit');
 
+// mongo
+const mongoose = require('mongoose');
+mongoose.connect(process.env.MONGODB, {
+   useNewUrlParser: true,
+   useUnifiedTopology: true,
+})
+    .then(() => { console.log('mongo conected')})
+    .catch(err =>{ console.log('Unable to connect mongo '+ err)});
+
+
 // templating
 app.set('view engine', 'ejs');
+
 // middlewares
 app.use(express.urlencoded({ extended: false }));
 app.use(cors());
