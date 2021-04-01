@@ -71,7 +71,7 @@ const enviarCorreo = async (paramsObj) => {
              from: `${process.env.MAIL_NAME} <${process.env.MAIL_FROM}>`, // sender address
             //  bcc: 'informes@royalhome.mx',
              subject: 'Solicitud informes', // Subject line
-             text: `datos: nombre:${fc_nombre}, tel:${fc_telefono}, mail:${fc_email}, via de comunicacion:${fc_via_comunicacion}, horario:${fc_horario}`, // plain text body
+             text: `datos: nombre:${fc_nombre}, tel:${fc_telefono}, mail:${fc_email}, via de comunicacion:${fc_via_comunicacion}, horario:${fc_horario}, _refURL${fc_refURL}, _refID: ${fc_refID}`, // plain text body
              // attachments: paramsObj.attachments,
              // html: emailTemplate // html body
           };
