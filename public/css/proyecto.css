@@ -324,6 +324,16 @@
    width: 90%;
    height: 360px;
 }
+
+
+/********* Media Query On landscape  ************/
+@media screen and (orientation:landscape) {
+   .matterport {
+      margin: 200px auto 28px auto;
+   }
+}
+
+
 /********* Media Query On screens that are 992px or more ************/
 @media screen and (min-width: 992px) {
    .matterport{

@@ -220,24 +220,27 @@ input, select {
 
 /********* Media Query On screens that are 600px or more ************/
 @media screen and (min-width: 600px) {
-   .forma_container{
-      margin: 0;
-   }
-   .slide_header{
-      height: 200px;
-   }
-   .slide_header > p{
-      font-size: 50px;
-   }
-  .chevron_left {
-     left: 150px;
-  }
-  .chevron_right {
-     right: 150px;
-  }
+    .forma_container{
+        margin: 0;
+    }
 }
 /********* Media Query On screens that are 992px or more ************/
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1200px) {
+    .forma_container{
+        margin: 0;
+    }
+    .slide_header{
+        height: 200px;
+    }
+    .slide_header > p{
+        font-size: 50px;
+    }
+    .chevron_left {
+        left: 150px;
+    }
+    .chevron_right {
+        right: 150px;
+    }
    .legales_container{
       height: 200px;
    }
