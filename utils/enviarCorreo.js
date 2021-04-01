@@ -22,6 +22,8 @@ const enviarCorreo = async (paramsObj) => {
    });
 
    let emailTemplate;
+   const fc_refURL = paramsObj.fc_refURL;
+   const fc_refID = paramsObj.fc_refID;
    const fc_nombre = paramsObj.fc_nombre;
    const fc_telefono = paramsObj.fc_telefono || '';
    const fc_email = paramsObj.fc_email;
