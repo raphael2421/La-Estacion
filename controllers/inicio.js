@@ -57,7 +57,9 @@ exports.formaDeContacto = async (req, res, next) => {
       path: '/',
       page: 'Inicio',
       msjForma: 'Tu solicitud fue enviada',
-      fechaMX: await fechaMX()
+      fechaMX: await fechaMX(),
+      _refID: req.params._refID || '',
+      _refURL: req.headers.referer || ''
    });
    
 } // formaDeContacto end...
