@@ -18,7 +18,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cors());
 app.use(cookie());
 app.use(hpp());
-app.use(xss())
+app.use(xss());
 // app.use(helmet());
 const limit = rate_limit({
    windowMs: 10 * 60 * 1000,
@@ -26,6 +26,15 @@ const limit = rate_limit({
 });
 app.use(limit);
 
+// SSL
+if(process.env.NODE_ENV === 'production') {
+   app.use((req, res, next) => {
+      if (req.header('x-forwarded-proto') !== 'https')
+         res.redirect(`https://${req.header('host')}${req.url}`)
+      else
+         next()
+   })
+}
 
 // routes
 app.use('/', require('./routes/inicio'));

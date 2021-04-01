@@ -16,7 +16,7 @@
    position: absolute;
    height: 145px;
    width: 100%;
-   background: rgb(0,0,0), .3;
+   background: rgba(0,0,0, 0.3);
    background: linear-gradient(180deg, rgba(0,0,0,0.499019676229867) 60%, rgba(0,0,0,0) 100%);
    /* z-index: 5; */
    visibility: hidden;
@@ -36,7 +36,7 @@
    width: 30px;
    top: calc(50% - 60px);
    left: 26px;
-   z-index: 100;
+   z-index: 30;
    transform: rotate(180deg);
    cursor: pointer;
 }
@@ -46,7 +46,7 @@
    width: 30px;
    top: calc(50% - 60px);
    right: 26px;
-   z-index: 100;
+   z-index: 30;
    cursor: pointer;
 }
 /*******************************************************/

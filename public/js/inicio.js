@@ -67,7 +67,7 @@ slidesContent.forEach((i, ï, ä)=>{
          <div class="slide_header">
             <p class="slide_header_txt"> ${i.title} </p>
          </div>
-         ${(ï == 0) ? `<video class="slide_img swipe" src="../media/slider-inicio/video.mp4" autoplay muted loop type="video/mp4" poster="../media/slider-inicio/video.jpg"></video>` : `<img class="slide_img swipe" src="../media/slider-inicio/${window.innerWidth >= 600 ? i.large : i.small}" alt="${i.title}">`}
+         ${(ï === 0) ? `<video class="slide_img swipe" src="../media/slider-inicio/video.mp4" autoplay muted loop type="video/mp4" poster="../media/slider-inicio/video.jpg" data-index="${ï}"></video>` : `<img class="slide_img swipe" data-index="${ï}" src="../media/slider-inicio/${window.innerWidth >= 900 ? i.large : i.small}" alt="${i.title}">`}
       </div>
    `;
 });
@@ -173,22 +173,23 @@ window.addEventListener('click', ()=>{
 
 ///////// si es touch show finger
 window.addEventListener('load', () => {
-   slideInterval = setInterval(autoSlide, 3200);
-   if (window.matchMedia("(pointer: coarse)").matches) {
-      // touchscreen
-      console.log('touchscreen');
-      // touchscreen
-      let img = document.createElement('img');
-      img.setAttribute('src', '../media/dedo.svg');
-      document.body.appendChild(img);
-      img.classList.add('touch_anim');
-      setTimeout(() => {
-         img.classList.add('finger_fadeout');
-      }, 3200);
-   }
+
+   // if (window.matchMedia("(pointer: coarse)").matches) {
+   //    // touchscreen
+   //    console.log('touchscreen');
+   //    // touchscreen
+   //    let img = document.createElement('img');
+   //    img.setAttribute('src', '../media/dedo.svg');
+   //    document.body.appendChild(img);
+   //    img.classList.add('touch_anim');
+   //    setTimeout(() => {
+   //       img.classList.add('finger_fadeout');
+   //    }, 3200);
+   // }
 
    //////////// muestra dedo
    
    
    /// anima dedo
 });
+slideInterval = setInterval(autoSlide, 3200);
