@@ -48,13 +48,13 @@ if(process.env.NODE_ENV === 'production') {
 }
 
 // routes
-app.use('/', require('./routes/inicio'));
 app.use('/vive-la-estacion', require('./routes/galeria'));
 app.use('/quienes-somos', require('./routes/qSomos'));
 app.use('/proyecto', require('./routes/proyecto'));
 app.use('/beneficios', require('./routes/beneficios'));
 app.use('/ubicacion', require('./routes/ubicacion'));
 app.use('/aviso-de-privacidad', require('./routes/privacidad'));
+app.use('/', require('./routes/inicio'));
 // app.use('/404', require('./routes/404'));
 
 
