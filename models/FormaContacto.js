@@ -2,45 +2,35 @@
 const mongoose = require('mongoose');
 
 
-const UserSchema = new mongoose.Schema({
+const FormaContactoSchema = new mongoose.Schema({
     nombre: {
-        type: String, required: true
+        type: String, required: [true, 'Por favor introduzca su nombre']
     },
-    login: {
-        type: String, required: true
+    telefono: {
+        type: Number, required: false
     },
-    email: {
-        type: String, required: true
+    correo: {
+        type: String, required: [true, 'Por favor introduzca un correo válido']
     },
-    password: {
-        type: String, required: true, select: false
+    pref_contacto: {
+        type: String, required: false
     },
-    social_links: {
-        facebook: String,
-        linkedin: String,
-        github: String,
-        fiverr: String,
-        twitter: String,
+    horario_atencion: {
+        type: String, required: false
     },
-    resetPass:{type:String, default:undefined},
-    deleteAt: { type: Date, default: new Date(masMinutos(3))},
+    _refURL:{
+        type: String,
+    },
+    _refID:{
+        type: String,
+    },
     _date:{
         type: Date, default: Date.now
     },
 
 });
 // indexes
-UserSchema.index({
-    email: 1,
-}, {
-    unique: true,
-});
-
-UserSchema.index({ deleteAt: 1 }, { expireAfterSeconds: 0 });
-
 
 // x4otgRTAsXy93sxNoa85qjnmfbNP290e
-const User = mongoose.model('User', UserSchema);
-module.exports = User;
-
-
+const FormaContacto = mongoose.model('FormaContacto', FormaContactoSchema);
+module.exports = FormaContacto;

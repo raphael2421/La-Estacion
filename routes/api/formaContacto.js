@@ -1,12 +1,10 @@
 // express
 const router = require('express').Router();
 // DeStructuring controller
-const { renderInicio, formaDeContacto, refID } = require('../controllers/inicio');
+const { allForms } = require('../../controllers/api/formaContacto');
 
 router.route('/')
-.get(renderInicio)
-.post(formaDeContacto)
-
+.get(allForms)
 
 // export
 module.exports = router;

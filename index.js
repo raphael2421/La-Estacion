@@ -47,6 +47,8 @@ if(process.env.NODE_ENV === 'production') {
    })
 }
 
+// api routers
+app.use('/api/v1/fomra_contacto', require('./routes/api/formaContacto'));
 // routes
 app.use('/vive-la-estacion', require('./routes/galeria'));
 app.use('/quienes-somos', require('./routes/qSomos'));

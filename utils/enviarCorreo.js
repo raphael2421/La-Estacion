@@ -22,13 +22,13 @@ const enviarCorreo = async (paramsObj) => {
    });
 
    let emailTemplate;
-   const fc_refURL = paramsObj.fc_refURL;
-   const fc_refID = paramsObj.fc_refID;
-   const fc_nombre = paramsObj.fc_nombre;
-   const fc_telefono = paramsObj.fc_telefono || '';
-   const fc_email = paramsObj.fc_email;
-   const fc_via_comunicacion = paramsObj.fc_via_comunicacion;
-   const fc_horario = paramsObj.fc_horario;
+   const fc_refURL = paramsObj._refURL;
+   const fc_refID = paramsObj._refID;
+   const fc_nombre = paramsObj.nombre;
+   const fc_telefono = paramsObj.telefono || '';
+   const fc_email = paramsObj.correo;
+   const fc_via_comunicacion = paramsObj.pref_contacto;
+   const fc_horario = paramsObj.horario_atencion;
    const emailCCO = process.env.SMTP_EMAIL;
    ///
 

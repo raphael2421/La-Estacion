@@ -15,12 +15,12 @@
     <div class="contacto_top">
        <p>síguenos en</p>
        <div class="contacto_icons">
-        <a href="https://www.instagram.com/laestacionresidence"><img src="../media/instagram-icon.png" alt=""></a>
-        <a href="https://www.facebook.com/LaEstacionResidence"><img src="../media/facebook-icon.png" alt=""></a>
+        <a href="https://www.instagram.com/laestacionresidence" target="_blank"><img src="../media/instagram-icon.png" alt=""></a>
+        <a href="https://www.facebook.com/LaEstacionResidence" target="_blank"><img src="../media/facebook-icon.png" alt=""></a>
        </div>
     </div>
     <div class="contacto_banner">
-       <p>¡VIVE <br> LA ESTACIÓN!</p>
+       <img src="../media/logo-la-estacion-completo.svg" alt="" width="240px">
     </div>
     <div id="contacto" class="contacto_bottom">
        <img src="../media/ubicacion-icon.png" alt="">
@@ -35,19 +35,19 @@
     </div>
     <div class="forma_container">
        <form id="contacto_forma" class="contacto_forma" action="/" method="post">
-         <input id="fc_refID" type="hidden" name="fc_refID" value="<%= _refID %>"/>
-         <input id="fc_refURL" type="hidden" name="fc_refURL" value="<%= _refURL %>"/>
-         <input id="fc_nombre" type="text" name="fc_nombre" placeholder="Nombre" required />
-         <input id="fc_telefono" type="text" name="fc_telefono" placeholder="Teléfono" />
-         <input id="fc_email" type="text" name="fc_email" placeholder="Email" required />
-         <select name="fc_via_comunicacion" id="fc_via_comunicacion">
+         <input id="fc_refID" type="hidden" name="_refID" value="<%= _refID %>"/>
+         <input id="fc_refURL" type="hidden" name="_refURL" value="<%= _refURL %>"/>
+         <input id="fc_nombre" type="text" name="nombre" placeholder="Nombre" required />
+         <input id="fc_telefono" type="number" name="telefono" placeholder="Teléfono" />
+         <input id="fc_email" type="email" name="correo" placeholder="Email" required validate/>
+         <select name="pref_contacto" id="fc_via_comunicacion">
             <option selected="selected" disabled>¿Cómo prefiere ser contactado?</option>
             <option value="Llamada">Llamada</option>
             <option value="Whatsapp">Whatsapp</option>
             <option value="Telegram">Telegram</option>
             <option value="Email">Email</option>
          </select>
-         <select name="fc_horario" id="fc_horario">
+         <select name="horario_atencion" id="fc_horario">
             <option selected="selected" disabled>Horarios de atención (México Centro)</option>
             <option value="9am - 10am">9am - 10am</option>
             <option value="10am - 11am">10am - 11am</option>
