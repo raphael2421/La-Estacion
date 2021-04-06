@@ -68,7 +68,7 @@ link_contacto.forEach((i, ï, ä)=>{
    });
 });
 function linkContacto(){
-   if (window.location.hash == '#contacto') {      
+   if (window.location.hash == '#contacto') {
       link_contacto.forEach((i, ï, ä)=>{
          i.classList.add('link_active')
       });

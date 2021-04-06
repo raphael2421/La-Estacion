@@ -188,3 +188,17 @@ window.addEventListener('load', () => {
    // }
 });
 slideInterval = setInterval(autoSlide, 3200);
+
+
+
+
+
+////////////// cookie
+const fc_refID = document.getElementById('fc_refID');
+fc_refID.value = getCookie('refid');
+
+function getCookie(name) {
+   function escape(s) { return s.replace(/([.*+?\^$(){}|\[\]\/\\])/g, '\\$1'); }
+   var match = document.cookie.match(RegExp('(?:^|;\\s*)' + escape(name) + '=([^;]*)'));
+   return match ? match[1] : null;
+}

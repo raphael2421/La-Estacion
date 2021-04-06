@@ -69,10 +69,10 @@
             <%= locals.msjForma  ? `${msjForma}` : '' %>
          </div>
         
-            <%- locals.msjForma ? `            <script>
+            <%- locals.msjForma ? ` <script>
             window.addEventListener('load', function(){
                document.getElementById('contacto').scrollIntoView();
-            });               
+            }); 
             </script>` : '' %>
          
        </form>
