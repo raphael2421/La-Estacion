@@ -49,14 +49,17 @@ exports.allForms = async (req, res, next) => {
    //// exec query
    const cForms = await query;
 
-   res.status(200).json({
-      success: true,
-      total_resultados: total_docs,
-      por_pagina: cForms.length,
-      pagina: page,
-      total_paginas: total_pages,
-      data: cForms
-   });
+   // res.status(200).json({
+   //    success: true,
+   //    total_resultados: total_docs,
+   //    por_pagina: cForms.length,
+   //    pagina: page,
+   //    total_paginas: total_pages,
+   //    data: cForms
+   // });
+   res.status(200).json(
+   cForms
+   );
 
 } // allForms end...
 
