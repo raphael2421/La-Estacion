@@ -12,13 +12,13 @@ exports.allForms = async (req, res, next) => {
    // paginación
    const total_docs = await FormaContacto.countDocuments();
    let page = parseInt(req.query.page) || 1;
-   let per_page = parseInt(req.query.per_page) || 10;
+   let per_page = parseInt(req.query.per_page) || 1000000;
 
    if (page <= 0) {
       page = 1
    }
-   if (per_page > 100) {
-      per_page = 10
+   if (per_page > 900000) {
+      per_page = 1000000
    }
 
    const total_pages = Math.ceil((total_docs / per_page));
@@ -49,17 +49,18 @@ exports.allForms = async (req, res, next) => {
    //// exec query
    const cForms = await query;
 
-   // res.status(200).json({
-   //    success: true,
-   //    total_resultados: total_docs,
-   //    por_pagina: cForms.length,
-   //    pagina: page,
-   //    total_paginas: total_pages,
-   //    data: cForms
-   // });
-   res.status(200).json(
-   cForms
-   );
+   res.status(200).json({
+      success: true,
+      total_resultados: total_docs,
+      por_pagina: cForms.length,
+      pagina: page,
+      total_paginas: total_pages,
+      data: cForms
+   });
+
+   // res.status(200).json(
+   // cForms
+   // );
 
 } // allForms end...
 
