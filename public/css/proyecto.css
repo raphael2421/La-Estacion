@@ -334,6 +334,11 @@
    width: 90%;
    height: 360px;
 }
+/************* pics **********/
+.pics_frame{
+   margin: 20px;
+   border: 1px solid red;
+}
 
 
 /********* Media Query On landscape  ************/
