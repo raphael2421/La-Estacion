@@ -27,7 +27,10 @@ const FormaContactoSchema = new mongoose.Schema({
     _date:{
         type: Date, default: Date.now
     },
-
+    asignado:{
+        type: Boolean,
+        default: false
+    },
 });
 // indexes
 

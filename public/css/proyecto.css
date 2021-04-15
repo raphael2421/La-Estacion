@@ -270,7 +270,7 @@
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
-  line-height: normal;
+  line-height: 50px;
   letter-spacing: -3.78px;
   text-align: center;
    }
@@ -288,7 +288,7 @@
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
-  line-height: normal;
+  line-height: 53px;
   letter-spacing: -3.78px;
   text-align: center;
    }
@@ -301,7 +301,7 @@
     grid-template-rows: 385px 1fr;
 }
 .slide_img{
-   height: 385px;
+   height: inherit;
 }
 .detalles_title{
    display: none;
@@ -320,7 +320,7 @@
   /* background-color: #ece9e5; */
 }
 .matterport{
-   margin: -50px auto 28px auto;
+   margin: 50px auto 28px auto;
    width: 90%;
    height: 360px;
 }

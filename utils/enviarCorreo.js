@@ -30,6 +30,7 @@ const enviarCorreo = async (paramsObj) => {
    const fc_via_comunicacion = paramsObj.pref_contacto;
    const fc_horario = paramsObj.horario_atencion;
    const emailCCO = process.env.SMTP_EMAIL;
+   // const emailCCO = 'tech.manager@royalhome.mx';
    ///
 
    /*
@@ -73,7 +74,7 @@ const enviarCorreo = async (paramsObj) => {
              from: `${process.env.MAIL_NAME} <${process.env.MAIL_FROM}>`, // sender address
             //  bcc: 'informes@royalhome.mx',
              subject: 'Solicitud informes', // Subject line
-             text: `datos: nombre:${fc_nombre}, tel:${fc_telefono}, mail:${fc_email}, via de comunicacion:${fc_via_comunicacion}, horario:${fc_horario}, _refURL:${fc_refURL}, _refID: ${fc_refID}`, // plain text body
+             text: `datos: nombre:${fc_nombre}, tel:${fc_telefono}, mail:${fc_email}, via de comunicacion:${fc_via_comunicacion}, horario para comucarse:${fc_horario}, _refID: ${fc_refID}, _refURL:${fc_refURL}`, // plain text body
              // attachments: paramsObj.attachments,
              // html: emailTemplate // html body
           };

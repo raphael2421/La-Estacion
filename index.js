@@ -25,7 +25,8 @@ mongoose.connect(process.env.MONGODB, {
 app.set('view engine', 'ejs');
 
 // middlewares
-app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 app.use(cookie());
 app.use(hpp());
@@ -49,6 +50,7 @@ if(process.env.NODE_ENV === 'production') {
 
 // api routers
 app.use('/api/v1/fomra_contacto', require('./routes/api/formaContacto'));
+app.use('/api/v1/blog', require('./routes/api/blog'));
 // routes
 app.use('/vive-la-estacion', require('./routes/galeria'));
 app.use('/quienes-somos', require('./routes/qSomos'));

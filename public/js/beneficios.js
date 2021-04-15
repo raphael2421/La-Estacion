@@ -3,7 +3,7 @@ const blog = document.querySelector('.blog');
 const blogContent = [
    {
       title: 'Plusvalía',
-      img: 'mexico-5756222.png',
+      img: 'san miguel 640x640.jpg',
       imgxl: '',
       text: `Por más de 7 años, San Miguel de Allende se mantiene como una de las ciudades más atractivas para invertir en bienes raíces, ya que ha brindado mayor plusvalía a tráves de los años.</b>`,
       content: ''

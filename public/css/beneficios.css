@@ -52,6 +52,9 @@
   letter-spacing: -0.83px;
   text-align: left;
   color: #ffffff;
+  z-index: 1;
+/* box-shadow: 1px 0 10px rgba(0,0,0, .2); */
+/* padding: 5px 10px; */
   
 }
 .blog_title_right{
@@ -68,7 +71,10 @@
   letter-spacing: -0.83px;
   text-align: right;
   color: #ffffff;
-  
+     z-index: 1;
+/* box-shadow: 1px 0 10px rgba(0,0,0, .2); */
+/* padding: 5px 10px; */
+
 }
 .blog_img_left{
    width: 100%;
@@ -156,12 +162,7 @@
    }
 
 } /*600px*/
-.blog_title_right::after, blog_title_left::after{
-   content: "";
-   position: absolute;
-   display: block;
-    background-color: #d7340f;
-}
+
 @media screen and (min-width: 992px) {
    .blog_title_right{
       right: 18%;
