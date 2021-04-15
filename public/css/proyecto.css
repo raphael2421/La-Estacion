@@ -336,6 +336,7 @@
 }
 /************* pics **********/
 .pics_frame{
+   display: none;
    margin: 20px;
    border: 1px solid red;
 }
