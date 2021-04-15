@@ -301,10 +301,14 @@
     grid-template-rows: 385px 1fr;
 }
 .slide_img{
-   height: inherit;
+   height: 570px;
+   height: calc(100vh - 44px);
 }
 .detalles_title{
    display: none;
+}
+.detalles_box{
+   margin-top: 10px;
 }
 .detalles_content{
    padding: 5%;
