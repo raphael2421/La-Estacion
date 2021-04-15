@@ -295,6 +295,7 @@
 /****/
 /*************** Slider Detalles ***********************/
 .slide {
+    height: 570px;
     height: calc(100vh - 44px);
     display: grid;
     grid-template-columns: 1fr;
@@ -308,7 +309,7 @@
    display: none;
 }
 .detalles_box{
-   margin-top: 10px;
+   margin-top: 20px;
 }
 .detalles_content{
    padding: 5%;
