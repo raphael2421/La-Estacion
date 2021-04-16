@@ -5,7 +5,7 @@ const blogContent = [
       title: 'Plusvalía',
       img: 'san miguel 640x640.jpg',
       imgxl: '',
-      text: `Por más de 7 años, San Miguel de Allende se mantiene como una de las ciudades más atractivas para invertir en bienes raíces, ya que ha brindado mayor plusvalía a tráves de los años.</b>`,
+      text: `Por más de 7 años, San Miguel de Allende se mantiene como <strong>una de las ciudades más atractivas para invertir en bienes raíces</strong>, ya que ha brindado mayor plusvalía a tráves de los años.</b>`,
       content: ''
    },
    {
@@ -26,8 +26,7 @@ del mundo <br>
 para vivir.`,
       img: 'litsie-gonzalez-m-ei-f-cggi-7-e-unsplash.png',
       imgxl: '',
-      text: `San Miguel de Allende <br>
-se convirtió en <b>el primer lugar turístico sin playa</b> de América Latina en recibir el Sello de Viaje seguro (TSS) por parte del Consejo Mundial de Viajes y Turismo (WTTC)`,
+      text: `Nombrada la mejor ciudad pequeña del mundo para vivir por la revista <strong>Condé Nast Traveler</strong>, San Miguel de Allende se convirtió en el primer lugar turístico sin playa de América Latina en recibir el Sello de Viaje seguro (TSS) por parte del Consejo Mundial de Viajes y Turismo (WTTC).`,
       content: ''
    },
    {
