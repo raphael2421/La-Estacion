@@ -34,6 +34,7 @@
    position: absolute;
    height: 60px;
    width: 30px;
+   top: -webkit-calc(50% - 60px);
    top: calc(50% - 60px);
    left: 26px;
    z-index: 30;
@@ -44,6 +45,7 @@
    position: absolute;
    height: 60px;
    width: 30px;
+   top: -webkit-calc(50% - 60px);
    top: calc(50% - 60px);
    right: 26px;
    z-index: 30;
@@ -58,7 +60,7 @@
 .contacto_container{
    /* height: calc(100vh - 44px); */
    display: grid;
-   grid-template-rows: 1fr 115px 1fr;
+   grid-template-rows: 1fr 240px 1fr;
 }
 .contacto_top {
     display: grid;
@@ -66,6 +68,7 @@
     justify-content: center;
     align-content: center;
     grid-template-rows: 69px 40px;
+    grid-gap: 23px;
     gap: 23px;
 }
 .contacto_top > p{
@@ -92,11 +95,19 @@
    display: grid;
    background-color: var(--Primary);
    justify-content: center;
+   justify-items: center;
    align-content: center;
 }
-.contacto_banner >p{
+.contacto_banner > h1{
+   margin: 0;
+   padding: 0;
+}
+
+.contacto_banner >h2{
+   margin: 0;
+   padding: 0;
    font-family: 'Encode Sans', sans-serif;
-  font-size: 30.5px;
+  font-size: 16px;
   font-weight: 100;
   font-stretch: normal;
   font-style: normal;
@@ -226,6 +237,9 @@ input, select {
 }
 /********* Media Query On screens that are 992px or more ************/
 @media screen and (min-width: 1200px) {
+   .contacto_banner >h2{
+      font-size: 24px;
+   }
     .forma_container{
         margin: 0;
     }
