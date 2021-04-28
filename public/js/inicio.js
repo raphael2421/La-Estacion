@@ -61,8 +61,9 @@ const slidesContent = [
 // sin video: <img class="slide_img swipe" src="../media/slider-inicio/${window.innerWidth >= 600 ? i.large : i.small}" alt="${i.title}">
 let slideN = 0;
 slides_container.setAttribute('style', `grid-template-columns: repeat(${slidesContent.length}, 100%);`);
+let slidesTemp = '';
 slidesContent.forEach((i, ï, ä)=>{
-   slides_container.innerHTML += `
+   slidesTemp += `
       <div class="slide">
          <div class="slide_header">
             <p class="slide_header_txt"> ${i.title} </p>
@@ -70,6 +71,9 @@ slidesContent.forEach((i, ï, ä)=>{
          ${(ï === 0) ? `<video class="slide_img swipe" src="../media/slider-inicio/video.mp4" autoplay muted loop type="video/mp4" poster="../media/slider-inicio/video.jpg" data-index="${ï}"></video>` : `<img class="slide_img swipe" data-index="${ï}" src="../media/slider-inicio/${window.innerWidth >= 900 ? i.large : i.small}" alt="${i.title}">`}
       </div>
    `;
+   if ([ï >= ä.length-1]) {
+      slides_container.innerHTML = slidesTemp;
+   }
 });
 
 // go left
@@ -80,7 +84,7 @@ function go_left() {
       slideN = slidesContent.length - 1;
    }
    if (window.innerWidth >= 1250) {
-      let width = window.innerWidth - 17;      
+      let width = window.innerWidth - 17;
       slides_container.style.transform = `translate(-${width * slideN}px)`;
    } else{
       slides_container.style.transform = `translate(-${window.innerWidth * slideN}px)`;
@@ -126,9 +130,8 @@ document.addEventListener('touchstart', function (e) {
    if (e.target.classList.contains('swipe')) {
       e.stopPropagation();
       initialCoordsX = e.touches[0].clientX;
-      initialCoordsY = e.touches[0].clientY;  
+      initialCoordsY = e.touches[0].clientY;
    }
-   
    // console.log(initialCoordsX);
 });
 
@@ -188,9 +191,6 @@ window.addEventListener('load', () => {
    // }
 });
 slideInterval = setInterval(autoSlide, 3200);
-
-
-
 
 
 ////////////// cookie
