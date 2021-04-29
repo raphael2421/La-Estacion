@@ -10,7 +10,7 @@ const cookie = require('cookie-parser');
 const cors = require('cors');
 const hpp = require('hpp');
 const rate_limit = require('express-rate-limit');
-
+const setCache = require('./middleware/cache');
 // mongo
 const mongoose = require('mongoose');
 mongoose.connect(process.env.MONGODB, {
@@ -25,6 +25,7 @@ mongoose.connect(process.env.MONGODB, {
 app.set('view engine', 'ejs');
 
 // middlewares
+app.use(setCache)
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
