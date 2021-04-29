@@ -44,7 +44,7 @@
       gtag('config', 'AW-397905907');
    </script>
    <%- locals.msjForma ? `<!-- Event snippet for Website lead conversion page --> <script> gtag('event', 'conversion', { 'send_to': 'AW-397905907/kZyNCKjj24kCEPOf3r0B' });</script>` : '<!--No Lead-->' %>
-   <title><%= locals.page ? 'La Estación | ' + page : 'La Estación Hotel & Residence' %></title>
+   <title><%= locals.page ? page + ' | La Estación' : 'La Estación Hotel & Residence' %></title>
 </head>
 
 <body>

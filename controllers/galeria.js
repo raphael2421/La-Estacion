@@ -22,7 +22,7 @@ exports.renderGaleria = async (req, res, next) => {
    if (!Object.is(refid, undefined)) {
       res.cookie('refid', refid, options).status(200).render('galeria', {
          path: '/vive-la-estacion',
-         page: 'Galería',
+         page: 'Vive la estación',
          fechaMX: await fechaMX(),
          _refID: req.query._refID || '',
          _refURL: req.headers.referer || ''
@@ -31,7 +31,7 @@ exports.renderGaleria = async (req, res, next) => {
       else{
          res.status(200).render('galeria', {
             path: '/vive-la-estacion',
-            page: 'Galería',
+            page: 'Vive la estación',
             fechaMX: await fechaMX(),
             _refID: req.query._refID || '',
             _refURL: req.headers.referer || ''
