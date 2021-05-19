@@ -6,7 +6,7 @@ const ejs = require('ejs');
 const enviarCorreo = async (paramsObj) => {
    //  si no trae correo no hace nada 
    if (Object.is(paramsObj.fc_email, undefined) === true || paramsObj.fc_email === '') {
-      console.log('enviarFactura::');
+      // console.log('enviarCorreo::');
       paramsObj.fc_email = paramsObj.fc_email;
    }
 
@@ -73,8 +73,8 @@ const enviarCorreo = async (paramsObj) => {
           const mailBody = {
              from: `${process.env.MAIL_NAME} <${process.env.MAIL_FROM}>`, // sender address
             //  bcc: 'informes@royalhome.mx',
-             subject: 'Solicitud informes', // Subject line
-             text: `nombre:${fc_nombre}, tel:${fc_telefono}, mail:${fc_email}, via de comunicación:${fc_via_comunicacion}, horario para comunicarse:${fc_horario}, _refID: ${fc_refID}, _refURL:${fc_refURL}`, // plain text body
+             subject: 'informes La Estación', // Subject line
+             text: `nombre: ${fc_nombre},  tel: ${fc_telefono},  mail: ${fc_email},  via de comunicación: ${fc_via_comunicacion},  horario para comunicarse: ${fc_horario}`, // plain text body
              // attachments: paramsObj.attachments,
              // html: emailTemplate // html body
           };

@@ -35,5 +35,5 @@ const FormaContactoSchema = new mongoose.Schema({
 // indexes
 
 // x4otgRTAsXy93sxNoa85qjnmfbNP290e
-const FormaContacto = mongoose.model('FormaContacto', FormaContactoSchema);
+const FormaContacto = mongoose.model('LaEstacionForma', FormaContactoSchema);
 module.exports = FormaContacto;

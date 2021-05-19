@@ -32,5 +32,5 @@ const PostSchema = new mongoose.Schema({
 // indexes
 
 // x4otgRTAsXy93sxNoa85qjnmfbNP290e
-const Post = mongoose.model('Post', PostSchema);
+const Post = mongoose.model('LaEstacionPost', PostSchema);
 module.exports = Post;

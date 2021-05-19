@@ -51,6 +51,7 @@ if(process.env.NODE_ENV === 'production') {
 
 // api routers
 app.use('/api/v1/fomra_contacto', require('./routes/api/formaContacto'));
+app.use('/api/v1/forma_contacto', require('./routes/api/formaContacto'));
 app.use('/api/v1/blog', require('./routes/api/blog'));
 // routes
 app.use('/vive-la-estacion', require('./routes/galeria'));
