@@ -14,11 +14,14 @@ exports.renderUbicacion = async (req, res, next) => {
    const options = {
       expires: new Date(now.setDate(now.getDate() + 1000)),
       httpOnly: false,
-      // secure: true
+      secure: true
    };
    // res
    if (!Object.is(refid, undefined)) {
-      res.cookie('refid', refid, options).status(200).render('ubicacion', {
+      res.cookie('refid', refid, options).setHeader(
+         'Content-Security-Policy',
+         "default-src 'self'; font-src 'self'; img-src 'self'; script-src 'self'; style-src 'self'; frame-src 'self'; script-src 'https://embed.waze.com'"
+      ).status(200).render('ubicacion', {
          path: '/ubicacion',
          page: 'Ubicación',
          fechaMX: await fechaMX(),
@@ -27,7 +30,10 @@ exports.renderUbicacion = async (req, res, next) => {
       });
    }
       else{
-         res.status(200).render('ubicacion', {
+      res.status(200).setHeader(
+         'Content-Security-Policy',
+         "default-src 'self'; font-src 'self'; img-src 'self'; script-src 'self'; style-src 'self'; frame-src 'self'; script-src 'https://embed.waze.com'"
+      ).render('ubicacion', {
             path: '/ubicacion',
             page: 'Ubicación',
             fechaMX: await fechaMX(),
@@ -36,3 +42,5 @@ exports.renderUbicacion = async (req, res, next) => {
          });
       }
 } // renderUbicacion end...
+
+
