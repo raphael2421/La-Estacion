@@ -190,7 +190,7 @@ window.addEventListener('load', () => {
    //    }, 3200);
    // }
 });
-slideInterval = setInterval(autoSlide, 3200);
+slideInterval = setInterval(autoSlide, 3600);
 
 
 ////////////// cookie
