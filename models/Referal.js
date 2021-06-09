@@ -49,6 +49,7 @@ ReferalSchema.virtual('_leads', { // <<--este es el mombre virtual que tendra en
    foreignField: 'refID', // <<-- este es el campo externo donde vamos a buscar (un campo que exista en el modelo Ticket)
    justOne: false
 })
+
 // x4otgRTAsXy93sxNoa85qjnmfbNP290e
 const Referal = mongoose.model('Referal', ReferalSchema);
 module.exports = Referal;

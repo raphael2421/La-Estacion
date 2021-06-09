@@ -1,5 +1,6 @@
 const asyncHandler = require('../../middleware/asyncHandler');
 const Referal = require('../../models/Referal');
+const User = require('../../models/User');
 // importa utilidad extends Error
 const ErrorResponse = require('../../utils/errorResponse');
 // enviar correo con token
@@ -101,13 +102,17 @@ exports.userBorrar = async (req, res, next) => {
 // @route   POST /api/v1/auth/users
 // @access  Public
 exports.refAll = asyncHandler(async (req, res, next) => {
-   const users = await Referal.find().populate({
-      path: '_leads'
-   }); //.select('+password +role');
+   const referals = await Referal.find().populate({
+      path: '_leads',
+      select: 'refID -_id'
+   })
+      .populate({
+         path: 'autor',
+         select: 'nombre -_id'
+      }); //.select('+password +role');
 
-   
    res.status(200).json({
-       success: true, data: users
+       success: true, data: referals
       }
       )
 });
