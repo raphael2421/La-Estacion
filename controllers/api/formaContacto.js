@@ -46,6 +46,10 @@ exports.allForms = async (req, res, next) => {
    // query con select
    query.select(select);
 
+   // populate 
+   // query.populate({
+   //    path: '_campaña'
+   // });
    //// exec query
    const cForms = await query;
 

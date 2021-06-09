@@ -32,7 +32,7 @@ app.use(cors());
 app.use(cookie());
 app.use(hpp());
 app.use(xss());
-// app.use(helmet());
+app.use(helmet());
 const limit = rate_limit({
    windowMs: 10 * 60 * 1000,
    max: 2000
@@ -53,6 +53,7 @@ if(process.env.NODE_ENV === 'production') {
 app.use('/api/v1/fomra_contacto', require('./routes/api/formaContacto'));
 app.use('/api/v1/forma_contacto', require('./routes/api/formaContacto'));
 app.use('/api/v1/blog', require('./routes/api/blog'));
+app.use('/api/v1/referals', require('./routes/api/referal'));
 // routes
 app.use('/vive-la-estacion', require('./routes/galeria'));
 app.use('/quienes-somos', require('./routes/qSomos'));

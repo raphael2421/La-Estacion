@@ -44,8 +44,9 @@
     </div>
     <div class="forma_container">
        <form id="contacto_forma" class="contacto_forma" action="/" method="post">
-         <input id="fc_refID" type="hidden" name="_refID" value="<%= _refID %>"/>
-         <input id="fc_refURL" type="hidden" name="_refURL" value="<%= _refURL %>"/>
+         <input id="fc_refID" type="hidden" name="refID" value=""/>
+         <input id="fc_refURL" type="hidden" name="refURL" value=""/>
+         <input id="fc_lastURL" type="hidden" name="lastURL" value="<%= lastURL %>"/>
          <input id="fc_nombre" type="text" name="nombre" placeholder="Nombre" required />
          <input id="fc_telefono" type="number" name="telefono" placeholder="Teléfono" />
          <input id="fc_email" type="email" name="correo" placeholder="Email" required validate/>
@@ -77,13 +78,7 @@
          <div class="forma_msj">
             <%= locals.msjForma  ? `${msjForma}` : '' %>
          </div>
-        
-            <%- locals.msjForma ? ` <script>
-            window.addEventListener('load', function(){
-               document.getElementById('contacto').scrollIntoView();
-            }); 
-            </script>` : '' %>
-         
+
        </form>
     </div>
  </div> <!--contacto_container-->

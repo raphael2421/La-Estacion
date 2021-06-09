@@ -18,10 +18,13 @@ const FormaContactoSchema = new mongoose.Schema({
     horario_atencion: {
         type: String, required: false
     },
-    _refURL:{
+    lastURL:{
         type: String,
     },
-    _refID:{
+    refURL:{
+        type: String,
+    },
+    refID:{
         type: String,
     },
     _date:{
@@ -31,8 +34,23 @@ const FormaContactoSchema = new mongoose.Schema({
         type: Boolean,
         default: false
     },
-});
+}, // forma schema
+   /// virtuals
+{
+    toJSON: { virtuals: true },
+    toObject: { virtuals: true }
+}
+);
 // indexes
+
+
+// Reverse populate
+FormaContactoSchema.virtual('_campaña', { // <<--este es el mombre virtual que tendra en la respuesta JSON
+    ref: 'Referal', // <<-- este es el modelo en el que vamos a buscar
+    localField: 'correo', // <<-- este es el VALOR del modelo actual que vamos a buscar  (en este caso un valor que existe en Empresa)
+    foreignField: '_id', // <<-- este es el campo externo donde vamos a buscar (un campo que exista en el modelo Ticket)
+    justOne: false
+})
 
 // x4otgRTAsXy93sxNoa85qjnmfbNP290e
 const FormaContacto = mongoose.model('LaEstacionForma', FormaContactoSchema);

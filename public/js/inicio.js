@@ -195,10 +195,23 @@ slideInterval = setInterval(autoSlide, 3600);
 
 ////////////// cookie
 const fc_refID = document.getElementById('fc_refID');
+const fc_refURL = document.getElementById('fc_refURL');
 fc_refID.value = getCookie('refid');
+fc_refURL.value = getCookie('refurl');
 
 function getCookie(name) {
    function escape(s) { return s.replace(/([.*+?\^$(){}|\[\]\/\\])/g, '\\$1'); }
    var match = document.cookie.match(RegExp('(?:^|;\\s*)' + escape(name) + '=([^;]*)'));
    return match ? match[1] : null;
 }
+
+window.addEventListener('load', function () {
+   if (window.location.hash === '#contacto') {
+      document.getElementById('contacto').scrollIntoView();
+   }
+
+   if (document.querySelector('.forma_msj').innerText === "Tu solicitud fue enviada") {
+      document.getElementById('contacto').scrollIntoView();
+   }
+
+});
