@@ -60,6 +60,8 @@ exports.refCrear = asyncHandler( async (req, res, next) => {
    res.status(201).json({
       success: true,
       msg: 'Enlace de referidos creado',
+      share: `https://www.laestacionresidence.mx/ref/${referal.id}`,
+      share_english: `https://www.laestacionresidence.mx/ref/${referal.id}-en-US`
    });
    
 }); // referalCrear end...
@@ -144,14 +146,14 @@ const sendCookieToken = (user, status, res)=>{
 // @route   POST /api/v1/auth/miperfil
 // @access  Private
 exports.miPerfil = asyncHandler(async (req, res, next)=>{
-   const user = await Referal.findById(req.user.id).select('+role').populate({
+   const ref = await Referal.findById(req.user.id).select('+role').populate({
       path: '_empresas',
       select: 'razon_social rfc logo'
    });
 
    res.status(200).json({
       success: true,
-      data: user
+      data: ref
    })
 }); // miPerfil
 

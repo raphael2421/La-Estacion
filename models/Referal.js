@@ -20,6 +20,9 @@ const ReferalSchema = new mongoose.Schema({
    keywords: [
       String
    ],
+   visitas: [
+      String
+   ],
    _date: {
       type: Date, default: Date.now
    },

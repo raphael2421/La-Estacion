@@ -1,6 +1,7 @@
 const fechaMX = require('../utils/fechaMX');
 const enviarCorreo = require('../utils/enviarCorreo');
 const FormaContacto = require('../models/FormaContacto');
+const Referal = require('../models/Referal');
 
 //@name:      inicio
 //@route:     /
@@ -38,13 +39,6 @@ exports.renderInicio = async (req, res, next) => {
 //@method:    GET
 //@access:    Public
 exports.captureRefs = async (req, res, next) => {
-  // lang cookie
-   let lang = req.params.lang || req.cookies.lang;
-   if (Object.is(undefined, lang)) {
-      lang = 'es-MX';
-   };
-   
-   let refID = req.params.id;
    // fecha 
    const now = new Date();
    // options
@@ -53,6 +47,39 @@ exports.captureRefs = async (req, res, next) => {
       httpOnly: false,
       secure: process.env.NODE_ENV === 'production' ? true : false,
    };
+  // lang cookie
+   let lang = req.params.lang || req.cookies.lang;
+   if (Object.is(undefined, lang)) {
+      lang = 'es-MX';
+   };
+
+   
+   let refID = req.params.id;
+
+   // capturar visitas
+   const referal = await Referal.findById(refID);
+   if (!referal) {
+      console.log('Referal-ID invalido');
+      // return next(new ErrorResponse(`No se encontró la razón social con ID: ${req.params.id}`, 404));
+      res.cookie('refid', refID, options)
+         .cookie('refurl', req.headers.referer, options)
+         .cookie('lang', lang, options)
+         .status(200).render('inicio', {
+            path: '/',
+            page: 'Inicio',
+            fechaMX: await fechaMX(),
+            _refID: refID || '',
+            lastURL: req.headers.referer || ''
+         });
+   } // if END
+
+   req.body.visitas = referal.visitas
+   req.body.visitas.push(new Date().toISOString());
+
+   referalUpdated = await Referal.findByIdAndUpdate(req.params.id, req.body, {
+      new: true,
+      runValidators: true
+   });
 
    res.cookie('refid', refID, options)
    .cookie('refurl', req.headers.referer, options)
