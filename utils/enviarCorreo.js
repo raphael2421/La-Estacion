@@ -29,8 +29,7 @@ const enviarCorreo = async (paramsObj) => {
    const fc_email = paramsObj.correo;
    const fc_via_comunicacion = paramsObj.pref_contacto;
    const fc_horario = paramsObj.horario_atencion;
-   const emailCCO = process.env.SMTP_EMAIL;
-   // const emailCCO = 'tech.manager@royalhome.mx';
+   const emailCCO = process.env.SEND_TO_MAIL;
    ///
 
    /*

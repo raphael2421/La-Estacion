@@ -32,10 +32,10 @@ app.use(cors());
 app.use(cookie());
 app.use(hpp());
 app.use(xss());
-app.use(helmet());
+// app.use(helmet());
 const limit = rate_limit({
    windowMs: 10 * 60 * 1000,
-   max: 2000
+   max: 200
 });
 app.use(limit);
 
