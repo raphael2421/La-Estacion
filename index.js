@@ -35,7 +35,7 @@ app.use(xss());
 // app.use(helmet());
 const limit = rate_limit({
    windowMs: 10 * 60 * 1000,
-   max: 200
+   max: 1000
 });
 app.use(limit);
 
