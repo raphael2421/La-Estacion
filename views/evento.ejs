@@ -1,0 +1,108 @@
+<%- include('template-parts/header') %>
+<link rel="stylesheet" href="../css/inicio.css">
+
+<main class="container">
+    <div class="forma_container">
+       <form id="contacto_forma" class="contacto_forma" action="/evento" method="post">
+         <input id="fc_nombre" type="text" name="nombre" placeholder="Nombre" required />
+         <input id="fc_telefono" type="number" name="telefono" placeholder="Teléfono" required/>
+         <input id="fc_email" type="email" name="correo" placeholder="Correo" required validate/>
+         <!--  -->
+         
+            
+            <select name="desarrollo" id="fc_desarrollo" required>
+               <option selected disabled value="">Elige un desarrollo</option>
+               <option value="La Estación">La Estación</option>
+               <option value="Cleviá">Cleviá</option>
+               <option value="La Pilarica">La Pilarica</option>
+            </select>
+         
+         <!--  -->
+         <select name="medio" id="fc_medio" required>
+            <option selected disabled value="">¿Por que medio se entero?</option>
+            <option value="Facebook">Facebook</option>
+            <option value="Broker">Broker</option>
+            <option value="Modulo Ventas">Modulo Ventas</option>
+            <option value="Marca Personal">Marca Personal</option>
+            <option value="Google">Google</option>
+            <option value="Otro">Otro</option>
+         </select>
+         <input id="fc_otro_medio" type="text" name="" placeholder="Especifica Medio" class="hidden obilgatorio" />
+         <!--  -->
+         <select name="asesor" id="fc_asesor" required>
+            <option selected disabled value="">Asesor</option>
+            <option value="Ale">Ale</option>
+            <option value="Angela">Angela</option>
+            <option value="Beatriz">Beatriz</option>
+            <option value="Betty">Betty</option>
+            <option value="Dani">Dani</option>
+            <option value="Daniel">Daniel</option>
+            <option value="Jose">Jose</option>
+            <option value="Juan Luis">Juan Luis</option>
+            <option value="Julie">Julie</option>
+            <option value="Lilianne">Lilianne</option>
+            <option value="Stivenson">Stivenson</option>
+            <option value="Tony">Tony</option>
+            <option value="Yula">Toño</option>
+            <option value="Yula">Yula</option>
+            <option value="Otro">Otro</option>
+         </select>
+         <input id="fc_otro_asesor" type="text" name="" placeholder="Especifica Asesor" class="hidden obilgatorio" />
+         <!--  -->
+         <div>
+            <input id="fc_btn_enviar" type="submit" value="enviar">
+         </div>
+         <div class="forma_msj">
+            <%= locals.msjForma  ? `${msjForma}` : '' %>
+         </div>
+       </form>
+    </div>
+ </div> <!--contacto_container-->
+</main>
+
+<style>
+   .hidden{
+      display: none;
+   }
+   .header_icons > *, .menu_icon {
+    visibility: hidden;
+   }
+   .obilgatorio{
+      border: 1px solid var(--Secondary);
+   }
+</style>
+
+<script>
+   let fc_asesor = document.querySelector('#fc_asesor');
+   let fc_otro_asesor = document.querySelector('#fc_otro_asesor');
+   fc_asesor.addEventListener('change', function () {
+      if (fc_asesor.value == 'Otro') {
+         // console.log('hidden')
+         fc_otro_asesor.classList.remove('hidden');
+         fc_otro_asesor.setAttribute('required', 'required');
+         fc_otro_asesor.setAttribute('name', 'asesor');
+         fc_asesor.setAttribute('name', '');
+         fc_asesor.classList.add('hidden');
+      }
+   });
+
+
+   let fc_medio = document.querySelector('#fc_medio');
+   let fc_otro_medio = document.querySelector('#fc_otro_medio');
+   fc_medio.addEventListener('change', function () {
+         if (fc_medio.value == 'Otro') {
+            // console.log('hidden')
+            fc_otro_medio.classList.remove('hidden');
+            fc_otro_medio.setAttribute('required', 'required');
+            fc_otro_medio.setAttribute('name', 'medio');
+            fc_medio.setAttribute('name', '');
+            fc_medio.classList.add('hidden');
+         }
+      });
+
+</script>
+
+<%- include('template-parts/footer') %>
+<!-- <script src="../js/inicio.js"></script> -->
+<%- include('template-parts/scripts') %>
+
