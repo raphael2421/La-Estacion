@@ -71,7 +71,7 @@ const enviarCorreo = async (paramsObj) => {
        try {
           // crear el mensaje a enviar
           const mailBody = {
-             from: `${process.env.MAIL_NAME} <${process.env.MAIL_FROM}>`, // sender address
+             from: `Royal Home <${process.env.MAIL_FROM}>`, // sender address
              bcc: 'informes@royalhome.mx',
              subject: `Gracias ${fc_nombre}`, // Subject line
              text: `¡Gracias por visitarnos y ser parte de una experiencia Royal Home!
@@ -356,13 +356,10 @@ Ahora formas parte de nuestros clientes distinguidos, recibirás de primera mano
                                                 </td>
                                               </tr>
                                               <tr>
-                                                <td class="pc-xs-h-100" style="line-height: 1px; font-size: 1px" height="26">&nbsp;</td>
+                                                <td class="pc-xs-h-100" style="line-height: 1px; font-size: 1px" height="30">&nbsp;</td>
                                               </tr>
                                               <tr>
-                                                <td class="pc-fb-font" style="padding: 0 10px; font-family: 'Fira Sans', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 500; color: #ffffff" valign="top">¡Gracias por visitarnos y ser parte de</td>
-                                              </tr>
-                                              <tr>
-                                                <td class="pc-xs-fs-30 pc-xs-lh-42 pc-fb-font" style="padding: 13px 10px 0; letter-spacing: -0.7px; line-height: 46px; font-family: 'Fira Sans', Helvetica, Arial, sans-serif; font-size: 24px; font-weight: 800; color: #ffffff" valign="top">una experiencia Royal Home!</td>
+                                                <td class="pc-xs-fs-30 pc-xs-lh-42 pc-fb-font" style="padding: 13px 10px 0; letter-spacing: -0.7px; line-height: 46px; font-family: 'Fira Sans', Helvetica, Arial, sans-serif; font-size: 24px; font-weight: 800; color: #ffffff" valign="top">¡Gracias por ser parte <br>de una experiencia Royal Home!</td>
                                               </tr>
                                             </tbody>
                                           </table>
