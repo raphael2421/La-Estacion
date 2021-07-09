@@ -29,7 +29,7 @@ const enviarCorreo = async (paramsObj) => {
    const fc_email = paramsObj.correo;
    const fc_via_comunicacion = paramsObj.pref_contacto;
    const fc_horario = paramsObj.horario_atencion;
-   const emailCCO = process.env.SEND_TO_MAIL;
+   const emailCCO = process.env.NODE_ENV === 'production' ? process.env.SEND_TO_MAIL : process.env.TEST_MAIL ;
    ///
 
    /*

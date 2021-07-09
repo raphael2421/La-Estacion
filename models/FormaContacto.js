@@ -3,8 +3,10 @@ const mongoose = require('mongoose');
 
 
 const FormaContactoSchema = new mongoose.Schema({
-    sitio: {
-        type: String,
+    desarrollo:{
+        type: mongoose.Schema.ObjectId,
+        ref: 'Desarrollo',
+        default: '60e8952a9d74ea0a20460617'
     },
     nombre: {
         type: String, required: [true, 'Por favor introduzca su nombre']
