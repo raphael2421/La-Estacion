@@ -100,6 +100,19 @@
          }
       });
 
+      const select_field = document.querySelectorAll('select');
+      select_field.forEach((i, ï, ä)=>{
+         i.addEventListener("keydown", function(event) {
+            // console.log(event.key);
+            if (event.key === "ArrowDown") {
+               // Do something
+               event.preventDefault();
+               // console.log('prevented');
+            }
+         });
+      });
+    
+
 </script>
 
 <%- include('template-parts/footer') %>
