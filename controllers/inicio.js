@@ -107,13 +107,55 @@ exports.formaDeContacto = async (req, res, next) => {
    const ticket = await FormaContacto.create(req.body);
    console.log(ticket);
 
-   // render view
-   res.status(200).render('inicio', {
-      path: '/',
-      page: 'Inicio',
-      msjForma: 'Tu solicitud fue enviada',
-      fechaMX: await fechaMX(),
-      _refID: req.query._refID || '',
-      lastURL: req.headers.referer || ''
-   });
+   //refid
+   const refid = req.cookies.refid;
+   req.body.refID = refid;
+   // ********+++
+   try {
+      // console.log('refid', refid);
+      // crear entrada en mongodb con formulario
+      await FormaContacto.create(req.body);
+
+
+      if (Object.is(refid, undefined)) {
+         console.log('sin referal');
+      } else {
+         const reflink = await Referal.findOne({ codigo: refid })
+         // console.log('reflink', reflink);
+         reflink.conversiones.push(new Date().toISOString());
+
+         await Referal.findOneAndUpdate({ codigo: refid }, reflink, {
+            new: true,
+            runValidators: true
+         });
+
+      }
+
+      // render view
+      res.status(200).render('inicio', {
+         path: '/',
+         page: 'Inicio',
+         msjForma: 'Tu solicitud fue enviada',
+         fechaMX: await fechaMX(),
+         _refID: refid || '',
+         lastURL: req.headers.referer || ''
+      });
+
+   } catch (error) {
+      console.log(error);
+
+      // render view
+      res.status(200).render('inicio', {
+         path: '/',
+         page: 'Inicio',
+         msjForma: 'Tu solicitud fue enviada',
+         fechaMX: await fechaMX(),
+         _refID: req.query._refID || '',
+         lastURL: req.headers.referer || ''
+      });
+   }
+
+   // ***********
+
+
 } // formaDeContacto end...

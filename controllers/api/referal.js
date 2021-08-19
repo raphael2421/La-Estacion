@@ -16,10 +16,15 @@ const ErrorResponse = require('../../utils/errorResponse');
 //@access:    Public
 exports.confirmarAsistencia = async (req, res, next) => {
    //comienza aquí
-   // console.log(req.body);
+   console.log(req.body);
+
    let reflink = await Referal.findOne({ codigo: req.body.refCode }).exec();
    console.log('reflink', reflink);
-   reflink.conversiones.push(req.body.correo_confirmacion);
+   if (req.body.correo_confirmacion == '') {
+      reflink.conversiones.push('confirmo sin correo');
+   } else{
+      reflink.conversiones.push(req.body.correo_confirmacion);
+   }
 
 
    const confirmado = await Referal.findOneAndUpdate({ codigo: req.body.refCode }, reflink, {
