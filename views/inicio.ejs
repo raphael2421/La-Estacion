@@ -102,7 +102,7 @@
 
 
 <%- include('template-parts/footer') %>
-<div class="blackBox">
+<div class="blackBox display_none">
    
    <div class="confirmacion">
       <h3>Gracias! <br>
@@ -192,7 +192,7 @@
 
    <script>
       const confirmacion_refID = document.getElementById('confirmacion_refID');
-      confirmacion_refID.value = getCookie('refid');
+      confirmacion_refID.value = getCookieConfirm('refid');
 
             
                const blackBox = document.querySelector('.blackBox');
@@ -209,5 +209,21 @@
                   blackBox.classList.add('display_none');
                });
                
-            
+            const confirmacion_ref = getCookieConfirm('refid');
+            const confirmado = localStorage.getItem('confirmado21ago');
+            console.log(confirmado);
+            if (confirmacion_ref === 'OH21a' && confirmado == null) {
+               blackBox.classList.remove('display_none');
+               localStorage.setItem('confirmado21ago', 'true');
+            }
+
+            // console.log(confirmacion_ref);
+
+           function getCookieConfirm(name) {
+               function escape(s) { return s.replace(/([.*+?\^$(){}|\[\]\/\\])/g, '\\$1'); }
+               var match = document.cookie.match(RegExp('(?:^|;\\s*)' + escape(name) + '=([^;]*)'));
+               return match ? match[1] : null;
+            }
+
+
    </script>
