@@ -100,8 +100,114 @@
  </div>
 </main>
 
-<%- include('template-parts/footer') %>
 
+<%- include('template-parts/footer') %>
+<div class="blackBox">
+   
+   <div class="confirmacion">
+      <h3>Gracias! <br>
+      Puedes confirmar tu asistencia</h3>
+   <img src="../media/logo-la-estacion-hotel-residences-departamentos-venta-baratos-lujo-economicos-inversion-plusvalia.svg"
+      alt="La Estación Hotel &amp; Residences, departamentos en venta" width="240px" height="79" class="confirmar_logo">
+      <form action="#">
+         <input type="text" name="correo_confirmacion" placeholder="nombre@gmail.com">
+         <br>
+         <input type="hidden" id="confirmacion_refID">
+         <br>
+         <input type="submit" value="confirmar" id="btn_confirmar" class="">
+      </form>
+   </div>
+
+   
+   <img class="gallery_close" src="../media/close_btn.svg" alt="">
+</div>
 <script src="../js/inicio.js"></script>
+<!-- <link rel="stylesheet" href="../css/galeria.css"> -->
+<style>
+.confirmacion {
+    display: grid;
+    background-color: var(--Primary);
+    grid-column-start: 2;
+    height: 80%;
+    max-width: 800px;
+    width: 100%;
+    max-width: 600px;
+    justify-content: center;
+    text-align: center;
+    padding: 5%;
+    box-sizing: border-box;
+}
+.confirmar_logo{
+   margin: 0 auto;
+}
+#btn_confirmar{
+   width: 100%;
+    background-color: var(--Secondary);
+    color: #fff;
+    text-transform: uppercase;
+    border: 1px solid var(--Secondary);
+    cursor: pointer;
+}
+/*  */
+.blackBox {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: rgba(0, 0, 0, .6);
+    top: 0;
+    left: 0;
+    grid-template-columns: 26px 1fr 26px;
+    grid-template-rows: 1fr 30px;
+    z-index: 51;
+}
+.gallery_close {
+    grid-column: span 3;
+    width: 25px;
+    height: 25px;
+    z-index: 22;
+}
+@media screen and (min-width: 600px){
+   .blackBox {
+      grid-template-columns: 150px 1fr 150px;
+      grid-template-rows: 1fr 143px;
+      z-index: 51;
+      padding-top: 43px;
+   }
+   .gallery_close {
+      width: 50px;
+      height: 50px;
+      position: absolute;
+      top: 5%;
+      right: 5%;
+      z-index: 52;
+   }
+}
+</style>
 
 <%- include('template-parts/scripts') %>
+
+
+   <script>
+      const confirmacion_refID = document.getElementById('confirmacion_refID');
+      confirmacion_refID.value = getCookie('refid');
+
+            
+               const blackBox = document.querySelector('.blackBox');
+               const gallery_close = document.querySelector('.gallery_close');
+               const btn_confirmar = document.querySelector('#btn_confirmar');
+               
+
+               gallery_close.addEventListener('click', function (e) {
+                  e.preventDefault();
+                  blackBox.classList.add('display_none');
+               });
+               btn_confirmar.addEventListener('click', function (e) {
+                  e.preventDefault();
+                  blackBox.classList.add('display_none');
+               });
+               
+            
+   </script>

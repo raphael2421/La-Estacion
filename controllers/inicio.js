@@ -57,9 +57,9 @@ exports.captureRefs = async (req, res, next) => {
    let refID = req.params.id;
 
    // capturar visitas
-   const referal = await Referal.findById(refID);
+   const referal = await Referal.findOne({ codigo: refID });
    if (!referal) {
-      console.log('Referal-ID invalido');
+      // console.log('Referal-ID invalido');
       // return next(new ErrorResponse(`No se encontró la razón social con ID: ${req.params.id}`, 404));
       res.cookie('refid', refID, options)
          .cookie('refurl', req.headers.referer, options)
@@ -76,7 +76,7 @@ exports.captureRefs = async (req, res, next) => {
    req.body.visitas = referal.visitas
    req.body.visitas.push(new Date().toISOString());
 
-   referalUpdated = await Referal.findByIdAndUpdate(req.params.id, req.body, {
+   referalUpdated = await Referal.findByIdAndUpdate(referal._id, req.body, {
       new: true,
       runValidators: true
    });
