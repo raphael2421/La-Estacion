@@ -16,6 +16,7 @@ const mongoose = require('mongoose');
 mongoose.connect(process.env.MONGODB, {
    useNewUrlParser: true,
    useUnifiedTopology: true,
+   useFindAndModify: true
 })
     .then(() => { console.log('mongo conected')})
     .catch(err =>{ console.log('Unable to connect mongo '+ err)});

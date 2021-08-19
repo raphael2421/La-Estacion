@@ -8,6 +8,37 @@ const ErrorResponse = require('../../utils/errorResponse');
 // crypto
 // const crypto = require('crypto');
 
+
+
+//@name:      confirmar asistencia
+//@route:     /api/v1/confirmacion
+//@method:    POST
+//@access:    Public
+exports.confirmarAsistencia = async (req, res, next) => {
+   //comienza aquí
+   // console.log(req.body);
+   let reflink = await Referal.findOne({ codigo: req.body.refCode }).exec();
+   console.log('reflink', reflink);
+   reflink.conversiones.push(req.body.correo_confirmacion);
+
+
+   const confirmado = await Referal.findOneAndUpdate({ codigo: req.body.refCode }, reflink, {
+      new: true,
+      runValidators: true
+   });
+ 
+   
+   // console.log('reflink',reflink);
+   // send response
+   res.status(200).json({
+      success: true,
+      msg: 'Asistencia confirmada',
+      confirmado
+   })
+} // confirmarAsistencia end...
+
+
+
 //@name:      login
 //@route:     /api/v1/users/login
 //@method:    POST

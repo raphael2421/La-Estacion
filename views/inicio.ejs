@@ -110,9 +110,9 @@
    <img src="../media/logo-la-estacion-hotel-residences-departamentos-venta-baratos-lujo-economicos-inversion-plusvalia.svg"
       alt="La Estación Hotel &amp; Residences, departamentos en venta" width="240px" height="79" class="confirmar_logo">
       <form action="#">
-         <input type="text" name="correo_confirmacion" placeholder="nombre@gmail.com">
+         <input type="text" name="correo_confirmacion" placeholder="nombre@gmail.com" id="mail_confirmado">
          <br>
-         <input type="hidden" id="confirmacion_refID">
+         <input type="hidden" id="confirmacion_refID" name="refCode">
          <br>
          <input type="submit" value="confirmar" id="btn_confirmar" class="">
       </form>
@@ -194,6 +194,9 @@
       const confirmacion_refID = document.getElementById('confirmacion_refID');
       confirmacion_refID.value = getCookieConfirm('refid');
 
+
+
+
             
                const blackBox = document.querySelector('.blackBox');
                const gallery_close = document.querySelector('.gallery_close');
@@ -226,4 +229,29 @@
             }
 
 
+            // confirmar asistencia
+            const mail_confirmado = document.getElementById('mail_confirmado');
+            btn_confirmar.addEventListener('click', function (e) {
+               e.preventDefault();
+                  var myHeaders = new Headers();
+               myHeaders.append("Content-Type", "application/json");
+
+               var raw = JSON.stringify({
+                  "refCode": confirmacion_refID.value,
+                  "correo_confirmacion": mail_confirmado.value
+               });
+
+               var requestOptions = {
+                  method: 'POST',
+                  headers: myHeaders,
+                  body: raw,
+                  redirect: 'follow'
+               };
+
+               fetch("/api/v1/referals/confirmacion", requestOptions)
+                  .then(response => response.text())
+                  .then(result => console.log(result))
+                  .catch(error => console.log('error', error));
+            });
    </script>
+

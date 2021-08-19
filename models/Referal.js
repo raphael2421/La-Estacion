@@ -11,10 +11,8 @@ const ReferalSchema = new mongoose.Schema({
    canal: {
       type: String,
    },
-   titulo: {
-      type: String,
-      index: true,
-      unique: true
+   codigo: {
+      type: String
    },
    desc: {
       type: String
@@ -23,6 +21,9 @@ const ReferalSchema = new mongoose.Schema({
       String
    ],
    visitas: [
+      String
+   ],
+   conversiones: [
       String
    ],
    _date: {
@@ -36,21 +37,27 @@ const ReferalSchema = new mongoose.Schema({
       ref: 'User',
    },
 },
-/// virtuals
-{
-   toJSON: { virtuals: true },
-   toObject: { virtuals: true }
-}
+   /// virtuals
+   {
+      toJSON: { virtuals: true },
+      toObject: { virtuals: true }
+   }
 );
 // indexes
+ReferalSchema.index({
+   codigo: 1,
+}, {
+   unique: true,
+});
+
 
 // Reverse populate
-// ReferalSchema.virtual('_leads', { // <<--este es el mombre virtual que tendra en la respuesta JSON
-//    ref: 'Lead', // <<-- este es el modelo en el que vamos a buscar
-//    localField: '_id', // <<-- este es el VALOR del modelo actual que vamos a buscar  (en este caso un valor que existe en Empresa)
-//    foreignField: 'refID', // <<-- este es el campo externo donde vamos a buscar (un campo que exista en el modelo Ticket)
-//    justOne: false
-// })
+ReferalSchema.virtual('_leads', { // <<--este es el mombre virtual que tendra en la respuesta JSON
+   ref: 'Lead', // <<-- este es el modelo en el que vamos a buscar
+   localField: 'codigo', // <<-- este es el VALOR del modelo actual que vamos a buscar  (en este caso un valor que existe en Empresa)
+   foreignField: 'refID', // <<-- este es el campo externo donde vamos a buscar (un campo que exista en el modelo Ticket)
+   justOne: false
+})
 
 // x4otgRTAsXy93sxNoa85qjnmfbNP290e
 const Referal = mongoose.model('Referal', ReferalSchema);
