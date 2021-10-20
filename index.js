@@ -60,6 +60,7 @@ app.use('/evento', require('./routes/evento'));
 app.use('/vive-la-estacion', require('./routes/galeria'));
 app.use('/quienes-somos', require('./routes/qSomos'));
 app.use('/proyecto', require('./routes/proyecto'));
+app.use('/departamentos', require('./routes/departamentos'));
 app.use('/beneficios', require('./routes/beneficios'));
 app.use('/ubicacion', require('./routes/ubicacion'));
 app.use('/aviso-de-privacidad', require('./routes/privacidad'));

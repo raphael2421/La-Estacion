@@ -265,15 +265,16 @@
     text-align: center;
 }
 /****/
-   .sma_top{
-      font-size: 63px;
+.sma_top{
+	font-size: 52px;
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
   line-height: 50px;
   letter-spacing: -3.78px;
   text-align: center;
-   }
+  margin: 0;
+}
    .sma_middle{
       font-size: 46px;
   font-weight: normal;
@@ -291,6 +292,7 @@
   line-height: 53px;
   letter-spacing: -3.78px;
   text-align: center;
+  margin: 0;
    }
 /****/
 /*************** Slider Detalles ***********************/

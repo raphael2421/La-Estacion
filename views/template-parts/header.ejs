@@ -44,7 +44,8 @@
       gtag('config', 'AW-397905907');
    </script>
    <%- locals.msjForma ? `<!-- Event snippet for Website lead conversion page --> <script> gtag('event', 'conversion', { 'send_to': 'AW-397905907/kZyNCKjj24kCEPOf3r0B' });</script>` : '<!--No Lead-->' %>
-   <title><%= locals.page ? page + ' | La Estación' : 'La Estación Hotel & Residence' %></title>
+   <title><%= locals.page ? page : 'La Estación Hotel & Residence' %></title>
+   <%- locals.snippet ? snippet : '' %>
 </head>
 
 <body>
@@ -64,7 +65,7 @@
          <nav class="menu_desk">
             <ul>
                <li><a class="menu_link <%= path == '/' ? 'link_active' : '' %>" href="/">inicio</a></li>
-               <li><a class="menu_link <%= path == '/proyecto' ? 'link_active' : '' %>" href="/proyecto">proyecto</a></li>
+               <li><a class="menu_link <%= path == '/departamentos' ? 'link_active' : '' %>" href="/departamentos">departamentos</a></li>
                <li><a class="menu_link <%= path == '/vive-la-estacion' ? 'link_active' : '' %>" href="/vive-la-estacion">vive la estación</a></li>
                <li><a class="menu_link <%= path == '/beneficios' ? 'link_active' : '' %>" href="/beneficios">beneficios</a></li>
                <li><a class="menu_link <%= path == '/ubicacion' ? 'link_active' : '' %>" href="/ubicacion">ubicación</a></li>
@@ -80,7 +81,7 @@
    <nav class="menu_top">
       <ul>
          <li><a class="menu_link <%= path == '/' ? 'link_active' : '' %>" href="/">inicio</a></li>
-         <li><a class="menu_link <%= path == '/proyecto' ? 'link_active' : '' %>" href="/proyecto">proyecto</a></li>
+         <li><a class="menu_link <%= path == '/departamentos' ? 'link_active' : '' %>" href="/departamentos">departamentos</a></li>
          <li><a class="menu_link <%= path == '/vive-la-estacion' ? 'link_active' : '' %>" href="/vive-la-estacion">vive la estación</a></li>
          <li><a class="menu_link <%= path == '/beneficios' ? 'link_active' : '' %>" href="/beneficios">beneficios</a></li>
          <li><a class="menu_link <%= path == '/ubicacion' ? 'link_active' : '' %>" href="/ubicacion">ubicación</a></li>
