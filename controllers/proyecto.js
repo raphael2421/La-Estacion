@@ -32,7 +32,7 @@ exports.renderDepartamentos = async (req, res, next) => {
    if (!Object.is(refid, undefined)) {
       res.cookie('refid', refid, options).status(200).render('proyecto', {
          path: '/proyecto',
-         page: 'Proyecto',
+         page: 'Departamentos en San Miguel de Allende',
          fechaMX: await fechaMX(),
          _refID: req.query._refID || '',
          _refURL: req.headers.referer || '',
@@ -59,7 +59,7 @@ exports.renderDepartamentos = async (req, res, next) => {
       else{
          res.status(200).render('proyecto', {
             path: '/departamentos',
-            page: 'Departamentos en venta - San Miguel de Allende',
+            page: 'Departamentos en San Miguel de Allende',
             fechaMX: await fechaMX(),
             _refID: req.query._refID || '',
             _refURL: req.headers.referer || '',

@@ -26,9 +26,27 @@ exports.renderInicio = async (req, res, next) => {
 
       res.status(200).render('inicio', {
          path: '/',
-         page: 'Inicio',
+         page: 'La estación hotel & residence',
          fechaMX: await fechaMX(),
-         lastURL: req.headers.referer || ''
+         lastURL: req.headers.referer || '',
+         snippet: `<!-- Primary Meta Tags -->
+<title>La Estación hotel & residence</title>
+<meta name="title" content="La Estación hotel & residence">
+<meta name="description" content="venta de Departamentos con ubicación privilgiada a 5 minutos del centro, haz de San Miguel de Allende tu nueva casa">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.laestacionresidence.mx/">
+<meta property="og:title" content="La Estación hotel & residence">
+<meta property="og:description" content="venta de Departamentos con ubicación privilgiada a 5 minutos del centro, haz de San Miguel de Allende tu nueva casa">
+<meta property="og:image" content="https://www.laestacionresidence.mx/media/slider-inicio/la-estacion-hotel-and-residence.jpg">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://www.laestacionresidence.mx/">
+<meta property="twitter:title" content="La Estación hotel & residence">
+<meta property="twitter:description" content="venta de Departamentos con ubicación privilgiada a 5 minutos del centro, haz de San Miguel de Allende tu nueva casa">
+<meta property="twitter:image" content="https://www.laestacionresidence.mx/media/slider-inicio/la-estacion-hotel-and-residence.jpg">`
       });
 
 } // renderInicio end...
@@ -66,10 +84,28 @@ exports.captureRefs = async (req, res, next) => {
          .cookie('lang', lang, options)
          .status(200).render('inicio', {
             path: '/',
-            page: 'Inicio',
+            page: 'La estación hotel & residence',
             fechaMX: await fechaMX(),
             _refID: refID || '',
-            lastURL: req.headers.referer || ''
+            lastURL: req.headers.referer || '',
+            snippet: `<!-- Primary Meta Tags -->
+<title>La Estación hotel & residence</title>
+<meta name="title" content="La Estación hotel & residence">
+<meta name="description" content="venta de Departamentos con ubicación privilgiada a 5 minutos del centro, haz de San Miguel de Allende tu nueva casa">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.laestacionresidence.mx/">
+<meta property="og:title" content="La Estación hotel & residence">
+<meta property="og:description" content="venta de Departamentos con ubicación privilgiada a 5 minutos del centro, haz de San Miguel de Allende tu nueva casa">
+<meta property="og:image" content="https://www.laestacionresidence.mx/media/slider-inicio/la-estacion-hotel-and-residence.jpg">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://www.laestacionresidence.mx/">
+<meta property="twitter:title" content="La Estación hotel & residence">
+<meta property="twitter:description" content="venta de Departamentos con ubicación privilgiada a 5 minutos del centro, haz de San Miguel de Allende tu nueva casa">
+<meta property="twitter:image" content="https://www.laestacionresidence.mx/media/slider-inicio/la-estacion-hotel-and-residence.jpg">`
          });
    } // if END
 
@@ -86,10 +122,28 @@ exports.captureRefs = async (req, res, next) => {
       .cookie('lang', lang, options)
       .status(200).render('inicio', {
       path: '/',
-      page: 'Inicio',
+      page: 'La estación hotel & residence',
       fechaMX: await fechaMX(),
       _refID: refID || '',
-      lastURL: req.headers.referer || ''
+      lastURL: req.headers.referer || '',
+      snippet: `<!-- Primary Meta Tags -->
+<title>La Estación hotel & residence</title>
+<meta name="title" content="La Estación hotel & residence">
+<meta name="description" content="venta de Departamentos con ubicación privilgiada a 5 minutos del centro, haz de San Miguel de Allende tu nueva casa">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.laestacionresidence.mx/">
+<meta property="og:title" content="La Estación hotel & residence">
+<meta property="og:description" content="venta de Departamentos con ubicación privilgiada a 5 minutos del centro, haz de San Miguel de Allende tu nueva casa">
+<meta property="og:image" content="https://www.laestacionresidence.mx/media/slider-inicio/la-estacion-hotel-and-residence.jpg">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://www.laestacionresidence.mx/">
+<meta property="twitter:title" content="La Estación hotel & residence">
+<meta property="twitter:description" content="venta de Departamentos con ubicación privilgiada a 5 minutos del centro, haz de San Miguel de Allende tu nueva casa">
+<meta property="twitter:image" content="https://www.laestacionresidence.mx/media/slider-inicio/la-estacion-hotel-and-residence.jpg">`
    });
 } // captureRefs end...
 
@@ -134,11 +188,29 @@ exports.formaDeContacto = async (req, res, next) => {
       // render view
       res.status(200).render('inicio', {
          path: '/',
-         page: 'Inicio',
+         page: 'La estación hotel & residence',
          msjForma: 'Tu solicitud fue enviada',
          fechaMX: await fechaMX(),
          _refID: refid || '',
-         lastURL: req.headers.referer || ''
+         lastURL: req.headers.referer || '',
+         snippet: `<!-- Primary Meta Tags -->
+<title>La Estación hotel & residence</title>
+<meta name="title" content="La Estación hotel & residence">
+<meta name="description" content="venta de Departamentos con ubicación privilgiada a 5 minutos del centro, haz de San Miguel de Allende tu nueva casa">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.laestacionresidence.mx/">
+<meta property="og:title" content="La Estación hotel & residence">
+<meta property="og:description" content="venta de Departamentos con ubicación privilgiada a 5 minutos del centro, haz de San Miguel de Allende tu nueva casa">
+<meta property="og:image" content="https://www.laestacionresidence.mx/media/slider-inicio/la-estacion-hotel-and-residence.jpg">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://www.laestacionresidence.mx/">
+<meta property="twitter:title" content="La Estación hotel & residence">
+<meta property="twitter:description" content="venta de Departamentos con ubicación privilgiada a 5 minutos del centro, haz de San Miguel de Allende tu nueva casa">
+<meta property="twitter:image" content="https://www.laestacionresidence.mx/media/slider-inicio/la-estacion-hotel-and-residence.jpg">`
       });
 
    } catch (error) {
@@ -147,11 +219,29 @@ exports.formaDeContacto = async (req, res, next) => {
       // render view
       res.status(200).render('inicio', {
          path: '/',
-         page: 'Inicio',
+         page: 'La estación hotel & residence',
          msjForma: 'Tu solicitud fue enviada',
          fechaMX: await fechaMX(),
          _refID: req.query._refID || '',
-         lastURL: req.headers.referer || ''
+         lastURL: req.headers.referer || '',
+         snippet: `<!-- Primary Meta Tags -->
+<title>La Estación hotel & residence</title>
+<meta name="title" content="La Estación hotel & residence">
+<meta name="description" content="venta de Departamentos con ubicación privilgiada a 5 minutos del centro, haz de San Miguel de Allende tu nueva casa">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.laestacionresidence.mx/">
+<meta property="og:title" content="La Estación hotel & residence">
+<meta property="og:description" content="venta de Departamentos con ubicación privilgiada a 5 minutos del centro, haz de San Miguel de Allende tu nueva casa">
+<meta property="og:image" content="https://www.laestacionresidence.mx/media/slider-inicio/la-estacion-hotel-and-residence.jpg">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://www.laestacionresidence.mx/">
+<meta property="twitter:title" content="La Estación hotel & residence">
+<meta property="twitter:description" content="venta de Departamentos con ubicación privilgiada a 5 minutos del centro, haz de San Miguel de Allende tu nueva casa">
+<meta property="twitter:image" content="https://www.laestacionresidence.mx/media/slider-inicio/la-estacion-hotel-and-residence.jpg">`
       });
    }
 

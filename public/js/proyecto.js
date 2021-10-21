@@ -240,7 +240,7 @@ function jean_big_slider() {
    if (page === undefined) {
       page = 1;
    }
-   ///// declaro donde empieza el loop y donde acaba
+   ///// donde empieza el loop y donde acaba
    let sliderStart;
    let sliderEnd;
    if (sliderStart === undefined) {
@@ -249,7 +249,7 @@ function jean_big_slider() {
    if (sliderEnd === undefined) {
       sliderEnd = 2;
    }
-   //declaro  total paginas para usarlo despues
+   //total paginas para usarlo despues
    let total_pages;
    let per_page = 90;
    let seccion = 'Big Slider';

@@ -56,7 +56,7 @@
          <article class="bigmasonry_item_container biggallery_lizzy_nav_izq" photo="0">
             <img class="bigmasonry_item bigsingle_foto"
                src="https://kindermisslizzy.com/wp-content/uploads/2020/03/hectareas_slider.jpg"
-               alt="Más de 1,000 metros <br/> de áreas verdes">
+               alt="Más de 1,000 metros de áreas verdes">
             <img class="bigmasonry_icon bigsingle_foto"
                src="https://kindermisslizzy.com/wp-content/uploads/2020/03/area_verdes_activo.svg" alt="">
             <div class="bigmasonry_title bigsingle_foto">
@@ -100,7 +100,7 @@
       <img id="bigligthbox_lizzy_img" src="" alt="">
       <div class="close_bigligthbox">&nbsp;</div>
    </section>
-   <script>jean_big_slider('Big Slider')</script>
+   <script>jean_big_slider('Big Slider');</script>
 </div>
    <!--separador-->
    <div style="display: block; height: 10%;"></div>
@@ -191,7 +191,27 @@
    <!---->
 </main>
 
-
+<style>
+   .allende, .morelos{
+      border-bottom: none;
+   }
+   .modelos_title.allende::after {
+    content: "Desde $4,804,800 MXN";
+    display: block;
+    border-bottom: 1px solid #fff;
+    font-size: 22px;
+    margin-top: 20px;
+    padding-bottom: 10px;
+}
+   .modelos_title.morelos::after {
+    content: "Desde $2,839,200 MXN";
+    display: block;
+    border-bottom: 1px solid #fff;
+    font-size: 23px;
+    margin-top: 20px;
+    padding-bottom: 10px;
+}
+</style>
 <%- include('template-parts/footer') %>
 
 <script type="module" src="../js/proyecto.js"></script>
