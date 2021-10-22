@@ -4,7 +4,7 @@ let setCache = function (req, res, next) {
    /// seconds * minutes * hours * days ///
 
    // you only want to cache for GET requests
-   if (req.method == 'GET') {
+   if (req.method === 'GET') {
       res.set('Cache-control', `public, max-age=${period}`)
    } else {
       // for the other requests set strict no caching parameters

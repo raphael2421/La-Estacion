@@ -23,33 +23,33 @@ const slidesContent = [
   
    {
       title: '',
-      small: 'departamento.jpg',
-      large: 'departamento-XL.jpg'
+      small: 'departamento.webp',
+      large: 'departamento-XL.webp'
    },
    {
       title: '',
-      small: 'experiencias.jpg',
-      large: 'experiencias-XL.jpg'
+      small: 'experiencias.webp',
+      large: 'experiencias-XL.webp'
    },
    {
       title: '',
-      small: 'rooftop.jpg',
-      large: 'rooftop-XL.jpg'
+      small: 'rooftop.webp',
+      large: 'rooftop-XL.webp'
    },
    {
       title: '',
-      small: 'alberca.jpg',
-      large: 'alberca-XL.jpg'
+      small: 'alberca.webp',
+      large: 'alberca-XL.webp'
    },
    {
       title: '',
-      small: 'bar.jpg',
-      large: 'bar-XL.jpg'
+      small: 'bar.webp',
+      large: 'bar-XL.webp'
    },
    {
       title: '',
-      small: 'salon-de-juegos.jpg',
-      large: 'salon-de-juegos-XL.jpg'
+      small: 'salon-de-juegos.webp',
+      large: 'salon-de-juegos-XL.webp'
    },
 ]
 

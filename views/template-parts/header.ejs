@@ -15,6 +15,7 @@
    <link rel="preconnect" href="https://fonts.gstatic.com">
    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Brygada+1918&family=Encode+Sans:wght@100;500&display=swap" as="style" rel="stylesheet">
    <!-- Facebook Pixel Code -->
+   <%# 
    <script>
       !function (f, b, e, v, n, t, s) {
          if (f.fbq) return; n = f.fbq = function () {
@@ -43,7 +44,8 @@
       gtag('config', 'UA-194679361-1');
       gtag('config', 'AW-397905907');
    </script>
-   <%- locals.msjForma ? `<!-- Event snippet for Website lead conversion page --> <script> gtag('event', 'conversion', { 'send_to': 'AW-397905907/kZyNCKjj24kCEPOf3r0B' });</script>` : '<!--No Lead-->' %>
+   %>
+   
    <title><%= locals.page ? page : 'La Estación Hotel & Residence' %></title>
    <%- locals.snippet ? snippet : '' %>
 </head>
