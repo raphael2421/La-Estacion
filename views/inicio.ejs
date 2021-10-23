@@ -15,7 +15,7 @@
                   <%= x.title %>
                </p>
             </div>
-            <video class="slide_img swipe" src="../media/slider-inicio/video.mp4" autoplay muted loop type="video/mp4"
+            <video loading="lazy" class="slide_img swipe" src="../media/slider-inicio/video.mp4" autoplay muted loop type="video/mp4"
                poster="../media/slider-inicio/video.webp" data-index="<%= x.title %>"></video>
          </div>
          <% } else{%>
@@ -23,8 +23,12 @@
                <div class="slide_header">
                   <p class="slide_header_txt"> </p>
                </div>
-               <img class="slide_img swipe" data-index="6" src="../media/slider-inicio/<%= x.small %>"
-                  alt="<%= x.title %>">
+               <picture>
+                  <source media="(max-width:1199px)" srcset="../media/slider-inicio/<%= x.small %>">
+                  <source media="(min-width:1200px)" srcset="../media/slider-inicio/<%= x.large %>">
+                  <img loading="lazy" class="slide_img swipe" data-index="<%= i %>" src="../media/slider-inicio/<%= x.small %>" alt="<%= x.title %>">
+               </picture>
+
             </div>
             <% } %>
                <!-- fin if else -->

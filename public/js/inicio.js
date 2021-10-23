@@ -7,77 +7,9 @@ const slides_container = document.querySelector('.slides_container');
 const slide = document.querySelector('.slide');
 const slide_header = document.querySelector('.slide_header');
 const slide_img = document.querySelector('.slide_img');
+const slidesContent = document.querySelectorAll('.slide_img');
 
-// {
-//    title: '',
-//       small: 'proyecto.jpg',
-//          large: 'proyecto-XL.jpg'
-// },
-// <img class="slide_img swipe" src="../media/galeria/photo4-XL.jpg" />
-const slidesContent = [
-   {
-      title: '',
-      small: 'video.m4v',
-      large: 'video.m4v'
-   },
-  
-   {
-      title: '',
-      small: 'departamento.webp',
-      large: 'departamento-XL.webp'
-   },
-   {
-      title: '',
-      small: 'experiencias.webp',
-      large: 'experiencias-XL.webp'
-   },
-   {
-      title: '',
-      small: 'rooftop.webp',
-      large: 'rooftop-XL.webp'
-   },
-   {
-      title: '',
-      small: 'alberca.webp',
-      large: 'alberca-XL.webp'
-   },
-   {
-      title: '',
-      small: 'bar.webp',
-      large: 'bar-XL.webp'
-   },
-   {
-      title: '',
-      small: 'salon-de-juegos.webp',
-      large: 'salon-de-juegos-XL.webp'
-   },
-]
-
-//
-// IDEA:
-// multiplicar el ancho por el index del array para recorrer el slider
-
-// slider video: ${window.innerWidth >= 600 ? `<video class="slide_img swipe" src="../media/slider-inicio/video.mp4" autoplay="true" muted="true" loop="true"></video>` : `<img class="slide_img swipe" src="../media/slider-inicio/${window.innerWidth >= 600 ? i.large : i.small}" alt="${i.title}">`}
-// sin video: <img class="slide_img swipe" src="../media/slider-inicio/${window.innerWidth >= 600 ? i.large : i.small}" alt="${i.title}">
 let slideN = 0;
-// slides_container.setAttribute('style', `grid-template-columns: repeat(${slidesContent.length}, 100%);`);
-let slidesTemp = '';
-slidesContent.forEach((i, ï, ä)=>{
-   if (window.innerWidth >= 1200) {
-      console.log('desktop');
-      slidesTemp += `
-      <div class="slide">
-         <div class="slide_header">
-            <p class="slide_header_txt"> ${i.title} </p>
-         </div>
-         ${(ï === 0) ? `<video class="slide_img swipe" src="../media/slider-inicio/video.mp4" autoplay muted loop type="video/mp4" poster="../media/slider-inicio/video.webp" data-index="${ï}"></video>` : `<img class="slide_img swipe" data-index="${ï}" src="../media/slider-inicio/${i.large}" alt="${i.title}">`}
-      </div>
-   `;
-      if ([ï >= ä.length - 1]) {
-         slides_container.innerHTML = slidesTemp;
-      }
-   }
-});
 
 // go left
 chevron_left.addEventListener('click', go_left);
