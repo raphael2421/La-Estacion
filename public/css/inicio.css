@@ -8,6 +8,8 @@
 
 .slide_img{
    height: calc(100vh - 44px);
+   height: -webkit-calc(100vh - 44px);
+   height: -o-calc(100vh - 44px);
    width: 100%;
    object-fit: cover;
    text-align: center;

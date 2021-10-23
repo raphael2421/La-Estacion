@@ -30,20 +30,20 @@ exports.renderBeneficios = async (req, res, next) => {
          snippet: `<!-- Primary Meta Tags -->
 <title>Tu nuevo departamento en San Miguel de Allende</title>
 <meta name="title" content="Tu nuevo departamento en San Miguel de Allende">
-<meta name="description" content="La Estación, desarrollo exclusivo de departamentos con alta plusvalía. Descubre los beneficios detener una casa dentro de San Miguel de Allende.">
+<meta name="description" content="La Estación, desarrollo exclusivo de departamentos con alta plusvalía. Descubre los beneficios de tener una casa dentro de San Miguel de Allende.">
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.laestacionresidence.mx/beneficios">
 <meta property="og:title" content="Tu nuevo departamento en San Miguel de Allende">
-<meta property="og:description" content="La Estación, desarrollo exclusivo de departamentos con alta plusvalía. Descubre los beneficios detener una casa dentro de San Miguel de Allende.">
+<meta property="og:description" content="La Estación, desarrollo exclusivo de departamentos con alta plusvalía. Descubre los beneficios de tener una casa dentro de San Miguel de Allende.">
 <meta property="og:image" content="">
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image">
 <meta property="twitter:url" content="https://www.laestacionresidence.mx/beneficios">
 <meta property="twitter:title" content="Tu nuevo departamento en San Miguel de Allende">
-<meta property="twitter:description" content="La Estación, desarrollo exclusivo de departamentos con alta plusvalía. Descubre los beneficios detener una casa dentro de San Miguel de Allende.">
+<meta property="twitter:description" content="La Estación, desarrollo exclusivo de departamentos con alta plusvalía. Descubre los beneficios de tener una casa dentro de San Miguel de Allende.">
 <meta property="twitter:image" content="https://www.laestacionresidence.mx/media/blog/san-miguel-de-allende-beneficios.jpg">`
       });
     }
@@ -57,20 +57,20 @@ exports.renderBeneficios = async (req, res, next) => {
             snippet: `<!-- Primary Meta Tags -->
 <title>Tu nuevo departamento en San Miguel de Allende</title>
 <meta name="title" content="Tu nuevo departamento en San Miguel de Allende">
-<meta name="description" content="La Estación, desarrollo exclusivo de departamentos con alta plusvalía. Descubre los beneficios detener una casa dentro de San Miguel de Allende.">
+<meta name="description" content="La Estación, desarrollo exclusivo de departamentos con alta plusvalía. Descubre los beneficios de tener una casa dentro de San Miguel de Allende.">
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.laestacionresidence.mx/beneficios">
 <meta property="og:title" content="Tu nuevo departamento en San Miguel de Allende">
-<meta property="og:description" content="La Estación, desarrollo exclusivo de departamentos con alta plusvalía. Descubre los beneficios detener una casa dentro de San Miguel de Allende.">
+<meta property="og:description" content="La Estación, desarrollo exclusivo de departamentos con alta plusvalía. Descubre los beneficios de tener una casa dentro de San Miguel de Allende.">
 <meta property="og:image" content="">
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image">
 <meta property="twitter:url" content="https://www.laestacionresidence.mx/beneficios">
 <meta property="twitter:title" content="Tu nuevo departamento en San Miguel de Allende">
-<meta property="twitter:description" content="La Estación, desarrollo exclusivo de departamentos con alta plusvalía. Descubre los beneficios detener una casa dentro de San Miguel de Allende.">
+<meta property="twitter:description" content="La Estación, desarrollo exclusivo de departamentos con alta plusvalía. Descubre los beneficios de tener una casa dentro de San Miguel de Allende.">
 <meta property="twitter:image" content="https://www.laestacionresidence.mx/media/blog/san-miguel-de-allende-beneficios.jpg">`
          });
       }

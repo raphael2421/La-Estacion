@@ -3,6 +3,45 @@ const enviarCorreo = require('../utils/enviarCorreo');
 const FormaContacto = require('../models/FormaContacto');
 const Referal = require('../models/Referal');
 
+const slidesContent = [
+   {
+      title: '',
+      small: 'video.m4v',
+      large: 'video.m4v'
+   },
+
+   {
+      title: '',
+      small: 'departamento.webp',
+      large: 'departamento-XL.webp'
+   },
+   {
+      title: '',
+      small: 'experiencias.webp',
+      large: 'experiencias-XL.webp'
+   },
+   {
+      title: '',
+      small: 'rooftop.webp',
+      large: 'rooftop-XL.webp'
+   },
+   {
+      title: '',
+      small: 'alberca.webp',
+      large: 'alberca-XL.webp'
+   },
+   {
+      title: '',
+      small: 'bar.webp',
+      large: 'bar-XL.webp'
+   },
+   {
+      title: '',
+      small: 'salon-de-juegos.webp',
+      large: 'salon-de-juegos-XL.webp'
+   },
+];
+
 //@name:      inicio
 //@route:     /
 //@method     GET
@@ -28,6 +67,7 @@ exports.renderInicio = async (req, res, next) => {
          path: '/',
          page: 'La estación hotel & residence',
          fechaMX: await fechaMX(),
+         data: slidesContent,
          lastURL: req.headers.referer || '',
          snippet: `<!-- Primary Meta Tags -->
 <title>La Estación hotel & residence</title>
@@ -87,6 +127,7 @@ exports.captureRefs = async (req, res, next) => {
             page: 'La estación hotel & residence',
             fechaMX: await fechaMX(),
             _refID: refID || '',
+            data: slidesContent,
             lastURL: req.headers.referer || '',
             snippet: `<!-- Primary Meta Tags -->
 <title>La Estación hotel & residence</title>
@@ -125,6 +166,7 @@ exports.captureRefs = async (req, res, next) => {
       page: 'La estación hotel & residence',
       fechaMX: await fechaMX(),
       _refID: refID || '',
+      data: slidesContent,
       lastURL: req.headers.referer || '',
       snippet: `<!-- Primary Meta Tags -->
 <title>La Estación hotel & residence</title>
@@ -192,6 +234,7 @@ exports.formaDeContacto = async (req, res, next) => {
          msjForma: 'Tu solicitud fue enviada',
          fechaMX: await fechaMX(),
          _refID: refid || '',
+         data: slidesContent,
          lastURL: req.headers.referer || '',
          snippet: `<!-- Primary Meta Tags -->
 <title>La Estación hotel & residence</title>
@@ -223,6 +266,7 @@ exports.formaDeContacto = async (req, res, next) => {
          msjForma: 'Tu solicitud fue enviada',
          fechaMX: await fechaMX(),
          _refID: req.query._refID || '',
+         data: slidesContent,
          lastURL: req.headers.referer || '',
          snippet: `<!-- Primary Meta Tags -->
 <title>La Estación hotel & residence</title>

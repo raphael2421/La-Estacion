@@ -60,19 +60,22 @@ const slidesContent = [
 // slider video: ${window.innerWidth >= 600 ? `<video class="slide_img swipe" src="../media/slider-inicio/video.mp4" autoplay="true" muted="true" loop="true"></video>` : `<img class="slide_img swipe" src="../media/slider-inicio/${window.innerWidth >= 600 ? i.large : i.small}" alt="${i.title}">`}
 // sin video: <img class="slide_img swipe" src="../media/slider-inicio/${window.innerWidth >= 600 ? i.large : i.small}" alt="${i.title}">
 let slideN = 0;
-slides_container.setAttribute('style', `grid-template-columns: repeat(${slidesContent.length}, 100%);`);
+// slides_container.setAttribute('style', `grid-template-columns: repeat(${slidesContent.length}, 100%);`);
 let slidesTemp = '';
 slidesContent.forEach((i, ï, ä)=>{
-   slidesTemp += `
+   if (window.innerWidth >= 1200) {
+      console.log('desktop');
+      slidesTemp += `
       <div class="slide">
          <div class="slide_header">
             <p class="slide_header_txt"> ${i.title} </p>
          </div>
-         ${(ï === 0) ? `<video class="slide_img swipe" src="../media/slider-inicio/video.mp4" autoplay muted loop type="video/mp4" poster="../media/slider-inicio/video.jpg" data-index="${ï}"></video>` : `<img class="slide_img swipe" data-index="${ï}" src="../media/slider-inicio/${window.innerWidth >= 900 ? i.large : i.small}" alt="${i.title}">`}
+         ${(ï === 0) ? `<video class="slide_img swipe" src="../media/slider-inicio/video.mp4" autoplay muted loop type="video/mp4" poster="../media/slider-inicio/video.webp" data-index="${ï}"></video>` : `<img class="slide_img swipe" data-index="${ï}" src="../media/slider-inicio/${i.large}" alt="${i.title}">`}
       </div>
    `;
-   if ([ï >= ä.length-1]) {
-      slides_container.innerHTML = slidesTemp;
+      if ([ï >= ä.length - 1]) {
+         slides_container.innerHTML = slidesTemp;
+      }
    }
 });
 
@@ -123,7 +126,7 @@ let finalCoordsY = 0;
 
 document.addEventListener('touchstart', function (e) {
    clearInterval(slideInterval);
-   e.preventDefault();
+   // e.preventDefault();
    document.querySelectorAll('.slide_header_txt').forEach((i, ï, ä) => {
       i.innerText = 'Y:' + Math.floor(e.touches[0].clientY) + ' X:' + Math.floor(e.touches[0].clientX);
    });
@@ -157,7 +160,7 @@ document.addEventListener('touchend', function (e) {
 });
 
 document.body.addEventListener('touchmove', function (event) {
-   event.preventDefault();
+   // event.preventDefault();
 }, false);
 
 
