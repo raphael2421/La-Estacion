@@ -44,8 +44,8 @@
     <div class="contacto_top">
        <p>síguenos en</p>
        <div class="contacto_icons">
-        <a href="https://www.instagram.com/laestacionresidence" target="_blank"><img src="../media/instagram-icon.webp" alt="" height="40" width="40" /></a>
-        <a href="https://www.facebook.com/LaEstacionResidence" target="_blank"><img src="../media/facebook-icon.webp" alt="" height="40" width="18" /></a>
+        <a href="https://www.instagram.com/laestacionresidence" target="_blank" rel="noopener"><img src="../media/instagram-icon.webp" alt="" height="40" width="40" /></a>
+        <a href="https://www.facebook.com/LaEstacionResidence" target="_blank" rel="noopener"><img src="../media/facebook-icon.webp" alt="" height="40" width="18" /></a>
        </div>
     </div>
     <div class="contacto_banner">
@@ -55,7 +55,7 @@
       <h2><strong>Departamentos a 5  minutos del centro de San  Miguel de Allende.</strong> <br>Amenidades: alberca, rooftop, sala de juego y servicio de Hotel.</h2>
     </div>
     <div id="contacto" class="contacto_bottom">
-       <img src="../media/ubicacion-icon.png" alt="">
+       <img src="../media/ubicacion-icon.webp" width="54" height="69" alt="">
        <p>
          Calzada de la Estación 90, <br>
          Zona Centro, 37700 <br>
@@ -154,6 +154,7 @@
    .slides_container{
       grid-template-columns: repeat(<%=data.length %>, 100%);
    }
+/*    
 .confirmacion {
     display: grid;
     background-color: var(--Primary);
@@ -178,7 +179,7 @@
     border: 1px solid var(--Secondary);
     cursor: pointer;
 }
-/*  */
+
 .blackBox {
     display: grid;
     justify-items: center;
@@ -213,14 +214,14 @@
       top: 5%;
       right: 5%;
       z-index: 52;
-   }
+   } */
 }
 </style>
 
 <%- include('template-parts/scripts') %>
 
 
-   <script>
+   <!-- <script>
       const confirmacion_refID = document.getElementById('confirmacion_refID');
       confirmacion_refID.value = getCookieConfirm('refid');
 
@@ -289,7 +290,7 @@
                      document.querySelector('video').setAttribute('src', '../media/slider-inicio/video.mp4');
                   }
                }
-            
+             -->
    </script>
 
 
