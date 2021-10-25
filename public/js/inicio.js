@@ -91,10 +91,6 @@ document.addEventListener('touchend', function (e) {
    }
 });
 
-document.body.addEventListener('touchmove', function (event) {
-   // event.preventDefault();
-}, false);
-
 
 ////// auto slide
 function autoSlide() {
@@ -109,22 +105,7 @@ window.addEventListener('click', ()=>{
 });
 
 
-///////// si es touch show finger
-window.addEventListener('load', () => {
 
-   // if (window.matchMedia("(pointer: coarse)").matches) {
-   //    // touchscreen
-   //    console.log('touchscreen');
-   //    // touchscreen
-   //    let img = document.createElement('img');
-   //    img.setAttribute('src', '../media/dedo.svg');
-   //    document.body.appendChild(img);
-   //    img.classList.add('touch_anim');
-   //    setTimeout(() => {
-   //       img.classList.add('finger_fadeout');
-   //    }, 3200);
-   // }
-});
 slideInterval = setInterval(autoSlide, 3600);
 
 

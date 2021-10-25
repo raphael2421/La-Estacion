@@ -6,8 +6,8 @@ const Referal = require('../models/Referal');
 const slidesContent = [
    {
       title: '',
-      small: 'video.m4v',
-      large: 'video.m4v'
+      small: 'video.webp',
+      large: 'video.webp'
    },
 
    {

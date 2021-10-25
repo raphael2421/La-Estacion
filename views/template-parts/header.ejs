@@ -16,8 +16,44 @@
       header{background-color:var(--Primary);width:auto;height:44px;padding:0 26px;display:grid;grid-template-columns:35px auto 35px;align-items:flex-end;position:sticky;top:0;z-index:51;box-shadow:1px 1px 2px rgba(0,0,0,.1)}.header_logo{height:100%;display:grid;align-content:center}.header_logo>img{height:35px;margin:5px auto}.header_icons{height:100%;position:relative;display:flex;flex-direction:row-reverse;margin-right:26px}.header_icons>img{right:0;padding-left:16px;width:26px}.tel_icon{height:22px;width:19px;margin-top:12px;margin-right:16px}.whats_icon{width:26px;margin-top:3px}.header_menu{height:100%;display:grid;align-content:center}.header_menu>img{height:21px;width:24px;margin:12px auto}footer{position:relative}footer{height:38px;position:fixed;width:100%;display:grid;grid-template-rows:17px 21px;bottom:0;justify-items:center;background-color:unset}footer>.acento{align-self:end}.acento{display:block;width:52px;height:6px;background-color:var(--Secondary);margin:0 auto}.la-estacion-logo{height:35px;align-self:flex-end;background-color:var(--Primary);padding:2px}.close_menu_icon,.menu_icon,.tel_icon,.whats_icon{cursor:pointer}.menu_top{display:none;background-color:var(--Primary);position:fixed;top:44px;z-index:50;width:100%;height:100vh;justify-items:center}.menu_top>ul{padding:0}.menu_top>ul>li{font-family:'Encode Sans',sans-serif;object-fit:contain;list-style:none;text-transform:uppercase;font-size:21px;font-weight:100;font-stretch:normal;font-style:normal;line-height:2.29;letter-spacing:6.3px;text-align:center}.menu_link{color:var(--FontDark);text-decoration:none}.menu_link:hover{color:var(--Secondary)}.close_menu>img{width:33px;height:14px;margin:0 auto}.menu_top_open{display:grid;animation:openMenu 350ms;overflow:hidden}@keyframes openMenu{0%{top:-100px;opacity:0}100%{top:44px;opacity:1}}.menu_top_close{display:grid;animation:closeMenu 350ms forwards}@keyframes closeMenu{0%{top:44px;opacity:1}100%{top:-100px;opacity:.1}}.menu_desk{display:none}@media screen and (min-width:992px){.menu_top{display:none}header{background-color:var(--Primary);width:auto;height:60px;padding:0 5%;display:grid;grid-template-columns:94px auto;align-items:flex-end;position:sticky;top:0;z-index:51;box-shadow:1px 1px 2px rgba(0,0,0,.1);position:sticky}.header_logo>img{height:60px;background-color:var(--Primary);padding-top:40px}.whats_icon{width:36px;margin-top:12px;margin-left:30px}.header_menu>img{height:26px;width:32px;padding-bottom:30px}.tel_icon{display:none}.menu_desk{display:block}.menu_desk>ul>li{font-family:'Encode Sans',sans-serif;object-fit:contain;list-style:none;text-transform:uppercase;font-size:16px;font-weight:inherit;font-stretch:normal;font-style:normal;line-height:2;text-align:center;float:left;margin-right:18px}.header_menu{display:none}}.link_active{color:var(--Secondary)}.touch_anim{width:70px;height:70px;position:absolute;bottom:180px;right:40px;z-index:100;transition:.5s;animation:finger_fadein .8s forwards;animation-delay:1.2s;opacity:0;z-index:100}.finger_fadeout{animation:finger_fadeout .5s forwards}@keyframes finger_fadein{0%{opacity:0;right:-100px;bottom:600px}100%{opacity:1;right:40px;bottom:180px}}@keyframes finger_fadeout{0%{opacity:1;right:40px;bottom:180px}100%{opacity:0;right:280px;bottom:180px}}
    </style>
    <!-- <link rel="stylesheet" href="../css/header_footer.css"> -->
-   <link rel="preconnect" href="https://fonts.gstatic.com">
-   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Brygada+1918&family=Encode+Sans:wght@100;500&display=swap" as="style" rel="stylesheet">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   
+   <style>
+
+/* latin */
+@font-face {
+  font-family: 'Brygada 1918';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/brygada1918/v8/pe08MI6eKpdGqlF5LANrM--ACNaeo8mTUIR_y2-fyVgcug.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+
+/* latin */
+@font-face {
+  font-family: 'Encode Sans';
+  font-style: normal;
+  font-weight: 100;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/encodesans/v8/LDIhapOFNxEwR-Bd1O9uYNmnUQomAgE25imKSbHLSMA6.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* latin */
+@font-face {
+  font-family: 'Encode Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/encodesans/v8/LDIhapOFNxEwR-Bd1O9uYNmnUQomAgE25imKSbHLSMA6.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+      </style>
    <!-- Facebook Pixel Code -->
    <%# 
    <script>
