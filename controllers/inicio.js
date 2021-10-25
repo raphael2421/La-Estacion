@@ -7,7 +7,7 @@ const slidesContent = [
    {
       title: '',
       small: 'video.webp',
-      large: 'video.webp'
+      large: 'video-XL.webp'
    },
 
    {

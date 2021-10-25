@@ -17,7 +17,7 @@
             <picture>
                <source media="(max-width:1199px)" srcset="../media/slider-inicio/<%= x.small %>">
                <source media="(min-width:1200px)" srcset="../media/slider-inicio/<%= x.large %>">
-               <img loading="lazy" class="slide_img swipe" data-index="<%= i %>" src="../media/slider-inicio/<%= x.small %>"
+               <img loading="<%= i===0 ?'eager': 'lazy' %>" class="slide_img swipe" data-index="<%= i %>" src="../media/slider-inicio/<%= x.small %>"
                   alt="<%= x.title %>">
             </picture>
          
