@@ -66,7 +66,8 @@ app.use('/proyecto', require('./routes/proyecto'));
 app.use('/departamentos', require('./routes/departamentos'));
 app.use('/beneficios', require('./routes/beneficios'));
 app.use('/ubicacion', require('./routes/ubicacion'));
-app.use('/aviso-de-privacidad', require('./routes/privacidad'));
+// app.use('/aviso-de-privacidad', require('./routes/privacidad')); // se desactivo la privacidad
+app.use('/aviso-de-privacidad', require('./routes/inicio'));
 app.use('/', require('./routes/inicio'));
 // app.use('/404', require('./routes/404'));
 
