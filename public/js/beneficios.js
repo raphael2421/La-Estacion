@@ -2,6 +2,15 @@
 const blog = document.querySelector('.blog');
 const blogContent = [
    {
+      title: 'Day of the Dead Celebration',
+      img: 'day-of-the-dead-san-miguel-de-allende.jpg',
+      imgxl: '',
+      text: `San Miguel de Allende, a colonial-era city in Mexico’s central highlands, is known for its baroque Spanish architecture, thriving arts scene, and cultural festivals. In the city’s historic cobblestoned center lies the neo-Gothic church Parroquia de San Miguel Arcángel, whose dramatic pink towers rise above the main plaza, El Jardín. The Templo de San Francisco church nearby has an 18th-century churrigueresque facade. <br> <p><strong>Day of the Dead Celebrations</strong></p>
+
+This trip is planned around Mexico’s “Day of the Dead” celebrations which takes place from October 31 through November 3, 2021. “La Calaca” is an amazing display of participatory art and culture devoted to the Mexico’s “Day of the Dead” celebrations that seeks to honor, promote, and explore the traditions and themes of Día de Muertos, highlighting the tradition’s ability to transform the loss into celebration. In the end, we are all calacas!`,
+      content: ''
+   },
+   {
       title: 'Plusvalía',
       img: 'san miguel 640x640.jpg',
       imgxl: '',
