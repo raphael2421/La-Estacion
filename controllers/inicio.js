@@ -61,13 +61,18 @@ exports.renderInicio = async (req, res, next) => {
       httpOnly: false,
       secure: process.env.NODE_ENV === 'production' ? true : false,
    };
-   // res
 
+   // confirmacion de evento
+   let confirmation;
+   Object.is(req.query.confirmation, undefined) ? confirmation = false : confirmation = true;
+
+   // res
       res.status(200).render('inicio', {
          path: '/',
          page: 'La estación hotel & residence',
          fechaMX: await fechaMX(),
          data: slidesContent,
+         confirmation,
          lastURL: req.headers.referer || '',
          snippet: `<!-- Primary Meta Tags -->
 <title>La Estación hotel & residence</title>
