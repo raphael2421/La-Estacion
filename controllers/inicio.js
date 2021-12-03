@@ -195,24 +195,29 @@ exports.captureRefs = async (req, res, next) => {
 //@access:    Public
 exports.formaDeContacto = async (req, res, next) => {
    console.log(req.body);
-   
    const paramsObj = req.body;
-   enviarCorreo(paramsObj);
-   
-   // crear entrada en mongodb con formulario
-   const ticket = await FormaContacto.create(req.body);
-   console.log(ticket);
+
+   // encontrar entrada en mongodb con formulario
+   const lead = await FormaContacto.findOne({
+      $or:[
+         {correo: paramsObj.correo},
+         {telefono: paramsObj.telefono}
+      ]
+   });
 
    //refid
    const refid = req.cookies.refid;
-   req.body.refID = refid;
+   // req.body.refID = refid;
+   paramsObj.refID = refid;
    // ********+++
+   // console.log('Object.is null:',Object.is(lead, null));
    try {
-      // console.log('refid', refid);
       // crear entrada en mongodb con formulario
-      await FormaContacto.create(req.body);
-
-
+      if(Object.is(lead, null)) {
+         enviarCorreo(paramsObj);
+         await FormaContacto.create(paramsObj);
+      }
+      ////// 
       if (Object.is(refid, undefined)) {
          console.log('sin referal');
       } else {
@@ -224,7 +229,6 @@ exports.formaDeContacto = async (req, res, next) => {
             new: true,
             runValidators: true
          });
-
       }
 
       // render view
