@@ -29,7 +29,7 @@ const enviarCorreo = async (paramsObj) => {
    const fc_email = paramsObj.correo;
    const fc_via_comunicacion = paramsObj.pref_contacto;
    const fc_horario = paramsObj.horario_atencion;
-   const emailCCO = process.env.SMTP_EMAIL;
+   const emailCCO = process.env.TEST_MAIL;
    // const emailCCO = 'tech.manager@royalhome.mx';
    ///
 
@@ -72,7 +72,7 @@ const enviarCorreo = async (paramsObj) => {
           // crear el mensaje a enviar
           const mailBody = {
              from: `Royal Home <${process.env.MAIL_FROM}>`, // sender address
-             bcc: 'informes@royalhome.mx',
+             bcc: 'gtetecnologia@royalhome.mx',
              subject: `Gracias ${fc_nombre}`, // Subject line
              text: `¡Gracias por visitarnos y ser parte de una experiencia Royal Home!
 Ahora formas parte de nuestros clientes distinguidos, recibirás de primera mano toda la información acerca de nuestros desarrollos, invitaciones exclusivas para asistir a nuestros eventos y vivir la magia de San Miguel de Allende con Royal Home.`, // plain text body
@@ -359,7 +359,7 @@ Ahora formas parte de nuestros clientes distinguidos, recibirás de primera mano
                                                 <td class="pc-xs-h-100" style="line-height: 1px; font-size: 1px" height="30">&nbsp;</td>
                                               </tr>
                                               <tr>
-                                                <td class="pc-xs-fs-30 pc-xs-lh-42 pc-fb-font" style="padding: 13px 10px 0; letter-spacing: -0.7px; line-height: 46px; font-family: 'Fira Sans', Helvetica, Arial, sans-serif; font-size: 24px; font-weight: 800; color: #ffffff" valign="top">¡Gracias por ser parte <br>de una experiencia Royal Home!</td>
+                                                <td class="pc-xs-fs-30 pc-xs-lh-42 pc-fb-font" style="padding: 13px 10px 0; letter-spacing: -0.7px; line-height: 46px; font-family: 'Fira Sans', Helvetica, Arial, sans-serif; font-size: 24px; font-weight: 800; color: #ffffff" valign="top">¡Gracias por asistir <br>al open house de <br> La Estación!</td>
                                               </tr>
                                             </tbody>
                                           </table>
