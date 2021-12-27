@@ -102,6 +102,9 @@ exports.renderInicio = async (req, res, next) => {
 //@method:    GET
 //@access:    Public
 exports.captureRefs = async (req, res, next) => {
+   // confirmacion de evento
+   let confirmation;
+   Object.is(req.query.confirmation, undefined) ? confirmation = false : confirmation = true;
    // fecha 
    const now = new Date();
    // options
@@ -133,6 +136,7 @@ exports.captureRefs = async (req, res, next) => {
             fechaMX: await fechaMX(),
             _refID: refID || '',
             data: slidesContent,
+            confirmation,
             lastURL: req.headers.referer || '',
             snippet: `<!-- Primary Meta Tags -->
 <title>La Estación hotel & residence</title>
@@ -202,6 +206,10 @@ exports.formaDeContacto = async (req, res, next) => {
    console.log(req.body);
    const paramsObj = req.body;
 
+   // confirmacion de evento
+   let confirmation;
+   Object.is(req.query.confirmation, undefined) ? confirmation = false : confirmation = true;
+
    // encontrar entrada en mongodb con formulario
    const lead = await FormaContacto.findOne({
       $or:[
@@ -244,6 +252,7 @@ exports.formaDeContacto = async (req, res, next) => {
          fechaMX: await fechaMX(),
          _refID: refid || '',
          data: slidesContent,
+         confirmation,
          lastURL: req.headers.referer || '',
          snippet: `<!-- Primary Meta Tags -->
 <title>La Estación hotel & residence</title>
