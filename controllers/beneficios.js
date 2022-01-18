@@ -27,6 +27,36 @@ exports.renderBeneficios = async (req, res, next) => {
          fechaMX: await fechaMX(),
          _refID: req.query._refID || '',
          _refURL: req.headers.referer || '',
+         structuredData: `<script type='application/ld+json'>
+{
+    "@context": "http://schema.org/",
+    "@type": "NewsArticle",
+    "headline": "Day of the Dead Celebration",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.laestacionresidence.mx/"
+    },
+    "image": {
+        "@type": "ImageObject",
+        "url": "https://www.laestacionresidence.mx/media/blog/day-of-the-dead-san-miguel-de-allende.jpg",
+        "height": 574,
+        "width": 960
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Royal Home",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.laestacionresidence.mx/media/la-estacion-logo-royal-home-mexico-plaza.svg",
+            "height": 60,
+            "width": 60
+        }
+    },
+    "datePublished": "2021-11-02",
+    "dateModified": "2021-11-02",
+    "description": "San Miguel de Allende, a colonial-era city in Mexico’s central highlands, is known for its baroque Spanish architecture, thriving arts scene, and cultural festivals. In the city’s historic cobblestoned center lies the neo-Gothic church Parroquia de San Miguel Arcángel"
+}
+</script>`,
          snippet: `<!-- Primary Meta Tags -->
 <title>Tu nuevo departamento en San Miguel de Allende</title>
 <meta name="title" content="Tu nuevo departamento en San Miguel de Allende">
