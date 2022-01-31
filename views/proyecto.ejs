@@ -1,4 +1,56 @@
 <%- include('template-parts/head') %>
+<script type="application/ld+json">
+        {
+   "@context": "https://schema.org/",
+   "@type": "Product",
+   "name": "Departamento Morelos",
+   "image": "https://www.laestacionresidence.mx/media/slider-proyecto/interiores/LaEstaci%C3%B3nDepa_0010_20210302_la_estacion_0006.jpg",
+   "description": "Exclusivos departamentos equipados con la más alta gama de materiales de calidad, y una ubicación incomparable a 5 minutos del centro de San Miguel de Allende",
+   // "sku": "0446310786",
+   // "mpn": "925872",
+   "brand": {
+      "@type": "Brand",
+      "name": "La estación Residence"
+   },
+   "review": {
+      "@type": "Review",
+      "reviewRating": {
+         "@type": "Rating",
+         "ratingValue": "4",
+         "bestRating": "5"
+      },
+      "author": {
+         "@type": "Person",
+         "name": "Jean Belmont"
+      }
+   },
+   "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.4",
+      "reviewCount": "89"
+   },
+   "offers": {
+      "@type": "Offer",
+      "url": "https://www.laestacionresidence.mx/departamentos",
+      "price": "2,809.934",
+      "priceCurrency": "MXN",
+      "itemCondition": "https://schema.org/NewCondition",
+      "availability": "https://schema.org/PreSale",
+      "businessDays": {
+         "@type": "OpeningHoursSpecification",
+         "dayOfWeek": [
+            "https://schema.org/Sunday",
+            "https://schema.org/Monday",
+            "https://schema.org/Tuesday",
+            "https://schema.org/Wednesday",
+            "https://schema.org/Thursday"
+            "https://schema.org/Friday"
+            "https://schema.org/Sathurday"
+         ]
+      }
+   }
+}
+    </script>
 <%- include('template-parts/header') %>
 <link rel="stylesheet" href="../css/inicio.css">
 <link rel="stylesheet" href="../css/proyecto.css">
