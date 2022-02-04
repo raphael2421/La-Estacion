@@ -569,38 +569,23 @@
          unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
       }
    </style>
-   <!-- Facebook Pixel Code -->
-   <%# <script>
-      !function (f, b, e, v, n, t, s) {
-      if (f.fbq) return; n = f.fbq = function () {
-      n.callMethod ?
-      n.callMethod.apply(n, arguments) : n.queue.push(arguments)
-      };
-      if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
-      n.queue = []; t = b.createElement(e); t.async = !0;
-      t.src = v; s = b.getElementsByTagName(e)[0];
-      s.parentNode.insertBefore(t, s)
-      }(window, document, 'script',
-      'https://connect.facebook.net/en_US/fbevents.js');
-      fbq('init', '192161102360282');
-      fbq('track', 'PageView');
-      </script>
-      <noscript><img height="1" width="1" style="display:none"
-            src="https://www.facebook.com/tr?id=192161102360282&ev=PageView&noscript=1" /></noscript>
-      <!-- End Facebook Pixel Code -->
-
-      <!-- Global site tag (gtag.js) - Google Analytics 'UA-194679361-1'  Google Ads: 'AW-397905907' -->
-      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-194679361-1"></script>
-      <script>
-         window.dataLayer = window.dataLayer || [];
-         function gtag() { dataLayer.push(arguments); }
-         gtag('js', new Date());
-         gtag('config', 'UA-194679361-1');
-         gtag('config', 'AW-397905907');
-      </script>
-      %>
-
       <title>
          <%= locals.page ? page : '' %>
       </title>
       <%- locals.snippet ? snippet : '' %>
+      <!-- Global site tag (gtag.js) - Google Ads: 397905907 -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=AW-397905907"></script>
+      <script>
+         window.dataLayer = window.dataLayer || [];
+         function gtag() { dataLayer.push(arguments); }
+         gtag('js', new Date());
+
+         gtag('config', 'AW-397905907');
+      </script>
+
+      <% if (locals.conversion === true) { %>
+      <script id="converted">
+         gtag('event', 'conversion', { 'send_to': 'AW-397905907/nNmXCPnG8pcDEPOf3r0B' });
+      </script>
+
+      <% } %>

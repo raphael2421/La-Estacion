@@ -73,6 +73,7 @@ exports.renderInicio = async (req, res, next) => {
          fechaMX: await fechaMX(),
          data: slidesContent,
          confirmation,
+         conversion: false,
          lastURL: req.headers.referer || '',
          snippet: `<!-- Primary Meta Tags -->
 <title>La Estación hotel & residence</title>
@@ -136,6 +137,7 @@ exports.captureRefs = async (req, res, next) => {
             fechaMX: await fechaMX(),
             _refID: refID || '',
             data: slidesContent,
+            conversion: false,
             confirmation,
             lastURL: req.headers.referer || '',
             snippet: `<!-- Primary Meta Tags -->
@@ -176,6 +178,7 @@ exports.captureRefs = async (req, res, next) => {
       fechaMX: await fechaMX(),
       _refID: refID || '',
       data: slidesContent,
+      conversion: false,
       lastURL: req.headers.referer || '',
       snippet: `<!-- Primary Meta Tags -->
 <title>La Estación hotel & residence</title>
@@ -252,6 +255,7 @@ exports.formaDeContacto = async (req, res, next) => {
          fechaMX: await fechaMX(),
          _refID: refid || '',
          data: slidesContent,
+         conversion: true,
          confirmation,
          lastURL: req.headers.referer || '',
          snippet: `<!-- Primary Meta Tags -->
@@ -285,6 +289,7 @@ exports.formaDeContacto = async (req, res, next) => {
          fechaMX: await fechaMX(),
          _refID: req.query._refID || '',
          data: slidesContent,
+         conversion: true,
          lastURL: req.headers.referer || '',
          snippet: `<!-- Primary Meta Tags -->
 <title>La Estación hotel & residence</title>

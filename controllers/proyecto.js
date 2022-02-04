@@ -66,20 +66,20 @@ exports.renderDepartamentos = async (req, res, next) => {
             snippet: `<!-- Primary Meta Tags -->
 <title>Departamentos en San Miguel de Allende</title>
 <meta name="title" content="Departamentos en San Miguel de Allende">
-<meta name="description" content="Ubicados a 5 mins del centro de San Miguel de Allende, casas con exclusivas amenidades como: alberca, fogatero, salón de juegos, bar y gimnasio.">
+<meta name="description" content="Exclusivos departamentos equipados con la más alta gama de materiales de calidad, y una ubicación incomparable a 5 minutos del centro de San Miguel de Allende">
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.laestacionresidence.mx/departamentos">
 <meta property="og:title" content="Departamentos en San Miguel de Allende">
-<meta property="og:description" content="Ubicados a 5 mins del centro de San Miguel de Allende, casas con exclusivas amenidades como: alberca, fogatero, salón de juegos, bar y gimnasio.">
+<meta property="og:description" content="Exclusivos departamentos equipados con la más alta gama de materiales de calidad, y una ubicación incomparable a 5 minutos del centro de San Miguel de Allende">
 <meta property="og:image" content="https://www.laestacionresidence.mx/media/slider-proyecto/departamentos-en-san-miguel-de-allende.jpg">
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image">
 <meta property="twitter:url" content="https://www.laestacionresidence.mx/departamentos">
 <meta property="twitter:title" content="Departamentos en San Miguel de Allende">
-<meta property="twitter:description" content="Ubicados a 5 mins del centro de San Miguel de Allende, casas con exclusivas amenidades como: alberca, fogatero, salón de juegos, bar y gimnasio.">
+<meta property="twitter:description" content="Exclusivos departamentos equipados con la más alta gama de materiales de calidad, y una ubicación incomparable a 5 minutos del centro de San Miguel de Allende">
 <meta property="twitter:image" content="https://www.laestacionresidence.mx/media/slider-proyecto/departamentos-en-san-miguel-de-allende.jpg">`
          });
       }
