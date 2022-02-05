@@ -1,5 +1,5 @@
 const asyncHandler = require('../../middleware/asyncHandler');
-const FormaContacto = require('../../models/FormaContacto');
+const Lead = require('../../models/Lead');
 
 //@name:      Forma de cintacto
 //@route:     /forma_contacto
@@ -8,9 +8,9 @@ const FormaContacto = require('../../models/FormaContacto');
 exports.allForms = async (req, res, next) => {
    //comienza aquí
    // Query
-   let query = FormaContacto.find();
+   let query = Lead.find();
    // paginación
-   const total_docs = await FormaContacto.countDocuments();
+   const total_docs = await Lead.countDocuments();
    let page = parseInt(req.query.page) || 1;
    let per_page = parseInt(req.query.per_page) || 1000000;
 
@@ -76,9 +76,9 @@ exports.allForms = async (req, res, next) => {
 // @access   Private
 exports.allcForms = asyncHandler(async (req, res, next) => {
    // Query
-   let query = FormaContacto.find();
+   let query = Lead.find();
    // paginación
-   const total_docs = await FormaContacto.countDocuments();
+   const total_docs = await Lead.countDocuments();
    let page = parseInt(req.query.page) || 1;
    let per_page = parseInt(req.query.per_page) || 10;
 
