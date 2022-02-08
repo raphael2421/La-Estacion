@@ -1,28 +1,21 @@
 <script>
    const menu_icon = document.querySelector(".menu_icon"), menu_top = document.querySelector(".menu_top"), close_menu_icon = document.querySelector(".close_menu_icon"), links_menu = document.querySelectorAll(".menu_link"), tel_icon = document.querySelector(".tel_icon"); function close_menu() { menu_top.classList.remove("menu_top_open"), menu_top.classList.add("menu_top_close"), menu_icon.classList.toggle("hidden"), setTimeout(() => { document.querySelector(".menu_top_close").addEventListener("animationend", () => { menu_top.classList.remove("menu_top_close") }) }, 10) } menu_icon.addEventListener("click", () => { menu_top.classList.add("menu_top_open"), menu_icon.classList.toggle("hidden"), document.body.setAttribute("overflow", "hidden") }), close_menu_icon.addEventListener("click", close_menu), links_menu.forEach((e, o, t) => { e.addEventListener("click", close_menu) }); const date = new Date, dtf = new Intl.DateTimeFormat("es-MX", { hour: "numeric", minute: "numeric", second: "numeric", timeZone: "America/Mexico_City" }), horario_cerrado = document.getElementById("horario_cerrado"), horario_abierto = document.getElementById("horario_abierto"), closed = new Date(horario_cerrado.value), open = new Date(horario_abierto.value); dtf.format(date) > dtf.format(open) && dtf.format(date) < dtf.format(closed) && tel_icon.classList.remove("hidden"); const link_contacto = document.querySelectorAll(".link_contacto"); function linkContacto() { "#contacto" == window.location.hash && link_contacto.forEach((e, o, t) => { e.classList.add("link_active") }) } link_contacto.forEach((e, o, t) => { e.addEventListener("click", function () { this.classList.add("link_active") }) }), linkContacto();
 </script>
-<!-- Global site tag (gtag.js) - Google Ads: 397905907 -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-397905907" ></script>
-<script>
-   window.dataLayer = window.dataLayer || [];
-   function gtag() { dataLayer.push(arguments); }
-   gtag('js', new Date());
-   gtag('config', 'AW-397905907');
-   
-   console.log(dataLayer);
-   // conversion whats
-   const conversion_whats = document.querySelector('.conversion_whats');
-   
-   conversion_whats.addEventListener('click', function (e) {
-      gtag('event', 'conversion', { 'send_to': 'AW-397905907/3_h-CIj9xpcDEPOf3r0B' });
-   });
-         // 
-</script>
-
+<!-- Google Conversions -->
 <% if (locals.conversion===true) { %>
    <script id="converted">
       gtag('event', 'conversion', { 'send_to': 'AW-397905907/nNmXCPnG8pcDEPOf3r0B' });
    </script>
    <% } %>
+
+   <script>
+         // conversion whats
+            const conversion_whats = document.querySelector('.conversion_whats');
+
+            conversion_whats.addEventListener('click', function (e) {
+               gtag('event', 'conversion', { 'send_to': 'AW-397905907/3_h-CIj9xpcDEPOf3r0B' });
+            });
+         //
+   </script>
 </body>
 </html>
