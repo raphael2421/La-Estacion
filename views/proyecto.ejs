@@ -1,56 +1,53 @@
 <%- include('template-parts/head') %>
+<!-- LD+JSON -->
 <script type="application/ld+json">
-        {
-   "@context": "https://schema.org/",
-   "@type": "Product",
-   "name": "Departamento Morelos",
-   "image": "https://www.laestacionresidence.mx/media/slider-proyecto/interiores/LaEstaci%C3%B3nDepa_0010_20210302_la_estacion_0006.jpg",
-   "description": "Exclusivos departamentos equipados con la más alta gama de materiales de calidad, y una ubicación incomparable a 5 minutos del centro de San Miguel de Allende",
-   // "sku": "0446310786",
-   // "mpn": "925872",
-   "brand": {
-      "@type": "Brand",
-      "name": "La estación Residence"
-   },
-   "review": {
-      "@type": "Review",
-      "reviewRating": {
-         "@type": "Rating",
-         "ratingValue": "4",
-         "bestRating": "5"
-      },
-      "author": {
-         "@type": "Person",
-         "name": "Jean Belmont"
-      }
-   },
-   "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.4",
-      "reviewCount": "89"
-   },
-   "offers": {
-      "@type": "Offer",
-      "url": "https://www.laestacionresidence.mx/departamentos",
-      "price": "2809934",
-      "priceCurrency": "MXN",
-      "itemCondition": "https://schema.org/NewCondition",
-      "availability": "https://schema.org/PreSale",
-      "businessDays": {
-         "@type": "OpeningHoursSpecification",
-         "dayOfWeek": [
-            "https://schema.org/Sunday",
-            "https://schema.org/Monday",
-            "https://schema.org/Tuesday",
-            "https://schema.org/Wednesday",
-            "https://schema.org/Thursday",
-            "https://schema.org/Friday",
-            "https://schema.org/Sathurday"
-         ]
-      }
-   }
+{
+  "@context": "https://schema.org/", 
+  "@type": "Product", 
+  "name": "Allende",
+  "image": "https://www.laestacionresidence.mx/media/slider-proyecto/interiores/LaEstaci%C3%B3nDepa_0008_20210302_la_estacion_0009.jpg",
+  "description": "Hermoso departamento ubicado a 5 mins del centro
+de San Miguel de Allende,
+cuenta con alberca, fogatero, salón de juegos, bar y gimnasio.",
+  "brand": {
+    "@type": "Brand",
+    "name": "La Estación Hotel and Residences"
+  },
+  "sku": "620c0c8007101ffbe0c1018d",
+  "offers": {
+    "@type": "Offer",
+    "url": "https://www.laestacionresidence.mx/departamentos",
+    "priceCurrency": "MXN",
+    "price": "4848480",
+    "priceValidUntil": "2022-02-28",
+    "availability": "https://schema.org/PreSale",
+    "itemCondition": "https://schema.org/NewCondition"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5",
+    "bestRating": "5",
+    "worstRating": "4",
+    "ratingCount": "1",
+    "reviewCount": "1"
+  },
+  "review": {
+    "@type": "Review",
+    "name": "Jean Belmont",
+    "reviewBody": "Excelente atención, estuve viviendo en La Estación Hotel and Residences por al rededor de 20 días todo muy bien, aunque no tienen servicio de tintorería",
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": "5",
+      "bestRating": "5",
+      "worstRating": "4"
+    },
+    "datePublished": "2021-02-22",
+    "author": {"@type": "Person", "name": "admin"},
+    "publisher": {"@type": "Organization", "name": "admin"}
+  }
 }
-    </script>
+</script>
+<!------>
 <%- include('template-parts/header') %>
 <link rel="stylesheet" href="../css/inicio.css">
 <link rel="stylesheet" href="../css/proyecto.css">
