@@ -22,7 +22,7 @@ cuenta con alberca, fogatero, salón de juegos, bar y gimnasio.",
     "@type": "Offer",
     "url": "https://www.laestacionresidence.mx/departamentos",
     "priceCurrency": "MXN",
-    "price": "4848480",
+    "price": "<%= precio[1][1]  %>",
     "priceValidUntil": "2022-02-28",
     "availability": "https://schema.org/PreSale",
     "itemCondition": "https://schema.org/NewCondition"
@@ -51,54 +51,7 @@ cuenta con alberca, fogatero, salón de juegos, bar y gimnasio.",
   }
 }
 </script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org/", 
-  "@type": "Product", 
-  "name": "Morelos",
-  "image": "https://www.laestacionresidence.mx/media/slider-proyecto/interiores/LaEstaci%C3%B3nDepa_0005_20210302_la_estacion_0012.jpg",
-  "description": "Hermoso departamento ubicado a 5 mins del centro
-de San Miguel de Allende,
-cuenta con alberca, fogatero, salón de juegos, bar y gimnasio.",
-  "brand": {
-    "@type": "Brand",
-    "name": "La Estación Hotel and Residences"
-  },
-  "sku": "620c521507101ffbe0c1019c",
-  "mpn": "620c521507101ffbe0c1019c",
-  "offers": {
-    "@type": "Offer",
-    "url": "https://www.laestacionresidence.mx/departamentos",
-    "priceCurrency": "MXN",
-    "price": "4147998",
-    "priceValidUntil": "2022-02-28",
-    "availability": "https://schema.org/PreSale",
-    "itemCondition": "https://schema.org/NewCondition"
-  },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "5",
-    "bestRating": "5",
-    "worstRating": "4",
-    "ratingCount": "1",
-    "reviewCount": "1"
-  },
-  "review": {
-    "@type": "Review",
-    "name": "Juan José Cruz",
-    "reviewBody": "Maravilloso Open House un evento que nos ayudo a tomar la decisión de adquirir un departamento en la estación simplemente la mejor ubicación.",
-    "reviewRating": {
-      "@type": "Rating",
-      "ratingValue": "5",
-      "bestRating": "5",
-      "worstRating": "4"
-    },
-    "datePublished": "2021-12-19",
-    "author": {"@type": "Person", "name": "admin"},
-    "publisher": {"@type": "Organization", "name": "royalhome"}
-  }
-}
-</script>
+
 <!------>
 <%- include('template-parts/header') %>
 <link rel="stylesheet" href="../css/inicio.css">
@@ -234,7 +187,7 @@ cuenta con alberca, fogatero, salón de juegos, bar y gimnasio.",
                El departamento que te permitirá descubrir tu lado más íntimo y entrelazar tus nuevas historias para vivir La Estación.
             </p>
             <div class="precio">
-               Desde $2,809,934 MXN
+               Desde <%= precio[0][1] %>
             </div>
             <p class="m2 morelos">65m<sup>2</sup></p>
             <div class="modelos_amenidades">
@@ -270,7 +223,7 @@ cuenta con alberca, fogatero, salón de juegos, bar y gimnasio.",
                de Allende.
             </p>
             <div class="precio">
-               Desde $4,848,480 MXN
+               Desde <%= precio[1][1] %>
             </div>
             <p class="m2 morelos">110m<sup>2</sup></p>
             <div class="modelos_amenidades">
@@ -298,7 +251,7 @@ cuenta con alberca, fogatero, salón de juegos, bar y gimnasio.",
       border-bottom: none;
    }
    .modelos_title.allende::after {
-    content: "Desde $4,804,800 MXN";
+    content: "Desde <%= precio[1][1] %>";
     display: block;
     border-bottom: 1px solid #fff;
     font-size: 22px;
@@ -306,7 +259,7 @@ cuenta con alberca, fogatero, salón de juegos, bar y gimnasio.",
     padding-bottom: 10px;
 }
    .modelos_title.morelos::after {
-    content: "Desde $2,839,200 MXN";
+    content: "<%= precio[0][1] %>";
     display: block;
     border-bottom: 1px solid #fff;
     font-size: 23px;
