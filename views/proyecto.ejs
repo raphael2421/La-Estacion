@@ -23,7 +23,7 @@ cuenta con alberca, fogatero, salón de juegos, bar y gimnasio.",
     "url": "https://www.laestacionresidence.mx/departamentos",
     "priceCurrency": "<%= data.precio.precios.allende.code %>",
     "price": "<%= data.precio.precios.allende.monto  %>",
-    "priceValidUntil": <%= new Date() %>,
+    "priceValidUntil": "<%= new Date().toISOString().slice(0,10)%>",
     "availability": "https://schema.org/PreSale",
     "itemCondition": "https://schema.org/NewCondition"
   },
