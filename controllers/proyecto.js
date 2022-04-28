@@ -1,6 +1,7 @@
 const fechaMX = require('../utils/fechaMX');
 
 const Desarrollo = require('../models/Desarrollo');
+const Pagina = require('../models/Pagina')
 
 
 //@name:      redirect to departamentos
@@ -20,9 +21,12 @@ exports.renderProyecto = async (req, res, next) => {
 exports.renderDepartamentos = async (req, res, next) => {
    //comienza aquí
 
-   const desarrollo = await Desarrollo.findById('60e8952a9d74ea0a20460617');
-
-   // console.log(desarrollo.precios.MXN);
+   const page = await Pagina.findById('622626ac0da0f73974227557')
+   .populate({
+         path: "precio",
+         select: "precios"
+      })
+   // console.log(page.precio);
 
    //refid
    const refid = req.query._refID;
@@ -42,7 +46,7 @@ exports.renderDepartamentos = async (req, res, next) => {
          fechaMX: await fechaMX(),
          _refID: req.query._refID || '',
          _refURL: req.headers.referer || '',
-         precio: desarrollo.precios.MXN 
+         data: page
       });
     }
       else{
@@ -52,7 +56,7 @@ exports.renderDepartamentos = async (req, res, next) => {
             fechaMX: await fechaMX(),
             _refID: req.query._refID || '',
             _refURL: req.headers.referer || '',
-            precio: desarrollo.precios.MXN
+            data: page
          });
       }
 

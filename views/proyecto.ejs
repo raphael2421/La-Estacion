@@ -21,9 +21,9 @@ cuenta con alberca, fogatero, salón de juegos, bar y gimnasio.",
   "offers": {
     "@type": "Offer",
     "url": "https://www.laestacionresidence.mx/departamentos",
-    "priceCurrency": "MXN",
-    "price": "<%= precio[1][1]  %>",
-    "priceValidUntil": "2022-02-28",
+    "priceCurrency": "<%= data.precio.precios.allende.code %>",
+    "price": "<%= data.precio.precios.allende.monto  %>",
+    "priceValidUntil": <%= new Date() %>,
     "availability": "https://schema.org/PreSale",
     "itemCondition": "https://schema.org/NewCondition"
   },
@@ -187,7 +187,7 @@ cuenta con alberca, fogatero, salón de juegos, bar y gimnasio.",
                El departamento que te permitirá descubrir tu lado más íntimo y entrelazar tus nuevas historias para vivir La Estación.
             </p>
             <div class="precio">
-               Desde <%= precio[0][1] %>
+               <%= parseFloat(data.precio.precios['morelos'].monto)==0 ? 'agotado' : 'Desde '+parseFloat(data.precio.precios['morelos'].monto).toLocaleString('es-MX',{style:'currency', currency: 'MXN' }) %>
             </div>
             <p class="m2 morelos">65m<sup>2</sup></p>
             <div class="modelos_amenidades">
@@ -223,7 +223,7 @@ cuenta con alberca, fogatero, salón de juegos, bar y gimnasio.",
                de Allende.
             </p>
             <div class="precio">
-               Desde <%= precio[1][1] %>
+             <%= parseFloat(data.precio.precios['allende'].monto)==0 ? 'agotado' : 'Desde '+parseFloat(data.precio.precios['allende'].monto).toLocaleString('es-MX',{style:'currency', currency: 'MXN' }) %>
             </div>
             <p class="m2 morelos">110m<sup>2</sup></p>
             <div class="modelos_amenidades">
@@ -251,7 +251,7 @@ cuenta con alberca, fogatero, salón de juegos, bar y gimnasio.",
       border-bottom: none;
    }
    .modelos_title.allende::after {
-    content: "Desde <%= precio[1][1] %>";
+    content: "<%= parseFloat(data.precio.precios['allende'].monto)==0 ? 'agotado' : 'Desde '+parseFloat(data.precio.precios['allende'].monto).toLocaleString('es-MX',{style:'currency', currency: 'MXN' }) %>";
     display: block;
     border-bottom: 1px solid #fff;
     font-size: 22px;
@@ -259,7 +259,7 @@ cuenta con alberca, fogatero, salón de juegos, bar y gimnasio.",
     padding-bottom: 10px;
 }
    .modelos_title.morelos::after {
-    content: "<%= precio[0][1] %>";
+    content: "<%= parseFloat(data.precio.precios['morelos'].monto)==0 ? 'agotado' : 'Desde '+parseFloat(data.precio.precios['morelos'].monto).toLocaleString('es-MX',{style:'currency', currency: 'MXN' }) %>";
     display: block;
     border-bottom: 1px solid #fff;
     font-size: 23px;
