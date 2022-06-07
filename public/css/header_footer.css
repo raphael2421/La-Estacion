@@ -29,8 +29,9 @@ header{
 }
 .header_icons > img{
   right: 0px;
-  padding-left: 16px;
-  width: 26px;
+  padding-left: 25px;
+  width: 48px;
+  height: 62px;
 }
 .tel_icon{
   height: 22px;
@@ -41,6 +42,13 @@ header{
 .whats_icon {
     width: 26px;
     margin-top: 3px;
+}
+
+.lpi_360 {
+  background-image: url('../../media/360-degree-rotate.svg');
+  background-color: var(--Gold);
+  border-radius: 50%;
+  cursor: pointer;
 }
 
 .header_menu{
